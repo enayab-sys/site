@@ -18,12 +18,13 @@ html {
 ========================= */
 
 :root {
-    --background: #f5f3ef;
-    --text: #1c1c1c;
-    --muted: #77736d;
-    --border: #dedbd5;
+    --background: #fafafa;
+    --text: #222222;
+    --muted: #777777;
+    --border: #e8e8e8;
     --accent: #5b5bf7;
 }
+
 
 
 
