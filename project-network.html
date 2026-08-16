@@ -10,7 +10,7 @@
 
     <meta
         name="description"
-        content="Projet de conception et sécurisation d'une infrastructure réseau multi-site avec Cisco Packet Tracer."
+        content="Conception et sécurisation d'une infrastructure réseau multi-site avec Cisco Packet Tracer : VLAN, OSPF, EtherChannel, DHCP, NAT/PAT, SSH et sécurité de niveau 2."
     >
 
     <link rel="stylesheet" href="style.css">
@@ -18,15 +18,13 @@
 
 <body>
 
-    <!-- NAVIGATION -->
-
     <header class="navbar">
 
         <a href="index.html" class="logo">BAY</a>
 
         <nav>
-            <a href="index.html#about">About</a>
-            <a href="index.html#projects">Projects</a>
+            <a href="index.html#about">À propos</a>
+            <a href="index.html#projects">Projets</a>
             <a href="index.html#articles">Articles</a>
         </nav>
 
@@ -40,7 +38,7 @@
         <section class="project-hero">
 
             <p class="eyebrow">
-                Project 01 · Networking
+                Projet 01 · Réseaux
             </p>
 
             <h1>
@@ -49,15 +47,16 @@
             </h1>
 
             <p class="project-intro">
-                Conception et sécurisation d'une infrastructure
-                réseau multi-site avec Cisco Packet Tracer.
+                Conception et sécurisation d'une infrastructure réseau
+                simulant une entreprise composée d'un siège et d'une
+                agence distante, avec Cisco Packet Tracer.
             </p>
 
             <div class="tags project-tags">
                 <span>Cisco</span>
                 <span>Packet Tracer</span>
-                <span>Networking</span>
-                <span>Security</span>
+                <span>Réseau</span>
+                <span>Sécurité</span>
             </div>
 
         </section>
@@ -75,50 +74,30 @@
         </section>
 
 
-        <!-- CONTEXT -->
+        <!-- 01 PRÉSENTATION -->
 
         <section class="project-section">
 
             <p class="section-number">01</p>
 
-            <h2>Contexte</h2>
+            <h2>Présentation</h2>
 
             <div class="project-text">
 
                 <p>
-                    Ce projet consiste à concevoir une infrastructure
-                    réseau multi-site simulée avec Cisco Packet Tracer.
+                    Ce projet met en place une infrastructure réseau
+                    multi-site simulant une entreprise composée d'un
+                    siège (HQ) et d'une agence distante (Branch).
                 </p>
-
-                <p>
-                    L'objectif est de mettre en place une architecture
-                    permettant aux différents sites de communiquer
-                    tout en assurant la segmentation et la sécurité
-                    du réseau.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- OBJECTIVES -->
-
-        <section class="project-section">
-
-            <p class="section-number">02</p>
-
-            <h2>Objectifs</h2>
-
-            <div class="project-text">
 
                 <ul>
-                    <li>Concevoir une architecture réseau multi-site.</li>
-                    <li>Configurer les équipements Cisco.</li>
-                    <li>Mettre en place le routage entre les différents réseaux.</li>
-                    <li>Segmenter le réseau avec des VLAN.</li>
-                    <li>Mettre en place le DHCP.</li>
-                    <li>Sécuriser les communications réseau.</li>
+                    <li>Segmentation en VLAN et routage inter-VLAN</li>
+                    <li>Routage dynamique OSPF entre les deux sites</li>
+                    <li>Agrégation de liens avec EtherChannel LACP</li>
+                    <li>Service DHCP pour l'agence</li>
+                    <li>Traduction NAT/PAT vers Internet</li>
+                    <li>Administration à distance en SSH</li>
+                    <li>Sécurité de niveau 2 et ACL inter-VLAN</li>
                 </ul>
 
             </div>
@@ -126,7 +105,36 @@
         </section>
 
 
-        <!-- TECHNOLOGIES -->
+        <!-- 02 ARCHITECTURE -->
+
+        <section class="project-section">
+
+            <p class="section-number">02</p>
+
+            <h2>Architecture</h2>
+
+            <div class="project-text">
+
+                <p>
+                    R1-ISP simule Internet et fournit la connectivité
+                    externe à R2-HQ. Sur le siège, R2-HQ gère le
+                    routage OSPF, le NAT/PAT, les ACL et l'accès SSH,
+                    et relie SW1-CORE en trunk 802.1Q.
+                </p>
+
+                <ul>
+                    <li>SW1-CORE ↔ SW2 : EtherChannel LACP (Po1)</li>
+                    <li>SW1-CORE ↔ SW3-ACCESS : trunk, 3 VLAN distribués aux postes (10 ADMIN, 20 USERS, 30 SERVERS)</li>
+                    <li>R2-HQ ↔ R3-BRANCH : liaison WAN routée en OSPF</li>
+                    <li>R3-BRANCH gère le DHCP de l'agence et relie SW4 avec 2 VLAN (110 SALES, 120 GUEST)</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- 03 TECHNOLOGIES -->
 
         <section class="project-section">
 
@@ -137,28 +145,43 @@
             <div class="technology-grid">
 
                 <div class="technology">
-                    <strong>Cisco Packet Tracer</strong>
-                    <span>Network simulation</span>
+                    <strong>VLAN / 802.1Q</strong>
+                    <span>Segmentation réseau</span>
                 </div>
 
                 <div class="technology">
-                    <strong>VLAN</strong>
-                    <span>Network segmentation</span>
+                    <strong>OSPF</strong>
+                    <span>Routage dynamique</span>
                 </div>
 
                 <div class="technology">
-                    <strong>Routing</strong>
-                    <span>Inter-network communication</span>
+                    <strong>EtherChannel LACP</strong>
+                    <span>Agrégation de liens</span>
                 </div>
 
                 <div class="technology">
                     <strong>DHCP</strong>
-                    <span>IP address management</span>
+                    <span>Attribution d'adresses</span>
+                </div>
+
+                <div class="technology">
+                    <strong>NAT / PAT</strong>
+                    <span>Traduction d'adresses</span>
                 </div>
 
                 <div class="technology">
                     <strong>ACL</strong>
-                    <span>Network access control</span>
+                    <span>Contrôle d'accès</span>
+                </div>
+
+                <div class="technology">
+                    <strong>SSH</strong>
+                    <span>Administration distante</span>
+                </div>
+
+                <div class="technology">
+                    <strong>Port Security / DAI</strong>
+                    <span>Sécurité de niveau 2</span>
                 </div>
 
             </div>
@@ -166,26 +189,39 @@
         </section>
 
 
-        <!-- SECURITY -->
+        <!-- 04 PLAN D'ADRESSAGE -->
 
         <section class="project-section">
 
             <p class="section-number">04</p>
 
-            <h2>Sécurité</h2>
+            <h2>Plan d'adressage</h2>
 
             <div class="project-text">
 
-                <p>
-                    La sécurité de l'infrastructure repose notamment
-                    sur la segmentation du réseau et le contrôle
-                    des communications entre les différents réseaux.
-                </p>
+                <div class="table-wrap">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>VLAN</th>
+                                <th>Nom</th>
+                                <th>Réseau</th>
+                                <th>Passerelle</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>10</td><td>ADMIN</td><td>192.168.10.0/24</td><td>192.168.10.1</td></tr>
+                            <tr><td>20</td><td>USERS</td><td>192.168.20.0/24</td><td>192.168.20.1</td></tr>
+                            <tr><td>30</td><td>SERVERS</td><td>192.168.30.0/24</td><td>192.168.30.1</td></tr>
+                            <tr><td>110</td><td>SALES</td><td>192.168.110.0/24</td><td>192.168.110.1</td></tr>
+                            <tr><td>120</td><td>GUEST</td><td>192.168.120.0/24</td><td>192.168.120.1</td></tr>
+                        </tbody>
+                    </table>
+                </div>
 
                 <p>
-                    Des mécanismes de filtrage peuvent être utilisés
-                    afin de limiter les communications autorisées
-                    entre les différentes zones du réseau.
+                    Liaisons WAN : R1 ↔ R2 en 10.0.0.0/30 (R1 = .1, R2 = .2)
+                    et R2 ↔ R3 en 10.0.0.4/30 (R2 = .5, R3 = .6).
                 </p>
 
             </div>
@@ -193,28 +229,388 @@
         </section>
 
 
-        <!-- LEARNING -->
+        <!-- 05 VLAN & TRUNKS -->
 
         <section class="project-section">
 
             <p class="section-number">05</p>
 
-            <h2>Ce que j'ai appris</h2>
+            <h2>VLAN &amp; Trunks</h2>
 
             <div class="project-text">
 
                 <p>
-                    Ce projet m'a permis de mieux comprendre la
-                    conception d'une infrastructure réseau,
-                    la segmentation des réseaux et la configuration
-                    des équipements Cisco.
+                    Création des VLAN sur SW1 et SW3, affectation des
+                    ports d'accès et mise en trunk du lien vers le cœur
+                    de réseau.
                 </p>
 
+<pre class="code-block">vlan 10
+ name ADMIN
+vlan 20
+ name USERS
+vlan 30
+ name SERVERS
+
+! SW3 - ports d'accès
+interface fa0/2
+ switchport mode access
+ switchport access vlan 10
+interface fa0/3
+ switchport mode access
+ switchport access vlan 20
+interface fa0/4
+ switchport mode access
+ switchport access vlan 30
+
+! Trunk vers SW1
+interface fa0/1
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,30</pre>
+
+                <p>Vérification : <code>show vlan brief</code> et <code>show interfaces trunk</code></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- 06 ETHERCHANNEL -->
+
+        <section class="project-section">
+
+            <p class="section-number">06</p>
+
+            <h2>EtherChannel LACP</h2>
+
+            <div class="project-text">
+
                 <p>
-                    Il m'a également permis de mettre en pratique
-                    plusieurs notions étudiées dans le cadre de
-                    mon Mastère Infrastructure & Réseaux.
+                    Agrégation de deux liens entre SW1 et SW2 pour
+                    doubler la bande passante et apporter de la
+                    redondance.
                 </p>
+
+<pre class="code-block">interface range fa0/23 - 24
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,30
+ channel-group 1 mode active
+
+interface port-channel 1
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,30</pre>
+
+                <p>
+                    Vérification avec <code>show etherchannel summary</code> :
+                    <code>Po1(SU)</code> en LACP, avec <code>Fa0/23(P)</code>
+                    et <code>Fa0/24(P)</code> correctement intégrés.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- 07 ROUTAGE -->
+
+        <section class="project-section">
+
+            <p class="section-number">07</p>
+
+            <h2>Routage inter-VLAN &amp; OSPF</h2>
+
+            <div class="project-text">
+
+                <h3>Router-on-a-Stick (R2)</h3>
+
+<pre class="code-block">interface gigabitEthernet 0/0.10
+ encapsulation dot1Q 10
+ ip address 192.168.10.1 255.255.255.0
+
+interface gigabitEthernet 0/0.20
+ encapsulation dot1Q 20
+ ip address 192.168.20.1 255.255.255.0
+
+interface gigabitEthernet 0/0.30
+ encapsulation dot1Q 30
+ ip address 192.168.30.1 255.255.255.0</pre>
+
+                <h3>OSPF entre R2-HQ et R3-BRANCH</h3>
+
+<pre class="code-block">! R2-HQ
+router ospf 1
+ router-id 1.1.1.1
+ network 10.0.0.4 0.0.0.3 area 0
+ network 192.168.10.0 0.0.0.255 area 0
+ network 192.168.20.0 0.0.0.255 area 0
+ network 192.168.30.0 0.0.0.255 area 0
+
+! R3-BRANCH
+router ospf 1
+ router-id 3.3.3.3
+ network 10.0.0.4 0.0.0.3 area 0
+ network 192.168.110.0 0.0.0.255 area 0
+ network 192.168.120.0 0.0.0.255 area 0</pre>
+
+                <p>
+                    Vérification : <code>show ip ospf neighbor</code>
+                    doit indiquer l'état <strong>FULL</strong>.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- 08 DHCP -->
+
+        <section class="project-section">
+
+            <p class="section-number">08</p>
+
+            <h2>DHCP</h2>
+
+            <div class="project-text">
+
+                <p>Service DHCP configuré sur R3 pour les postes de l'agence.</p>
+
+<pre class="code-block">ip dhcp excluded-address 192.168.110.1 192.168.110.9
+ip dhcp pool VLAN110-SALES
+ network 192.168.110.0 255.255.255.0
+ default-router 192.168.110.1
+ dns-server 8.8.8.8
+
+ip dhcp excluded-address 192.168.120.1 192.168.120.9
+ip dhcp pool VLAN120-GUEST
+ network 192.168.120.0 255.255.255.0
+ default-router 192.168.120.1
+ dns-server 8.8.8.8</pre>
+
+                <p>Vérification : <code>show ip dhcp binding</code></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- 09 SÉCURITÉ -->
+
+        <section class="project-section">
+
+            <p class="section-number">09</p>
+
+            <h2>Sécurité de niveau 2</h2>
+
+            <div class="project-text">
+
+                <h3>Port Security</h3>
+
+                <p>
+                    Un seul MAC autorisé par port utilisateur, apprentissage
+                    automatique (sticky) et restriction en cas de violation.
+                </p>
+
+<pre class="code-block">interface range fa0/2 - 4
+ switchport mode access
+ switchport port-security
+ switchport port-security maximum 1
+ switchport port-security mac-address sticky
+ switchport port-security violation restrict
+ spanning-tree portfast
+ spanning-tree bpduguard enable</pre>
+
+                <h3>DHCP Snooping &amp; Dynamic ARP Inspection</h3>
+
+                <p>
+                    Protection contre les serveurs DHCP non autorisés et
+                    l'usurpation ARP sur SW3.
+                </p>
+
+<pre class="code-block">ip dhcp snooping
+ip dhcp snooping vlan 10,20,30
+ip arp inspection vlan 10,20
+
+interface fa0/1
+ ip dhcp snooping trust
+ ip arp inspection trust
+
+interface range fa0/2 - 4
+ ip dhcp snooping limit rate 10
+ ip arp inspection limit rate 15</pre>
+
+                <h3>Administration SSH</h3>
+
+<pre class="code-block">hostname R2-HQ
+ip domain-name entreprise.local
+username admin privilege 15 secret Admin@2026!
+crypto key generate rsa
+ip ssh version 2
+
+line vty 0 4
+ login local
+ transport input ssh</pre>
+
+                <p>
+                    Vérification : <code>show port-security</code>,
+                    <code>show ip dhcp snooping</code>,
+                    <code>show ip arp inspection</code>,
+                    <code>show ip ssh</code>
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- 10 ACL -->
+
+        <section class="project-section">
+
+            <p class="section-number">10</p>
+
+            <h2>ACL inter-VLAN</h2>
+
+            <div class="project-text">
+
+                <p>
+                    Les utilisateurs (VLAN 20) n'ont pas accès au VLAN
+                    ADMIN, mais peuvent joindre les serveurs et l'agence.
+                </p>
+
+<pre class="code-block">ip access-list extended USERS-POLICY
+ deny ip 192.168.20.0 0.0.0.255 192.168.10.0 0.0.0.255
+ permit ip 192.168.20.0 0.0.0.255 192.168.30.0 0.0.0.255
+ permit ip 192.168.20.0 0.0.0.255 192.168.110.0 0.0.0.255
+ permit ip 192.168.20.0 0.0.0.255 192.168.120.0 0.0.0.255
+ permit ip any any</pre>
+
+                <p>
+                    Le VLAN GUEST (120) est quant à lui totalement
+                    cloisonné : aucun accès aux autres réseaux internes.
+                </p>
+
+<pre class="code-block">ip access-list extended GUEST-POLICY
+ deny ip 192.168.120.0 0.0.0.255 192.168.10.0 0.0.0.255
+ deny ip 192.168.120.0 0.0.0.255 192.168.20.0 0.0.0.255
+ deny ip 192.168.120.0 0.0.0.255 192.168.30.0 0.0.0.255
+ deny ip 192.168.120.0 0.0.0.255 192.168.110.0 0.0.0.255
+ permit ip any any</pre>
+
+                <p>Vérification : <code>show access-lists</code></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- 11 NAT/PAT -->
+
+        <section class="project-section">
+
+            <p class="section-number">11</p>
+
+            <h2>NAT / PAT</h2>
+
+            <div class="project-text">
+
+                <p>
+                    Traduction des adresses privées du siège vers
+                    Internet via PAT (surcharge sur l'interface WAN).
+                </p>
+
+<pre class="code-block">interface gigabitEthernet 0/0.10
+ ip nat inside
+interface gigabitEthernet 0/0.20
+ ip nat inside
+interface gigabitEthernet 0/0.30
+ ip nat inside
+interface gigabitEthernet 0/1
+ ip nat outside
+
+ip access-list standard NAT-HQ
+ permit 192.168.10.0 0.0.0.255
+ permit 192.168.20.0 0.0.0.255
+ permit 192.168.30.0 0.0.0.255
+
+ip nat inside source list NAT-HQ interface gigabitEthernet 0/1 overload
+ip route 0.0.0.0 0.0.0.0 10.0.0.1</pre>
+
+                <p>
+                    Vérification : <code>show ip nat translations</code>
+                    après un ping depuis un poste vers 8.8.8.8.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- 12 MATRICE DE TESTS -->
+
+        <section class="project-section">
+
+            <p class="section-number">12</p>
+
+            <h2>Matrice de tests</h2>
+
+            <div class="project-text">
+
+                <div class="table-wrap">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Test</th>
+                                <th>Résultat attendu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>PC → passerelle</td><td class="ok">OK</td></tr>
+                            <tr><td>VLAN 20 → VLAN 10</td><td class="no">Bloqué</td></tr>
+                            <tr><td>VLAN 20 → VLAN 30</td><td class="ok">OK</td></tr>
+                            <tr><td>VLAN 10 → VLAN 30</td><td class="ok">OK</td></tr>
+                            <tr><td>VLAN GUEST (120) → autres VLAN</td><td class="no">Bloqué</td></tr>
+                            <tr><td>PC → Internet simulé</td><td class="ok">OK</td></tr>
+                            <tr><td>Voisinage OSPF R2 ↔ R3</td><td class="ok">FULL</td></tr>
+                            <tr><td>EtherChannel</td><td class="ok">Po1(SU)</td></tr>
+                            <tr><td>DHCP agence</td><td class="ok">OK</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 13 LIMITES -->
+
+        <section class="project-section">
+
+            <p class="section-number">13</p>
+
+            <h2>Limites &amp; bilan</h2>
+
+            <div class="project-text">
+
+                <p>
+                    Un tunnel VPN IPsec site-à-site entre R2-HQ et
+                    R3-BRANCH était prévu, mais la version de Packet
+                    Tracer utilisée ne supporte pas correctement les
+                    commandes IPsec/IKE nécessaires. Ce point est
+                    documenté comme une limite de l'environnement de
+                    simulation, avec une v2 envisagée sous GNS3 ou
+                    EVE-NG.
+                </p>
+
+                <div class="pitch">
+                    J'ai conçu une infrastructure Cisco multi-site avec
+                    segmentation VLAN, routage inter-VLAN, EtherChannel
+                    LACP et OSPF entre un siège et une agence, puis
+                    sécurisé l'ensemble avec Port Security, DHCP
+                    Snooping, Dynamic ARP Inspection, SSH et des ACL
+                    inter-VLAN — en validant chaque fonctionnalité avec
+                    les commandes de troubleshooting Cisco.
+                </div>
 
             </div>
 
@@ -226,7 +622,7 @@
         <div class="back-projects">
 
             <a href="index.html#projects">
-                ← Back to projects
+                ← Retour aux projets
             </a>
 
         </div>
