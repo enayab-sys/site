@@ -72,17 +72,21 @@ main {
     padding: 28px 30px;
 
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 }
 
 .logo-mark {
     display: flex;
+
     align-items: center;
 
     gap: 9px;
 
     font-weight: 700;
+
     font-size: 15px;
 
     color: var(--text);
@@ -93,53 +97,110 @@ main {
     height: 38px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     background: transparent;
 
-    border-radius: 8px;
+    color: var(--text);
 
-    flex-shrink: 0;
+    border-radius: 8px;
 }
 
 
 /* =========================
-   RUBIK'S CUBE — SVG
+   RUBIK'S CUBE
 ========================= */
 
-/*
-   Le cube est maintenant un SVG.
-   Il reste donc parfaitement net,
-   même sur les écrans Retina.
-*/
+.rubiks-cube {
+    width: 28px;
+    height: 28px;
 
-.rubiks-logo {
-    width: 32px;
-    height: 32px;
+    display: grid;
 
-    display: block;
+    grid-template-columns: repeat(3, 1fr);
 
-    transform: rotate(-4deg);
+    grid-template-rows: repeat(3, 1fr);
 
-    filter:
-        drop-shadow(
-            2px 3px 2px rgba(0, 0, 0, 0.15)
-        );
-}
+    gap: 2px;
 
-.rubiks-hero {
-    width: 48px;
-    height: 48px;
+    padding: 2px;
 
-    display: block;
+    background: #171717;
+
+    border-radius: 4px;
 
     transform: rotate(-5deg);
 
-    filter:
-        drop-shadow(
-            3px 4px 3px rgba(0, 0, 0, 0.15)
-        );
+    box-shadow:
+        3px 4px 0 rgba(0, 0, 0, 0.12);
+}
+
+.rubiks-cube span {
+    display: block;
+
+    min-width: 0;
+    min-height: 0;
+
+    border-radius: 1px;
+}
+
+
+/* Couleurs */
+
+.rubiks-cube span:nth-child(1) {
+    background: #ffffff;
+}
+
+.rubiks-cube span:nth-child(2) {
+    background: #ef4444;
+}
+
+.rubiks-cube span:nth-child(3) {
+    background: #3b82f6;
+}
+
+.rubiks-cube span:nth-child(4) {
+    background: #facc15;
+}
+
+.rubiks-cube span:nth-child(5) {
+    background: #22c55e;
+}
+
+.rubiks-cube span:nth-child(6) {
+    background: #ffffff;
+}
+
+.rubiks-cube span:nth-child(7) {
+    background: #f97316;
+}
+
+.rubiks-cube span:nth-child(8) {
+    background: #3b82f6;
+}
+
+.rubiks-cube span:nth-child(9) {
+    background: #ef4444;
+}
+
+
+/* Cube Hero */
+
+.hero-cube {
+    width: 42px;
+    height: 42px;
+
+    gap: 3px;
+
+    padding: 3px;
+
+    transform: rotate(-8deg);
+
+    box-shadow:
+        5px 6px 0 rgba(0, 0, 0, 0.12);
 }
 
 
@@ -149,6 +210,7 @@ main {
 
 .navbar nav {
     display: flex;
+
     align-items: center;
 
     gap: 25px;
@@ -159,8 +221,7 @@ main {
 
     font-size: 14px;
 
-    transition:
-        color 0.2s ease;
+    transition: color 0.2s ease;
 }
 
 .navbar nav a:hover {
@@ -180,7 +241,9 @@ main {
     padding: 130px 20px 110px;
 
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
 
     text-align: center;
@@ -193,12 +256,16 @@ main {
     margin-bottom: 30px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     border-radius: 50%;
 
     background: var(--accent-soft);
+
+    color: var(--accent);
 
     box-shadow:
         0 10px 30px rgba(217, 119, 6, 0.15);
@@ -242,7 +309,7 @@ main {
 
 
 /* =========================
-   CONTACT WIDGET
+   CONTACT
 ========================= */
 
 .contact-widget {
@@ -270,8 +337,7 @@ main {
 
     cursor: pointer;
 
-    transition:
-        opacity 0.2s ease;
+    transition: opacity 0.2s ease;
 }
 
 .contact-trigger:hover {
@@ -287,9 +353,7 @@ main {
 
     width: 280px;
 
-    transform:
-        translateX(-50%)
-        translateY(-8px);
+    transform: translateX(-50%) translateY(-8px);
 
     background: #1a1a1a;
 
@@ -319,15 +383,14 @@ main {
 
     visibility: visible;
 
-    transform:
-        translateX(-50%)
-        translateY(0);
+    transform: translateX(-50%) translateY(0);
 }
 
 .contact-card-bar {
     height: 38px;
 
     display: flex;
+
     align-items: center;
 
     padding: 0 14px;
@@ -376,7 +439,9 @@ main {
     padding: 18px 16px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     gap: 10px;
@@ -411,8 +476,7 @@ main {
 
     cursor: pointer;
 
-    transition:
-        border-color 0.2s ease;
+    transition: border-color 0.2s ease;
 }
 
 .copy-btn:hover {
@@ -460,10 +524,7 @@ main {
 .project {
     display: grid;
 
-    grid-template-columns:
-        60px
-        1fr
-        auto;
+    grid-template-columns: 60px 1fr auto;
 
     gap: 25px;
 
@@ -471,8 +532,7 @@ main {
 
     border-top: 1px solid var(--border);
 
-    transition:
-        padding 0.2s ease;
+    transition: padding 0.2s ease;
 }
 
 .project:last-child {
@@ -558,31 +618,6 @@ main {
 
 
 /* =========================
-   ABOUT PAGE
-========================= */
-
-.about-page {
-    padding: 120px 0 100px;
-}
-
-.about-page .section-header {
-    margin-bottom: 60px;
-}
-
-.about-page h1 {
-    font-size: clamp(42px, 7vw, 68px);
-
-    line-height: 1.05;
-
-    letter-spacing: -2px;
-}
-
-.about-page .about-content {
-    max-width: 650px;
-}
-
-
-/* =========================
    FOOTER
 ========================= */
 
@@ -594,6 +629,7 @@ footer {
     padding: 40px 30px 60px;
 
     display: flex;
+
     justify-content: space-between;
 
     color: var(--muted);
@@ -606,8 +642,13 @@ footer a {
 }
 
 
+/* ==================================================
+   PROJECT PAGES
+================================================== */
+
+
 /* =========================
-   PROJECT PAGE
+   PROJECT HERO
 ========================= */
 
 .project-hero {
@@ -638,29 +679,74 @@ footer a {
     margin-top: 30px;
 }
 
+
+/* =========================
+   PROJECT IMAGE SECTION
+========================= */
+
+.project-image-section {
+    padding: 90px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.project-image-section .section-header {
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   PROJECT IMAGE
+========================= */
+
 .project-image {
-    padding: 70px 0;
+    width: 100%;
 }
 
 .project-image img {
     width: 100%;
 
+    height: auto;
+
     display: block;
 
     border: 1px solid var(--border);
 
-    border-radius: 8px;
+    border-radius: 10px;
+
+    background: var(--surface);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.06);
+
+    /*
+       Empêche l'image d'être floue
+       à cause d'une déformation.
+    */
+    image-rendering: auto;
 }
+
+.image-caption {
+    margin-top: 12px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    text-align: center;
+}
+
+
+/* =========================
+   PROJECT SECTION
+========================= */
 
 .project-section {
     padding: 90px 0;
 
     display: grid;
 
-    grid-template-columns:
-        80px
-        250px
-        1fr;
+    grid-template-columns: 80px 250px 1fr;
 
     gap: 30px;
 
@@ -695,12 +781,25 @@ footer a {
     margin-bottom: 12px;
 }
 
+.project-text h3 {
+    font-size: 16px;
+
+    margin: 30px 0 5px;
+}
+
+.project-text h3:first-child {
+    margin-top: 0;
+}
+
+
+/* =========================
+   TECHNOLOGY GRID
+========================= */
+
 .technology-grid {
     display: grid;
 
-    grid-template-columns:
-        1fr
-        1fr;
+    grid-template-columns: 1fr 1fr;
 
     gap: 1px;
 
@@ -731,6 +830,11 @@ footer a {
     font-size: 13px;
 }
 
+
+/* =========================
+   BACK PROJECTS
+========================= */
+
 .back-projects {
     padding: 70px 0;
 }
@@ -740,8 +844,7 @@ footer a {
 
     border-bottom: 1px solid var(--text);
 
-    transition:
-        opacity 0.2s ease;
+    transition: opacity 0.2s ease;
 }
 
 .back-projects a:hover {
@@ -750,7 +853,7 @@ footer a {
 
 
 /* =========================
-   CODE & TABLEAUX
+   CODE
 ========================= */
 
 .code-block {
@@ -779,15 +882,10 @@ footer a {
     color: var(--text);
 }
 
-.project-text h3 {
-    font-size: 16px;
 
-    margin: 30px 0 5px;
-}
-
-.project-text h3:first-child {
-    margin-top: 0;
-}
+/* =========================
+   TABLEAUX
+========================= */
 
 .data-table {
     width: 100%;
@@ -838,6 +936,11 @@ footer a {
     overflow-x: auto;
 }
 
+
+/* =========================
+   PITCH
+========================= */
+
 .pitch {
     background: var(--surface);
 
@@ -854,8 +957,33 @@ footer a {
 
 
 /* =========================
-   MOBILE
+   ABOUT PAGE
 ========================= */
+
+.about-page {
+    padding: 120px 0 100px;
+}
+
+.about-page .section-header {
+    margin-bottom: 60px;
+}
+
+.about-page h1 {
+    font-size: clamp(42px, 7vw, 68px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+}
+
+.about-page .about-content {
+    max-width: 650px;
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
 
 @media (max-width: 650px) {
 
@@ -864,9 +992,7 @@ footer a {
     }
 
 
-    /* =========================
-       NAVBAR MOBILE
-    ========================== */
+    /* NAVBAR */
 
     .navbar {
         padding: 25px 20px;
@@ -880,20 +1006,8 @@ footer a {
         font-size: 12px;
     }
 
-    .logo-icon {
-        width: 34px;
-        height: 34px;
-    }
 
-    .rubiks-logo {
-        width: 30px;
-        height: 30px;
-    }
-
-
-    /* =========================
-       HERO MOBILE
-    ========================== */
+    /* HERO */
 
     .hero {
         padding: 90px 20px 60px;
@@ -906,39 +1020,31 @@ footer a {
         margin-bottom: 22px;
     }
 
-    .rubiks-hero {
-        width: 42px;
-        height: 42px;
-    }
-
     .hero h1 {
         font-size: 44px;
 
         letter-spacing: -1.5px;
     }
 
+
+    /* CONTACT */
+
     .contact-card {
         width: 240px;
     }
 
 
-    /* =========================
-       SECTIONS MOBILE
-    ========================== */
+    /* SECTIONS */
 
     .section {
         padding: 70px 0;
     }
 
 
-    /* =========================
-       PROJECTS MOBILE
-    ========================== */
+    /* PROJECTS */
 
     .project {
-        grid-template-columns:
-            40px
-            1fr;
+        grid-template-columns: 40px 1fr;
     }
 
     .project-link {
@@ -946,31 +1052,11 @@ footer a {
     }
 
 
-    /* =========================
-       ABOUT MOBILE
-    ========================== */
-
-    .about-page {
-        padding: 80px 0 60px;
-    }
-
-    .about-page .section-header {
-        margin-bottom: 40px;
-    }
-
-    .about-page h1 {
-        font-size: 42px;
-
-        letter-spacing: -1.5px;
-    }
-
-
-    /* =========================
-       FOOTER MOBILE
-    ========================== */
+    /* FOOTER */
 
     footer {
         padding-left: 20px;
+
         padding-right: 20px;
 
         flex-direction: column;
@@ -979,9 +1065,7 @@ footer a {
     }
 
 
-    /* =========================
-       PROJECT PAGE MOBILE
-    ========================== */
+    /* PROJECT HERO */
 
     .project-hero {
         padding: 80px 0 60px;
@@ -992,6 +1076,32 @@ footer a {
 
         letter-spacing: -1.5px;
     }
+
+
+    /* PROJECT IMAGE */
+
+    .project-image-section {
+        padding: 65px 0;
+    }
+
+    .project-image-section .section-header {
+        display: grid;
+
+        grid-template-columns: 45px 1fr;
+
+        margin-bottom: 30px;
+    }
+
+    .project-image-section h2 {
+        font-size: 27px;
+    }
+
+    .project-image img {
+        border-radius: 7px;
+    }
+
+
+    /* PROJECT SECTIONS */
 
     .project-section {
         display: block;
@@ -1007,7 +1117,24 @@ footer a {
         margin-bottom: 30px;
     }
 
+
+    /* TECHNOLOGIES */
+
     .technology-grid {
         grid-template-columns: 1fr;
     }
+
+
+    /* ABOUT */
+
+    .about-page {
+        padding: 80px 0 60px;
+    }
+
+    .about-page h1 {
+        font-size: 42px;
+
+        letter-spacing: -1.5px;
+    }
+
 }
