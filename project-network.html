@@ -9,7 +9,7 @@
 
     <meta
         name="description"
-        content="Projet d'infrastructure réseau multi-site réalisé avec Cisco Packet Tracer."
+        content="Conception et sécurisation d'une infrastructure réseau Cisco multi-site avec VLAN, OSPF, EtherChannel, DHCP, NAT, ACL et mécanismes de sécurité."
     >
 
     <link rel="stylesheet" href="style.css">
@@ -17,13 +17,13 @@
 
 <body>
 
-    <!-- =========================
+    <!-- =====================================================
          NAVBAR
-    ========================== -->
+    ====================================================== -->
 
     <header class="navbar">
 
-        <a href="index.html" class="logo-mark">
+        <a href="index.html" class="logo-mark" aria-label="Retour à l'accueil">
 
             <span class="logo-icon">
 
@@ -57,42 +57,70 @@
 
     <main>
 
-        <!-- =========================
-             PROJECT HERO
-        ========================== -->
+        <!-- =================================================
+             HERO
+        ================================================== -->
 
         <section class="project-hero">
 
             <p class="eyebrow">
-                Projet 01
+                Projet 01 · Réseau & infrastructure
             </p>
 
             <h1>
-                Infrastructure réseau multi-site
+                Infrastructure<br>
+                réseau multi-site
             </h1>
 
             <p class="project-intro">
-                Conception et sécurisation d'une infrastructure réseau
-                multi-site réalisée avec Cisco Packet Tracer.
-                L'objectif était de mettre en place une architecture
-                réseau fonctionnelle, organisée et sécurisée.
+                Conception, configuration et sécurisation d'une
+                infrastructure Cisco simulant le réseau d'une
+                entreprise composée d'un siège et d'une agence distante.
             </p>
 
             <div class="tags project-tags">
-
-                <span>Cisco</span>
+                <span>Cisco IOS</span>
                 <span>Packet Tracer</span>
-                <span>Réseau</span>
+                <span>VLAN</span>
+                <span>OSPF</span>
                 <span>Sécurité</span>
-
             </div>
 
         </section>
 
 
-        <!-- =========================
+        <!-- =================================================
+             CHIFFRES / RESUME
+        ================================================== -->
+
+        <section class="project-overview">
+
+            <div class="overview-card">
+                <strong>2</strong>
+                <span>Sites réseau</span>
+            </div>
+
+            <div class="overview-card">
+                <strong>5</strong>
+                <span>VLAN configurés</span>
+            </div>
+
+            <div class="overview-card">
+                <strong>3</strong>
+                <span>Routeurs</span>
+            </div>
+
+            <div class="overview-card">
+                <strong>10+</strong>
+                <span>Mécanismes réseau</span>
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
              TOPOLOGIE
-        ========================== -->
+        ================================================== -->
 
         <section class="project-image-section">
 
@@ -102,9 +130,15 @@
                     01
                 </p>
 
-                <h2>
-                    Topologie sur Cisco Packet Tracer
-                </h2>
+                <div>
+                    <p class="section-label">
+                        Architecture
+                    </p>
+
+                    <h2>
+                        Une infrastructure pensée comme un réseau d'entreprise
+                    </h2>
+                </div>
 
             </div>
 
@@ -112,11 +146,11 @@
 
                 <img
                     src="images/topology_cisco.png"
-                    alt="Topologie réseau réalisée sur Cisco Packet Tracer"
+                    alt="Topologie de l'infrastructure réseau Cisco multi-site"
                 >
 
                 <p class="image-caption">
-                    Topologie de l'infrastructure réseau réalisée sur Cisco Packet Tracer.
+                    Topologie complète réalisée et testée dans Cisco Packet Tracer.
                 </p>
 
             </div>
@@ -124,9 +158,9 @@
         </section>
 
 
-        <!-- =========================
+        <!-- =================================================
              CONTEXTE
-        ========================== -->
+        ================================================== -->
 
         <section class="project-section">
 
@@ -134,33 +168,47 @@
                 02
             </p>
 
-            <h2>
-                Contexte
-            </h2>
+            <div class="project-section-title">
+                <p class="section-label">
+                    Contexte
+                </p>
+
+                <h2>
+                    Le besoin
+                </h2>
+            </div>
 
             <div class="project-text">
 
                 <p>
-                    Ce projet consiste à concevoir une infrastructure
-                    réseau permettant de connecter plusieurs sites
-                    d'une même organisation.
+                    L'objectif était de construire une infrastructure
+                    représentant le réseau d'une entreprise avec un
+                    <strong>siège HQ</strong>, une <strong>agence distante</strong>
+                    et un accès à un Internet simulé.
                 </p>
 
                 <p>
-                    L'objectif était de mettre en pratique différentes
-                    notions d'administration réseau, notamment le
-                    routage, l'adressage IP, la segmentation du réseau
-                    et la sécurisation des communications.
+                    Le projet devait répondre à plusieurs problématiques :
+                    segmentation des utilisateurs, communication entre les
+                    réseaux, routage dynamique, accès Internet,
+                    administration distante et protection des équipements.
                 </p>
+
+                <div class="pitch">
+                    <strong>Problématique :</strong>
+                    comment construire un réseau multi-site fonctionnel,
+                    segmenté et sécurisé tout en conservant une architecture
+                    facilement administrable ?
+                </div>
 
             </div>
 
         </section>
 
 
-        <!-- =========================
-             OBJECTIFS
-        ========================== -->
+        <!-- =================================================
+             ARCHITECTURE
+        ================================================== -->
 
         <section class="project-section">
 
@@ -168,150 +216,88 @@
                 03
             </p>
 
-            <h2>
-                Objectifs
-            </h2>
-
-            <div class="project-text">
-
-                <p>
-                    La réalisation de cette infrastructure avait
-                    plusieurs objectifs :
+            <div class="project-section-title">
+                <p class="section-label">
+                    Architecture
                 </p>
 
-                <ul>
-
-                    <li>
-                        Concevoir une architecture réseau multi-site.
-                    </li>
-
-                    <li>
-                        Configurer les équipements réseau.
-                    </li>
-
-                    <li>
-                        Mettre en place le routage entre les différents réseaux.
-                    </li>
-
-                    <li>
-                        Organiser l'adressage IP.
-                    </li>
-
-                    <li>
-                        Tester la connectivité entre les différents équipements.
-                    </li>
-
-                    <li>
-                        Appliquer des mesures de sécurité adaptées.
-                    </li>
-
-                </ul>
-
+                <h2>
+                    Organisation du réseau
+                </h2>
             </div>
 
-        </section>
-
-
-        <!-- =========================
-             REALISATION
-        ========================== -->
-
-        <section class="project-section">
-
-            <p class="section-number">
-                04
-            </p>
-
-            <h2>
-                Réalisation
-            </h2>
-
             <div class="project-text">
 
                 <p>
-                    L'infrastructure a été entièrement simulée avec
-                    Cisco Packet Tracer afin de pouvoir tester
-                    l'architecture avant son éventuel déploiement.
+                    Le réseau est organisé autour de plusieurs équipements
+                    Cisco. Le routeur <strong>R2-HQ</strong> assure le routage
+                    du siège et la sortie vers Internet. <strong>R3-BRANCH</strong>
+                    représente l'agence distante.
                 </p>
 
-                <p>
-                    Les différents équipements ont été configurés
-                    afin d'assurer la communication entre les réseaux
-                    et les différents sites.
-                </p>
+                <div class="architecture">
 
-                <h3>
-                    Configuration réseau
-                </h3>
-
-                <p>
-                    Une attention particulière a été portée à
-                    l'adressage IP et à la configuration des interfaces
-                    réseau des équipements.
-                </p>
-
-                <h3>
-                    Routage
-                </h3>
-
-                <p>
-                    Le routage permet aux différents réseaux de
-                    communiquer entre eux. Les routes nécessaires
-                    ont été configurées et testées dans l'environnement
-                    Cisco Packet Tracer.
-                </p>
-
-                <h3>
-                    Tests
-                </h3>
-
-                <p>
-                    Plusieurs tests de connectivité ont été réalisés
-                    afin de vérifier le bon fonctionnement de
-                    l'infrastructure.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             COMPETENCES
-        ========================== -->
-
-        <section class="project-section">
-
-            <p class="section-number">
-                05
-            </p>
-
-            <h2>
-                Compétences
-            </h2>
-
-            <div class="project-text">
-
-                <div class="technology-grid">
-
-                    <div class="technology">
-                        <strong>Cisco Packet Tracer</strong>
-                        <span>Simulation d'infrastructures réseau</span>
+                    <div class="architecture-node">
+                        <span class="node-type">WAN</span>
+                        <strong>R1-ISP</strong>
+                        <small>Internet simulé · 8.8.8.8</small>
                     </div>
 
-                    <div class="technology">
-                        <strong>Adressage IP</strong>
-                        <span>Organisation et configuration des réseaux</span>
+                    <div class="architecture-line"></div>
+
+                    <div class="architecture-node architecture-main">
+                        <span class="node-type">HQ</span>
+                        <strong>R2-HQ</strong>
+                        <small>OSPF · NAT/PAT · ACL · SSH</small>
                     </div>
 
-                    <div class="technology">
-                        <strong>Routage</strong>
-                        <span>Communication entre plusieurs réseaux</span>
+                    <div class="architecture-line"></div>
+
+                    <div class="architecture-node">
+                        <span class="node-type">CORE</span>
+                        <strong>SW1-CORE</strong>
+                        <small>VLAN · Trunk · EtherChannel</small>
                     </div>
 
-                    <div class="technology">
-                        <strong>Sécurité réseau</strong>
-                        <span>Mise en place de mesures de protection</span>
+                    <div class="architecture-branches">
+
+                        <div class="architecture-branch">
+                            <strong>VLAN 10</strong>
+                            <span>ADMIN</span>
+                        </div>
+
+                        <div class="architecture-branch">
+                            <strong>VLAN 20</strong>
+                            <span>USERS</span>
+                        </div>
+
+                        <div class="architecture-branch">
+                            <strong>VLAN 30</strong>
+                            <span>SERVERS</span>
+                        </div>
+
+                    </div>
+
+                    <div class="architecture-line"></div>
+
+                    <div class="architecture-node">
+                        <span class="node-type">WAN</span>
+                        <strong>R3-BRANCH</strong>
+                        <small>OSPF · DHCP · ACL · SSH</small>
+                    </div>
+
+                    <div class="architecture-branches">
+
+                        <div class="architecture-branch">
+                            <strong>VLAN 110</strong>
+                            <span>SALES</span>
+                        </div>
+
+                        <div class="architecture-branch">
+                            <strong>VLAN 120</strong>
+                            <span>GUEST</span>
+                        </div>
+
                     </div>
 
                 </div>
@@ -321,9 +307,189 @@
         </section>
 
 
-        <!-- =========================
-             BILAN
-        ========================== -->
+        <!-- =================================================
+             PLAN ADRESSAGE
+        ================================================== -->
+
+        <section class="project-section">
+
+            <p class="section-number">
+                04
+            </p>
+
+            <div class="project-section-title">
+                <p class="section-label">
+                    Réseau
+                </p>
+
+                <h2>
+                    Plan d'adressage
+                </h2>
+            </div>
+
+            <div class="project-text">
+
+                <p>
+                    Chaque service est isolé dans son propre réseau logique.
+                    Cette organisation facilite l'administration et permet
+                    d'appliquer des politiques de sécurité différentes.
+                </p>
+
+                <div class="table-wrap">
+
+                    <table class="data-table">
+
+                        <thead>
+                            <tr>
+                                <th>VLAN</th>
+                                <th>Nom</th>
+                                <th>Réseau</th>
+                                <th>Passerelle</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>10</td>
+                                <td>ADMIN</td>
+                                <td>192.168.10.0/24</td>
+                                <td>192.168.10.1</td>
+                            </tr>
+
+                            <tr>
+                                <td>20</td>
+                                <td>USERS</td>
+                                <td>192.168.20.0/24</td>
+                                <td>192.168.20.1</td>
+                            </tr>
+
+                            <tr>
+                                <td>30</td>
+                                <td>SERVERS</td>
+                                <td>192.168.30.0/24</td>
+                                <td>192.168.30.1</td>
+                            </tr>
+
+                            <tr>
+                                <td>110</td>
+                                <td>SALES</td>
+                                <td>192.168.110.0/24</td>
+                                <td>192.168.110.1</td>
+                            </tr>
+
+                            <tr>
+                                <td>120</td>
+                                <td>GUEST</td>
+                                <td>192.168.120.0/24</td>
+                                <td>192.168.120.1</td>
+                            </tr>
+
+                            <tr>
+                                <td>WAN</td>
+                                <td>R2 ↔ R3</td>
+                                <td>10.0.0.4/30</td>
+                                <td>R2 .5 / R3 .6</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             VLAN / ETHERCHANNEL
+        ================================================== -->
+
+        <section class="project-section">
+
+            <p class="section-number">
+                05
+            </p>
+
+            <div class="project-section-title">
+                <p class="section-label">
+                    Switching
+                </p>
+
+                <h2>
+                    VLAN & EtherChannel
+                </h2>
+            </div>
+
+            <div class="project-text">
+
+                <p>
+                    Le réseau du siège est segmenté en plusieurs VLAN afin
+                    de séparer les administrateurs, les utilisateurs et les
+                    serveurs.
+                </p>
+
+                <div class="feature-grid">
+
+                    <div class="feature">
+                        <span class="feature-number">01</span>
+                        <strong>VLAN 10</strong>
+                        <p>Administration</p>
+                    </div>
+
+                    <div class="feature">
+                        <span class="feature-number">02</span>
+                        <strong>VLAN 20</strong>
+                        <p>Utilisateurs</p>
+                    </div>
+
+                    <div class="feature">
+                        <span class="feature-number">03</span>
+                        <strong>VLAN 30</strong>
+                        <p>Serveurs</p>
+                    </div>
+
+                </div>
+
+                <h3>
+                    Trunks 802.1Q
+                </h3>
+
+                <p>
+                    Les liaisons entre les équipements utilisent des trunks
+                    permettant de transporter les VLAN 10, 20 et 30.
+                </p>
+
+                <h3>
+                    EtherChannel LACP
+                </h3>
+
+                <p>
+                    Deux interfaces physiques sont regroupées dans un
+                    <strong>Port-Channel 1</strong> avec LACP afin d'augmenter
+                    la capacité du lien et d'apporter une redondance au niveau
+                    du raccordement entre les switches.
+                </p>
+
+                <div class="code-block">
+                    <code>
+                        SW1# show etherchannel summary<br>
+                        Group  Port-channel  Protocol<br>
+                        1      Po1(SU)       LACP<br><br>
+                        Fa0/23(P) &nbsp; Fa0/24(P)
+                    </code>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ROUTAGE
+        ================================================== -->
 
         <section class="project-section">
 
@@ -331,24 +497,415 @@
                 06
             </p>
 
-            <h2>
-                Bilan
-            </h2>
+            <div class="project-section-title">
+                <p class="section-label">
+                    Routage
+                </p>
+
+                <h2>
+                    Inter-VLAN & OSPF
+                </h2>
+            </div>
+
+            <div class="project-text">
+
+                <h3>
+                    Router-on-a-Stick
+                </h3>
+
+                <p>
+                    Le routage inter-VLAN du siège est assuré par
+                    <strong>R2-HQ</strong>. Une interface physique est utilisée
+                    comme trunk et plusieurs sous-interfaces permettent
+                    d'associer une passerelle à chaque VLAN.
+                </p>
+
+                <div class="code-block">
+                    <code>
+                        G0/0.10 → 192.168.10.1<br>
+                        G0/0.20 → 192.168.20.1<br>
+                        G0/0.30 → 192.168.30.1
+                    </code>
+                </div>
+
+                <h3>
+                    OSPF Area 0
+                </h3>
+
+                <p>
+                    Le routage dynamique OSPF permet à R2-HQ et R3-BRANCH
+                    d'échanger automatiquement leurs routes.
+                </p>
+
+                <div class="ospf-box">
+
+                    <div>
+                        <span>R2-HQ</span>
+                        <strong>1.1.1.1</strong>
+                    </div>
+
+                    <div class="ospf-link">
+                        <small>AREA 0</small>
+                        <strong>10.0.0.4/30</strong>
+                    </div>
+
+                    <div>
+                        <span>R3-BRANCH</span>
+                        <strong>3.3.3.3</strong>
+                    </div>
+
+                </div>
+
+                <div class="code-block">
+                    <code>
+                        R2# show ip ospf neighbor<br><br>
+                        Neighbor ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State<br>
+                        3.3.3.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FULL
+                    </code>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SERVICES
+        ================================================== -->
+
+        <section class="project-section">
+
+            <p class="section-number">
+                07
+            </p>
+
+            <div class="project-section-title">
+                <p class="section-label">
+                    Services
+                </p>
+
+                <h2>
+                    DHCP, NAT & SSH
+                </h2>
+            </div>
+
+            <div class="project-text">
+
+                <div class="service-list">
+
+                    <div class="service-item">
+                        <span>DHCP</span>
+
+                        <div>
+                            <strong>Attribution automatique</strong>
+                            <p>
+                                Les VLAN 110 et 120 de l'agence reçoivent
+                                automatiquement leur configuration IP.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <span>NAT/PAT</span>
+
+                        <div>
+                            <strong>Accès Internet simulé</strong>
+                            <p>
+                                Les réseaux internes du siège sont traduits
+                                vers l'interface WAN de R2.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="service-item">
+                        <span>SSH</span>
+
+                        <div>
+                            <strong>Administration sécurisée</strong>
+                            <p>
+                                Les équipements sont administrables à distance
+                                via SSH plutôt que par Telnet.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SECURITE
+        ================================================== -->
+
+        <section class="project-section security-section">
+
+            <p class="section-number">
+                08
+            </p>
+
+            <div class="project-section-title">
+                <p class="section-label">
+                    Sécurité
+                </p>
+
+                <h2>
+                    Défense en profondeur
+                </h2>
+            </div>
 
             <div class="project-text">
 
                 <p>
-                    Ce projet m'a permis de mettre en pratique les
-                    connaissances acquises en administration réseau
-                    et de mieux comprendre le fonctionnement d'une
-                    infrastructure composée de plusieurs réseaux.
+                    La sécurité ne repose pas sur un seul mécanisme.
+                    Plusieurs protections ont été mises en place à
+                    différents niveaux du réseau.
                 </p>
 
+                <div class="security-grid">
+
+                    <div class="security-card">
+                        <span>01</span>
+                        <strong>Port Security</strong>
+                        <p>
+                            Limitation des adresses MAC autorisées sur
+                            les ports utilisateurs.
+                        </p>
+                    </div>
+
+                    <div class="security-card">
+                        <span>02</span>
+                        <strong>PortFast</strong>
+                        <p>
+                            Accélération de la mise en service des ports
+                            destinés aux postes clients.
+                        </p>
+                    </div>
+
+                    <div class="security-card">
+                        <span>03</span>
+                        <strong>BPDU Guard</strong>
+                        <p>
+                            Protection des ports utilisateurs contre
+                            l'injection de BPDU.
+                        </p>
+                    </div>
+
+                    <div class="security-card">
+                        <span>04</span>
+                        <strong>DHCP Snooping</strong>
+                        <p>
+                            Protection contre les serveurs DHCP
+                            non autorisés.
+                        </p>
+                    </div>
+
+                    <div class="security-card">
+                        <span>05</span>
+                        <strong>Dynamic ARP Inspection</strong>
+                        <p>
+                            Contrôle des informations ARP afin de limiter
+                            certaines attaques de type spoofing.
+                        </p>
+                    </div>
+
+                    <div class="security-card">
+                        <span>06</span>
+                        <strong>ACL inter-VLAN</strong>
+                        <p>
+                            Contrôle des communications entre les différents
+                            segments du réseau.
+                        </p>
+                    </div>
+
+                </div>
+
+                <h3>
+                    Exemple de politique
+                </h3>
+
+                <div class="policy-box">
+
+                    <div class="policy-row blocked">
+                        <span>VLAN 20 USERS</span>
+                        <strong>→ VLAN 10 ADMIN</strong>
+                        <em>BLOCK</em>
+                    </div>
+
+                    <div class="policy-row allowed">
+                        <span>VLAN 20 USERS</span>
+                        <strong>→ VLAN 30 SERVERS</strong>
+                        <em>ALLOW</em>
+                    </div>
+
+                    <div class="policy-row blocked">
+                        <span>VLAN 120 GUEST</span>
+                        <strong>→ Réseaux internes</strong>
+                        <em>BLOCK</em>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             TESTS
+        ================================================== -->
+
+        <section class="project-section">
+
+            <p class="section-number">
+                09
+            </p>
+
+            <div class="project-section-title">
+                <p class="section-label">
+                    Validation
+                </p>
+
+                <h2>
+                    Tests & troubleshooting
+                </h2>
+            </div>
+
+            <div class="project-text">
+
                 <p>
-                    La simulation avec Cisco Packet Tracer m'a également
-                    permis de tester différentes configurations et
-                    d'identifier les problèmes de connectivité avant
-                    leur résolution.
+                    Chaque fonctionnalité a été vérifiée avec les commandes
+                    de diagnostic Cisco IOS et par des tests de connectivité.
+                </p>
+
+                <div class="test-list">
+
+                    <div class="test-row">
+                        <span>PC → Gateway</span>
+                        <strong>OK</strong>
+                    </div>
+
+                    <div class="test-row">
+                        <span>VLAN 20 → VLAN 10</span>
+                        <strong class="negative">BLOQUÉ</strong>
+                    </div>
+
+                    <div class="test-row">
+                        <span>VLAN 20 → VLAN 30</span>
+                        <strong>OK</strong>
+                    </div>
+
+                    <div class="test-row">
+                        <span>VLAN 120 → réseaux internes</span>
+                        <strong class="negative">BLOQUÉ</strong>
+                    </div>
+
+                    <div class="test-row">
+                        <span>OSPF R2 ↔ R3</span>
+                        <strong>FULL</strong>
+                    </div>
+
+                    <div class="test-row">
+                        <span>DHCP agence</span>
+                        <strong>OK</strong>
+                    </div>
+
+                    <div class="test-row">
+                        <span>EtherChannel Po1</span>
+                        <strong>Po1(SU)</strong>
+                    </div>
+
+                    <div class="test-row">
+                        <span>SSH</span>
+                        <strong>OK</strong>
+                    </div>
+
+                    <div class="test-row">
+                        <span>NAT translations</span>
+                        <strong>OK</strong>
+                    </div>
+
+                </div>
+
+                <h3>
+                    Commandes de diagnostic utilisées
+                </h3>
+
+                <div class="command-grid">
+
+                    <code>show ip interface brief</code>
+                    <code>show vlan brief</code>
+                    <code>show interfaces trunk</code>
+                    <code>show etherchannel summary</code>
+                    <code>show ip route</code>
+                    <code>show ip ospf neighbor</code>
+                    <code>show ip dhcp binding</code>
+                    <code>show port-security</code>
+                    <code>show ip dhcp snooping</code>
+                    <code>show ip arp inspection</code>
+                    <code>show access-lists</code>
+                    <code>show ip nat translations</code>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             IPSEC / LIMITATION
+        ================================================== -->
+
+        <section class="project-section limitation-section">
+
+            <p class="section-number">
+                10
+            </p>
+
+            <div class="project-section-title">
+                <p class="section-label">
+                    Retour d'expérience
+                </p>
+
+                <h2>
+                    Une limite identifiée
+                </h2>
+            </div>
+
+            <div class="project-text">
+
+                <p>
+                    L'objectif initial prévoyait également la mise en place
+                    d'un <strong>VPN IPsec site-à-site</strong> entre le
+                    siège et l'agence.
+                </p>
+
+                <div class="limitation-box">
+
+                    <span class="limitation-icon">!</span>
+
+                    <div>
+                        <strong>IPsec non validé dans Packet Tracer</strong>
+
+                        <p>
+                            La version de Packet Tracer utilisée ne permettait
+                            pas d'exécuter correctement les mécanismes
+                            IPsec/IKE nécessaires à la validation du VPN.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p>
+                    Je ne présente donc pas le VPN comme fonctionnel.
+                    Cette limitation constitue également une piste
+                    d'amélioration du projet : reproduire l'architecture
+                    dans <strong>GNS3</strong>, <strong>EVE-NG</strong>
+                    ou avec une solution telle qu'<strong>OPNsense</strong>.
                 </p>
 
             </div>
@@ -356,9 +913,136 @@
         </section>
 
 
-        <!-- =========================
+        <!-- =================================================
+             COMPETENCES
+        ================================================== -->
+
+        <section class="project-section">
+
+            <p class="section-number">
+                11
+            </p>
+
+            <div class="project-section-title">
+                <p class="section-label">
+                    Compétences
+                </p>
+
+                <h2>
+                    Ce que ce projet démontre
+                </h2>
+            </div>
+
+            <div class="project-text">
+
+                <div class="technology-grid">
+
+                    <div class="technology">
+                        <strong>Réseaux Cisco</strong>
+                        <span>Cisco IOS · VLAN · 802.1Q · Router-on-a-Stick</span>
+                    </div>
+
+                    <div class="technology">
+                        <strong>Routage</strong>
+                        <span>OSPF · routage inter-VLAN · routes statiques</span>
+                    </div>
+
+                    <div class="technology">
+                        <strong>Switching</strong>
+                        <span>EtherChannel · LACP · trunks · segmentation</span>
+                    </div>
+
+                    <div class="technology">
+                        <strong>Services réseau</strong>
+                        <span>DHCP · NAT/PAT · SSH</span>
+                    </div>
+
+                    <div class="technology">
+                        <strong>Sécurité</strong>
+                        <span>ACL · Port Security · BPDU Guard · DHCP Snooping</span>
+                    </div>
+
+                    <div class="technology">
+                        <strong>Protection L2</strong>
+                        <span>Dynamic ARP Inspection · Sticky MAC · PortFast</span>
+                    </div>
+
+                    <div class="technology">
+                        <strong>Troubleshooting</strong>
+                        <span>Diagnostic Cisco IOS · analyse des routes · connectivité</span>
+                    </div>
+
+                    <div class="technology">
+                        <strong>Documentation</strong>
+                        <span>Plan d'adressage · matrice de tests · configurations</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             BILAN
+        ================================================== -->
+
+        <section class="project-section project-bilan">
+
+            <p class="section-number">
+                12
+            </p>
+
+            <div class="project-section-title">
+                <p class="section-label">
+                    Bilan
+                </p>
+
+                <h2>
+                    Ce que j'en retiens
+                </h2>
+            </div>
+
+            <div class="project-text">
+
+                <p>
+                    Ce projet m'a permis de passer d'une approche théorique
+                    des réseaux à une approche beaucoup plus concrète :
+                    concevoir une architecture, la configurer, la sécuriser,
+                    puis diagnostiquer les problèmes rencontrés.
+                </p>
+
+                <p>
+                    J'ai particulièrement travaillé sur la segmentation,
+                    le routage dynamique, les mécanismes de sécurité
+                    de niveau 2 et le troubleshooting Cisco.
+                </p>
+
+                <div class="pitch">
+
+                    <strong>
+                        En entretien :
+                    </strong>
+
+                    « J'ai conçu une infrastructure Cisco multi-site avec
+                    VLAN, routage inter-VLAN, EtherChannel LACP et OSPF.
+                    J'ai ensuite ajouté DHCP, NAT/PAT, SSH et plusieurs
+                    mécanismes de sécurité comme Port Security, BPDU Guard,
+                    DHCP Snooping, Dynamic ARP Inspection et des ACL.
+                    Enfin, j'ai validé chaque fonctionnalité avec des tests
+                    de connectivité et les commandes de diagnostic Cisco. »
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
              RETOUR
-        ========================== -->
+        ================================================== -->
 
         <div class="back-projects">
 
@@ -371,9 +1055,9 @@
     </main>
 
 
-    <!-- =========================
+    <!-- =====================================================
          FOOTER
-    ========================== -->
+    ====================================================== -->
 
     <footer>
 

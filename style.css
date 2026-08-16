@@ -57,6 +57,10 @@ img {
     --terminal: #171717;
     --terminal-light: #242424;
     --terminal-border: #333333;
+
+    --success: #16a34a;
+    --danger: #dc2626;
+    --info: #2563eb;
 }
 
 
@@ -161,9 +165,6 @@ main {
 
     border-radius: 1px;
 }
-
-
-/* Couleurs */
 
 .rubiks-cube span:nth-child(1) {
     background: #ffffff;
@@ -541,7 +542,7 @@ main {
 
 
 /* =========================================================
-   PROJECTS
+   PROJECTS INDEX
 ========================================================= */
 
 .project-list {
@@ -699,7 +700,7 @@ main {
 
 
 /* =========================================================
-   ABOUT — OBJECTIF INTÉGRÉ
+   ABOUT — OBJECTIF
 ========================================================= */
 
 .about-goal {
@@ -1425,7 +1426,7 @@ main {
 
 
 /* =========================================================
-   PROJECT PAGE
+   PROJECT PAGE — BASE
 ========================================================= */
 
 .project-hero {
@@ -1458,11 +1459,89 @@ main {
 
 
 /* =========================================================
+   PROJECT NETWORK — HERO
+========================================================= */
+
+.network-hero {
+    position: relative;
+}
+
+.network-project-label {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 22px;
+
+    color: var(--accent);
+
+    font-family:
+        "SFMono-Regular",
+        "Roboto Mono",
+        Consolas,
+        monospace;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.network-project-label::before {
+    content: "";
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--success);
+
+    box-shadow:
+        0 0 0 4px rgba(22, 163, 74, 0.08);
+}
+
+.network-hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    margin-top: 35px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+.network-hero-meta strong {
+    color: var(--text);
+}
+
+
+/* =========================================================
    PROJECT IMAGE
 ========================================================= */
 
+.project-image-section {
+    padding: 80px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.project-image-section .section-header {
+    margin-bottom: 30px;
+}
+
 .project-image {
-    padding: 70px 0;
+    padding: 20px 0 0;
 }
 
 .project-image img {
@@ -1476,6 +1555,14 @@ main {
     border: 1px solid var(--border);
 
     border-radius: 8px;
+}
+
+.image-caption {
+    margin-top: 12px;
+
+    color: var(--muted);
+
+    font-size: 11px;
 }
 
 
@@ -1535,7 +1622,449 @@ main {
 
 
 /* =========================================================
-   CODE
+   NETWORK — INTRO / CHIFFRES
+========================================================= */
+
+.network-overview {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 1px;
+
+    margin: 30px 0;
+
+    background: var(--border);
+
+    border: 1px solid var(--border);
+}
+
+.network-stat {
+    padding: 24px;
+
+    background: var(--background);
+}
+
+.network-stat strong {
+    display: block;
+
+    color: var(--text);
+
+    font-size: 24px;
+
+    line-height: 1;
+}
+
+.network-stat span {
+    display: block;
+
+    margin-top: 8px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   NETWORK — ARCHITECTURE
+========================================================= */
+
+.network-architecture {
+    margin-top: 30px;
+
+    padding: 25px;
+
+    overflow-x: auto;
+
+    background: var(--terminal);
+
+    border: 1px solid var(--terminal-border);
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.network-architecture pre {
+    margin: 0;
+
+    color: #d4d4d4;
+
+    font-family:
+        "SFMono-Regular",
+        "Roboto Mono",
+        Consolas,
+        monospace;
+
+    font-size: 12px;
+
+    line-height: 1.65;
+}
+
+.network-architecture .highlight {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   NETWORK — LAYERS
+========================================================= */
+
+.network-layers {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.network-layer {
+    padding: 20px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+}
+
+.network-layer-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--accent);
+
+    font-family:
+        "SFMono-Regular",
+        "Roboto Mono",
+        Consolas,
+        monospace;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+}
+
+.network-layer strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 15px;
+}
+
+.network-layer p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   NETWORK — FEATURE GRID
+========================================================= */
+
+.network-feature-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 1px;
+
+    margin-top: 30px;
+
+    background: var(--border);
+
+    border: 1px solid var(--border);
+}
+
+.network-feature {
+    padding: 24px;
+
+    background: var(--background);
+}
+
+.network-feature-number {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: var(--muted);
+
+    font-family:
+        "SFMono-Regular",
+        "Roboto Mono",
+        Consolas,
+        monospace;
+
+    font-size: 10px;
+}
+
+.network-feature h3 {
+    margin: 0 0 8px;
+
+    font-size: 17px;
+}
+
+.network-feature p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   NETWORK — VLAN CARDS
+========================================================= */
+
+.vlan-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin-top: 30px;
+}
+
+.vlan-card {
+    position: relative;
+
+    padding: 20px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+.vlan-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: var(--accent);
+}
+
+.vlan-number {
+    color: var(--accent);
+
+    font-family:
+        "SFMono-Regular",
+        "Roboto Mono",
+        Consolas,
+        monospace;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.vlan-card h3 {
+    margin-top: 5px;
+
+    font-size: 16px;
+}
+
+.vlan-card p {
+    margin-top: 8px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   NETWORK — ADDRESSING TABLE
+========================================================= */
+
+.address-table {
+    margin-top: 30px;
+}
+
+.address-table td:first-child {
+    color: var(--accent);
+
+    font-family:
+        "SFMono-Regular",
+        "Roboto Mono",
+        Consolas,
+        monospace;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   NETWORK — SECURITY
+========================================================= */
+
+.security-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+
+    margin-top: 30px;
+}
+
+.security-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+}
+
+.security-icon {
+    width: 28px;
+    height: 28px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--accent-soft);
+
+    color: var(--accent);
+
+    font-family:
+        "SFMono-Regular",
+        "Roboto Mono",
+        Consolas,
+        monospace;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.security-item h3 {
+    margin-bottom: 5px;
+
+    font-size: 15px;
+}
+
+.security-item p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   NETWORK — ACL / POLICY
+========================================================= */
+
+.policy-box {
+    margin-top: 30px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+.policy-row {
+    display: grid;
+
+    grid-template-columns: 130px 1fr 90px;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 15px 18px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.policy-row:last-child {
+    border-bottom: none;
+}
+
+.policy-source,
+.policy-destination {
+    font-family:
+        "SFMono-Regular",
+        "Roboto Mono",
+        Consolas,
+        monospace;
+
+    font-size: 11px;
+}
+
+.policy-source {
+    color: var(--text);
+}
+
+.policy-destination {
+    color: var(--muted);
+}
+
+.policy-result {
+    text-align: right;
+
+    font-family:
+        "SFMono-Regular",
+        "Roboto Mono",
+        Consolas,
+        monospace;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+.policy-result.allow {
+    color: var(--success);
+}
+
+.policy-result.deny {
+    color: var(--danger);
+}
+
+
+/* =========================================================
+   NETWORK — CODE
 ========================================================= */
 
 .code-block {
@@ -1564,63 +2093,316 @@ main {
     color: var(--text);
 }
 
+.code-block.dark {
+    background: var(--terminal);
 
-/* =========================================================
-   TABLEAUX
-========================================================= */
+    border-color: var(--terminal-border);
 
-.table-wrap {
-    overflow-x: auto;
+    color: #d4d4d4;
 }
 
-.data-table {
-    width: 100%;
+.code-block .command {
+    color: var(--accent);
+}
 
-    margin: 20px 0;
+.code-block .comment {
+    color: #737373;
+}
 
-    border-collapse: collapse;
+.code-block .success {
+    color: #4ade80;
+}
+
+.code-block .danger {
+    color: #f87171;
+}
+
+
+/* =========================================================
+   NETWORK — DIAGNOSTIC COMMANDS
+========================================================= */
+
+.command-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 1px;
+
+    margin-top: 30px;
+
+    background: var(--border);
+
+    border: 1px solid var(--border);
+}
+
+.command-item {
+    padding: 18px;
+
+    background: var(--background);
+}
+
+.command-item code {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--accent);
+
+    font-family:
+        "SFMono-Regular",
+        "Roboto Mono",
+        Consolas,
+        monospace;
+
+    font-size: 12px;
+}
+
+.command-item span {
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   NETWORK — TESTS
+========================================================= */
+
+.test-table {
+    margin-top: 30px;
+}
+
+.test-status {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 6px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.test-status::before {
+    content: "";
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+}
+
+.test-status.ok {
+    color: var(--success);
+}
+
+.test-status.ok::before {
+    background: var(--success);
+}
+
+.test-status.no {
+    color: var(--danger);
+}
+
+.test-status.no::before {
+    background: var(--danger);
+}
+
+.test-status.partial {
+    color: var(--accent);
+}
+
+.test-status.partial::before {
+    background: var(--accent);
+}
+
+
+/* =========================================================
+   NETWORK — RESULT / SUCCESS BOX
+========================================================= */
+
+.result-box {
+    margin-top: 30px;
+
+    padding: 25px 28px;
+
+    background: #f0fdf4;
+
+    border: 1px solid #bbf7d0;
+
+    border-left: 3px solid var(--success);
+
+    border-radius: 0 8px 8px 0;
+}
+
+.result-box-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--success);
+
+    font-family:
+        "SFMono-Regular",
+        "Roboto Mono",
+        Consolas,
+        monospace;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.8px;
+}
+
+.result-box p {
+    margin: 0;
+
+    color: #166534;
 
     font-size: 14px;
 }
 
-.data-table th,
-.data-table td {
-    padding: 10px 14px;
 
-    text-align: left;
+/* =========================================================
+   NETWORK — LIMITATION
+========================================================= */
 
-    border-bottom: 1px solid var(--border);
+.limitation-box {
+    margin-top: 30px;
 
-    white-space: nowrap;
+    padding: 25px 28px;
+
+    background: #fff7ed;
+
+    border: 1px solid #fed7aa;
+
+    border-left: 3px solid var(--accent);
+
+    border-radius: 0 8px 8px 0;
 }
 
-.data-table th {
-    color: var(--muted);
+.limitation-label {
+    display: block;
 
-    font-size: 11px;
+    margin-bottom: 10px;
 
-    font-weight: 600;
+    color: var(--accent);
+
+    font-family:
+        "SFMono-Regular",
+        "Roboto Mono",
+        Consolas,
+        monospace;
+
+    font-size: 10px;
+
+    font-weight: 700;
 
     text-transform: uppercase;
 
-    letter-spacing: 0.4px;
+    letter-spacing: 0.8px;
 }
 
-.data-table td.ok {
-    color: #16a34a;
+.limitation-box p {
+    color: #7c2d12;
 
-    font-weight: 600;
+    font-size: 14px;
+
+    margin-bottom: 12px;
 }
 
-.data-table td.no {
-    color: #dc2626;
-
-    font-weight: 600;
+.limitation-box p:last-child {
+    margin-bottom: 0;
 }
 
 
 /* =========================================================
-   PITCH
+   NETWORK — SKILLS
+========================================================= */
+
+.network-skills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 30px;
+}
+
+.network-skill {
+    padding: 8px 12px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    color: var(--text);
+
+    font-size: 12px;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.network-skill:hover {
+    border-color: var(--accent);
+
+    background: var(--accent-soft);
+}
+
+
+/* =========================================================
+   NETWORK — GITHUB STRUCTURE
+========================================================= */
+
+.repo-tree {
+    margin-top: 30px;
+
+    padding: 25px;
+
+    background: var(--terminal);
+
+    border: 1px solid var(--terminal-border);
+
+    border-radius: 8px;
+
+    color: #d4d4d4;
+
+    font-family:
+        "SFMono-Regular",
+        "Roboto Mono",
+        Consolas,
+        monospace;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    overflow-x: auto;
+}
+
+.repo-tree .folder {
+    color: #60a5fa;
+}
+
+.repo-tree .file {
+    color: #d4d4d4;
+}
+
+.repo-tree .comment {
+    color: #737373;
+}
+
+
+/* =========================================================
+   NETWORK — PITCH ENTRETIEN
 ========================================================= */
 
 .pitch {
@@ -1635,6 +2417,108 @@ main {
     color: var(--text);
 
     font-size: 16px;
+}
+
+.network-pitch {
+    position: relative;
+
+    margin-top: 30px;
+
+    padding: 30px;
+
+    background: var(--terminal);
+
+    border: 1px solid var(--terminal-border);
+
+    border-radius: 10px;
+
+    color: #d4d4d4;
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.network-pitch-label {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: var(--accent);
+
+    font-family:
+        "SFMono-Regular",
+        "Roboto Mono",
+        Consolas,
+        monospace;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.network-pitch p {
+    margin: 0;
+
+    color: #d4d4d4;
+
+    font-family:
+        "SFMono-Regular",
+        "Roboto Mono",
+        Consolas,
+        monospace;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   NETWORK — SCREENSHOTS
+========================================================= */
+
+.screenshot-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.screenshot-card {
+    overflow: hidden;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+}
+
+.screenshot-card img {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    object-fit: cover;
+
+    background: #ebe7e0;
+}
+
+.screenshot-card figcaption {
+    padding: 12px 15px;
+
+    color: var(--muted);
+
+    font-size: 11px;
 }
 
 
@@ -1691,26 +2575,56 @@ footer a:hover {
 
 
 /* =========================================================
-   MOBILE
+   MOBILE — 750px
 ========================================================= */
 
 @media (max-width: 750px) {
 
     .experience-grid {
         grid-template-columns: 1fr;
+
         gap: 25px;
     }
 
     .certification-layout {
         grid-template-columns: 1fr;
+
         gap: 45px;
     }
 
     .experience-domain {
         white-space: normal;
     }
+
+    .network-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .network-layers {
+        grid-template-columns: 1fr;
+    }
+
+    .vlan-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .security-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .network-feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .command-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
+
+/* =========================================================
+   MOBILE — 650px
+========================================================= */
 
 @media (max-width: 650px) {
 
@@ -1745,6 +2659,7 @@ footer a:hover {
 
     .logo-name {
         font-size: 13px;
+
         letter-spacing: 1px;
     }
 
@@ -2048,10 +2963,93 @@ footer a:hover {
 
 
     /* =====================================================
+       NETWORK PROJECT
+    ===================================================== */
+
+    .network-hero-meta {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .network-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .network-stat {
+        padding: 20px;
+    }
+
+    .network-layers {
+        grid-template-columns: 1fr;
+    }
+
+    .network-feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vlan-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .security-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .policy-row {
+        grid-template-columns: 1fr;
+
+        gap: 5px;
+    }
+
+    .policy-result {
+        text-align: left;
+    }
+
+    .command-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .screenshot-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .network-architecture {
+        padding: 18px;
+    }
+
+    .network-architecture pre {
+        font-size: 10px;
+    }
+
+    .repo-tree {
+        padding: 18px;
+
+        font-size: 10px;
+    }
+
+    .network-pitch {
+        padding: 22px;
+    }
+
+    .network-pitch p {
+        font-size: 11px;
+    }
+
+
+    /* =====================================================
        TABLES
     ===================================================== */
 
+    .table-wrap {
+        width: 100%;
+
+        overflow-x: auto;
+    }
+
     .data-table {
+        min-width: 560px;
+
         font-size: 13px;
     }
 
@@ -2076,7 +3074,7 @@ footer a:hover {
 
 
 /* =========================================================
-   VERY SMALL PHONES
+   VERY SMALL PHONES — 400px
 ========================================================= */
 
 @media (max-width: 400px) {
@@ -2107,5 +3105,27 @@ footer a:hover {
 
     .profile-terminal-online {
         display: none;
+    }
+
+    .project-hero h1 {
+        font-size: 36px;
+    }
+
+    .network-stat strong {
+        font-size: 21px;
+    }
+
+    .network-feature {
+        padding: 20px;
+    }
+
+    .security-item {
+        padding: 16px;
+    }
+
+    .code-block {
+        padding: 16px;
+
+        font-size: 11px;
     }
 }
