@@ -12,27 +12,7 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    background: #fdfcfa;
-    color: #1c1917;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    line-height: 1.6;
-
-    -webkit-font-smoothing: antialiased;
-}
-
-
-/* =========================================================
-   VARIABLES
-========================================================= */
-
 :root {
-
     --background: #fdfcfa;
     --surface: #f6f3ee;
 
@@ -42,15 +22,30 @@ body {
     --border: #e7e2db;
 
     --accent: #d97706;
-    --accent-dark: #b45309;
     --accent-soft: #fef3e2;
 
-    --terminal: #171717;
-    --terminal-bar: #242424;
-    --terminal-border: #333333;
-    --terminal-text: #d4d4d4;
-    --terminal-muted: #777777;
+    --green: #27c93f;
+    --red: #ff5f56;
+    --yellow: #ffbd2e;
+}
 
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+    background: var(--background);
+    color: var(--text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.6;
+
+    -webkit-font-smoothing: antialiased;
 }
 
 
@@ -69,7 +64,9 @@ button {
 
 main {
     max-width: 900px;
+
     margin: 0 auto;
+
     padding: 0 30px;
 }
 
@@ -86,8 +83,9 @@ main {
     padding: 28px 30px;
 
     display: flex;
-    align-items: center;
+
     justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -95,13 +93,19 @@ main {
 
 .logo-mark {
     display: flex;
+
     align-items: center;
-    gap: 10px;
+    justify-content: center;
 
-    font-size: 15px;
+    gap: 9px;
+
+    width: auto;
+    height: 38px;
+
+    color: var(--text);
+
+    font-size: 14px;
     font-weight: 700;
-
-    letter-spacing: -0.2px;
 }
 
 .logo-icon {
@@ -109,8 +113,13 @@ main {
     height: 38px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
+
+    background: transparent;
+
+    border-radius: 8px;
 }
 
 
@@ -152,9 +161,6 @@ main {
 
     border-radius: 1px;
 }
-
-
-/* Couleurs cube */
 
 .rubiks-cube span:nth-child(1) {
     background: #ffffff;
@@ -199,6 +205,7 @@ main {
 
 .navbar nav {
     display: flex;
+
     align-items: center;
 
     gap: 25px;
@@ -220,7 +227,7 @@ main {
 
 
 /* =========================================================
-   GLOBAL SECTIONS
+   SECTIONS
 ========================================================= */
 
 .section {
@@ -252,11 +259,11 @@ main {
 }
 
 .section h2 {
-    font-size: 34px;
+    font-size: 35px;
 
     line-height: 1.15;
 
-    letter-spacing: -1.2px;
+    letter-spacing: -1px;
 }
 
 
@@ -269,53 +276,56 @@ main {
 }
 
 .about-page .section-header {
-    margin-bottom: 60px;
+    margin-bottom: 55px;
 }
 
 .about-intro {
     max-width: 680px;
 }
 
-.about-intro h1 {
-    font-size: clamp(48px, 8vw, 76px);
+.about-small-name {
+    color: var(--muted) !important;
 
-    line-height: 1;
+    font-family:
+        "SFMono-Regular",
+        "Roboto Mono",
+        Consolas,
+        monospace;
 
-    letter-spacing: -3px;
+    font-size: 13px !important;
 
-    margin-bottom: 35px;
-}
+    text-transform: uppercase;
 
-.about-intro h1 span {
-    color: var(--accent);
+    letter-spacing: 0.8px;
+
+    margin-bottom: 18px !important;
 }
 
 .about-intro p {
-    max-width: 620px;
-
     color: var(--muted);
 
-    font-size: 18px;
+    font-size: 17px;
 
-    margin-bottom: 24px;
+    line-height: 1.75;
+
+    max-width: 650px;
+
+    margin-bottom: 22px;
 }
 
 .about-intro .about-lead {
     color: var(--text);
 
-    font-size: 22px;
+    font-size: 21px;
 
-    line-height: 1.5;
+    line-height: 1.55;
+
+    margin-bottom: 28px;
 }
 
 .about-intro strong {
     color: var(--text);
 }
-
-
-/* =========================================================
-   MASTERE LINK
-========================================================= */
 
 .master-link {
     display: inline-block;
@@ -326,7 +336,7 @@ main {
 
     font-size: 14px;
 
-    font-weight: 700;
+    font-weight: 600;
 
     border-bottom: 1px solid var(--accent);
 
@@ -345,34 +355,7 @@ main {
 
 
 /* =========================================================
-   PITCH
-========================================================= */
-
-.pitch {
-    max-width: 650px;
-
-    margin-top: 35px;
-
-    padding: 20px 24px;
-
-    background: var(--surface);
-
-    border-left: 3px solid var(--accent);
-
-    color: var(--text);
-
-    font-size: 16px;
-
-    line-height: 1.6;
-}
-
-.pitch strong {
-    color: var(--text);
-}
-
-
-/* =========================================================
-   SKILLS
+   COMPÉTENCES
 ========================================================= */
 
 .about-skills {
@@ -422,19 +405,21 @@ main {
 }
 
 .skill-card h3 {
-    font-size: 22px;
+    font-size: 21px;
 
-    margin-bottom: 8px;
+    line-height: 1.3;
 
-    letter-spacing: -0.4px;
+    margin-bottom: 9px;
 }
 
 .skill-card p {
-    max-width: 620px;
-
     color: var(--muted);
 
+    max-width: 620px;
+
     font-size: 15px;
+
+    line-height: 1.65;
 }
 
 
@@ -445,36 +430,40 @@ main {
 .tags {
     display: flex;
 
-    flex-wrap: wrap;
-
-    gap: 8px;
+    gap: 7px;
 
     margin-top: 15px;
+
+    flex-wrap: wrap;
 }
 
 .tags span {
-    display: inline-flex;
-
-    align-items: center;
+    border: 1px solid var(--border);
 
     padding: 4px 9px;
 
-    border: 1px solid var(--border);
-
     border-radius: 20px;
-
-    background: var(--surface);
-
-    color: var(--muted);
 
     font-size: 11px;
 
-    line-height: 1.4;
+    color: var(--muted);
+
+    background: var(--surface);
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.tags span:hover {
+    color: var(--text);
+
+    border-color: #d6cfc5;
 }
 
 
 /* =========================================================
-   EXPERIENCE
+   EXPÉRIENCE
 ========================================================= */
 
 .experience-section {
@@ -492,9 +481,9 @@ main {
 .experience-header {
     display: flex;
 
-    align-items: flex-start;
-
     justify-content: space-between;
+
+    align-items: flex-start;
 
     gap: 30px;
 
@@ -502,15 +491,17 @@ main {
 }
 
 .experience-label {
-    color: var(--muted) !important;
+    color: var(--muted);
 
-    font-size: 11px !important;
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.6px;
 
     text-transform: uppercase;
 
-    letter-spacing: 0.7px;
-
-    margin-bottom: 8px !important;
+    margin-bottom: 8px;
 }
 
 .experience-header h3 {
@@ -522,23 +513,25 @@ main {
 .experience-number {
     color: var(--muted);
 
-    font-size: 13px;
-
     font-family:
         "SFMono-Regular",
         "Roboto Mono",
         Consolas,
         monospace;
+
+    font-size: 13px;
 }
 
 .experience-content {
-    max-width: 680px;
+    max-width: 700px;
 }
 
 .experience-content > p {
     color: var(--muted);
 
-    font-size: 17px;
+    font-size: 16px;
+
+    line-height: 1.7;
 
     margin-bottom: 25px;
 }
@@ -550,9 +543,9 @@ main {
 }
 
 .experience-content li {
-    margin-bottom: 11px;
+    margin-bottom: 10px;
 
-    padding-left: 4px;
+    padding-left: 5px;
 }
 
 .experience-content li::marker {
@@ -569,33 +562,31 @@ main {
 }
 
 .certification-grid {
-    display: grid;
+    display: flex;
 
-    grid-template-columns: 1fr 1fr;
-
-    gap: 1px;
-
-    background: var(--border);
-
-    border: 1px solid var(--border);
+    flex-direction: column;
 }
 
 .certification-card {
     display: grid;
 
-    grid-template-columns: 40px 1fr;
+    grid-template-columns: 60px 1fr;
 
-    gap: 15px;
+    gap: 25px;
 
-    padding: 25px;
+    padding: 27px 0;
 
-    background: var(--background);
+    border-top: 1px solid var(--border);
+}
+
+.certification-card:last-child {
+    border-bottom: 1px solid var(--border);
 }
 
 .certification-number {
     color: var(--muted);
 
-    font-size: 12px;
+    font-size: 13px;
 
     font-family:
         "SFMono-Regular",
@@ -605,20 +596,20 @@ main {
 }
 
 .certification-card h3 {
-    font-size: 17px;
+    font-size: 18px;
 
-    margin-bottom: 6px;
+    margin-bottom: 5px;
 }
 
 .certification-card p {
     color: var(--muted);
 
-    font-size: 13px;
+    font-size: 14px;
 }
 
 
 /* =========================================================
-   LANGUAGES
+   LANGUES
 ========================================================= */
 
 .languages {
@@ -626,9 +617,13 @@ main {
 
     grid-template-columns: repeat(3, 1fr);
 
-    gap: 15px;
+    gap: 1px;
 
-    margin-top: 25px;
+    margin-top: 35px;
+
+    background: var(--border);
+
+    border: 1px solid var(--border);
 }
 
 .language-item {
@@ -638,17 +633,13 @@ main {
 
     gap: 3px;
 
-    padding: 20px;
+    padding: 22px;
 
-    background: var(--surface);
-
-    border: 1px solid var(--border);
-
-    border-radius: 8px;
+    background: var(--background);
 }
 
 .language-item strong {
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .language-item span {
@@ -659,7 +650,7 @@ main {
 
 
 /* =========================================================
-   TECHNOLOGY GRID
+   ENVIRONNEMENT TECHNIQUE
 ========================================================= */
 
 .environments-section {
@@ -679,19 +670,21 @@ main {
 }
 
 .technology {
+    background: var(--background);
+
+    padding: 25px;
+
     display: flex;
 
     flex-direction: column;
 
-    gap: 5px;
+    gap: 6px;
 
-    padding: 25px;
-
-    background: var(--background);
+    min-height: 95px;
 }
 
 .technology strong {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .technology span {
@@ -704,7 +697,7 @@ main {
 
 
 /* =========================================================
-   OBJECTIVE
+   OBJECTIF
 ========================================================= */
 
 .objective-section {
@@ -718,17 +711,19 @@ main {
 .objective-content p {
     color: var(--muted);
 
-    font-size: 18px;
+    font-size: 17px;
 
-    margin-bottom: 25px;
+    line-height: 1.75;
+
+    margin-bottom: 22px;
 }
 
 .objective-content .about-lead {
     color: var(--text);
 
-    font-size: 22px;
+    font-size: 21px;
 
-    line-height: 1.5;
+    line-height: 1.55;
 }
 
 .objective-content strong {
@@ -737,56 +732,42 @@ main {
 
 
 /* =========================================================
-   REAL ME
+   PROFIL / TERMINAL
 ========================================================= */
 
 .real-me {
-    padding-top: 110px;
-}
+    padding-top: 100px;
 
-.real-me-intro {
-    max-width: 620px;
-
-    margin-bottom: 45px;
-}
-
-.real-me-intro p {
-    color: var(--muted);
-
-    font-size: 18px;
-
-    margin-bottom: 8px;
-}
-
-.real-me-intro strong {
-    color: var(--text);
+    padding-bottom: 120px;
 }
 
 
 /* =========================================================
-   PROFILE TERMINAL
+   TERMINAL
 ========================================================= */
 
 .profile-terminal {
     width: 100%;
 
-    overflow: hidden;
-
-    background: var(--terminal);
+    background: #171717;
 
     border: 1px solid #2d2d2d;
 
     border-radius: 10px;
+
+    overflow: hidden;
 
     box-shadow:
         0 25px 60px rgba(0, 0, 0, 0.15);
 }
 
 
-/* Terminal header */
+/* =========================================================
+   TERMINAL BAR
+========================================================= */
 
 .profile-terminal-bar {
-    min-height: 44px;
+    height: 44px;
 
     display: flex;
 
@@ -794,9 +775,9 @@ main {
 
     padding: 0 15px;
 
-    background: var(--terminal-bar);
+    background: #242424;
 
-    border-bottom: 1px solid var(--terminal-border);
+    border-bottom: 1px solid #333;
 
     font-family:
         "SFMono-Regular",
@@ -813,7 +794,7 @@ main {
     align-items: center;
 }
 
-.profile-terminal-bar .terminal-dot {
+.terminal-dot {
     width: 10px;
     height: 10px;
 
@@ -823,40 +804,40 @@ main {
 }
 
 .terminal-dot.red {
-    background: #ff5f56;
+    background: var(--red);
 }
 
 .terminal-dot.yellow {
-    background: #ffbd2e;
+    background: var(--yellow);
 }
 
 .terminal-dot.green {
-    background: #27c93f;
+    background: var(--green);
 }
 
 .profile-terminal-title {
     margin-left: 8px;
 
-    color: var(--terminal-muted);
+    color: #777;
 }
 
 .profile-terminal-online {
     margin-left: auto;
 
-    color: #27c93f;
+    color: var(--green);
 
     font-size: 10px;
-
-    white-space: nowrap;
 }
 
 
-/* Terminal body */
+/* =========================================================
+   TERMINAL BODY
+========================================================= */
 
 .profile-terminal-body {
     padding: 30px;
 
-    color: var(--terminal-text);
+    color: #d4d4d4;
 
     font-family:
         "SFMono-Regular",
@@ -870,34 +851,33 @@ main {
 .terminal-command {
     color: #777;
 
-    margin-bottom: 18px;
+    margin-bottom: 25px;
 }
 
 .terminal-name {
     color: #ffffff;
 
-    font-size: 22px;
+    font-size: 24px;
+
+    line-height: 1.2;
 
     font-weight: 700;
 
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
 
 .terminal-subtitle {
-    color: #999;
+    color: #8b8b8b;
 
     font-size: 12px;
 }
 
-
-/* Separator */
-
 .terminal-separator {
     height: 1px;
 
-    background: var(--terminal-border);
+    background: #333;
 
-    margin: 22px 0;
+    margin: 25px 0;
 }
 
 
@@ -910,11 +890,13 @@ main {
 
     grid-template-columns: 1fr 1fr;
 
-    border: 1px solid var(--terminal-border);
+    border: 1px solid #333;
 }
 
 .profile-cell {
-    min-height: 95px;
+    min-height: 90px;
+
+    padding: 17px 18px;
 
     display: flex;
 
@@ -922,17 +904,13 @@ main {
 
     justify-content: center;
 
-    gap: 7px;
+    gap: 5px;
 
-    padding: 18px;
-
-    border-bottom: 1px solid var(--terminal-border);
-
-    border-right: 1px solid var(--terminal-border);
+    border-bottom: 1px solid #333;
 }
 
-.profile-cell:nth-child(2n) {
-    border-right: none;
+.profile-cell:nth-child(odd) {
+    border-right: 1px solid #333;
 }
 
 .profile-cell:nth-last-child(-n + 2) {
@@ -944,9 +922,9 @@ main {
 
     font-size: 10px;
 
-    text-transform: uppercase;
-
     letter-spacing: 0.6px;
+
+    text-transform: uppercase;
 }
 
 .profile-cell strong {
@@ -975,21 +953,21 @@ main {
 
     gap: 12px;
 
-    width: 100%;
+    margin-top: 5px;
 }
 
 .progress-label {
     color: #777;
 
-    font-size: 11px;
-
-    white-space: nowrap;
+    font-size: 12px;
 }
 
 .progress-bar {
     flex: 1;
 
     height: 10px;
+
+    max-width: none;
 
     background: #292929;
 
@@ -1019,7 +997,9 @@ main {
 
     font-size: 11px;
 
-    white-space: nowrap;
+    min-width: 30px;
+
+    text-align: right;
 }
 
 .terminal-error {
@@ -1027,72 +1007,7 @@ main {
 
     color: #777;
 
-    font-size: 10px;
-}
-
-
-/* =========================================================
-   FUN FACTS
-========================================================= */
-
-.fun-facts {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 15px;
-
-    margin-top: 25px;
-}
-
-.fun-fact {
-    display: flex;
-
-    align-items: flex-start;
-
-    gap: 14px;
-
-    padding: 20px;
-
-    background: var(--surface);
-
-    border: 1px solid var(--border);
-
-    border-radius: 8px;
-
-    transition:
-        transform 0.2s ease,
-        border-color 0.2s ease;
-}
-
-.fun-fact:hover {
-    transform: translateY(-3px);
-
-    border-color: #d6cfc5;
-}
-
-.fun-fact-icon {
-    flex-shrink: 0;
-
-    font-size: 23px;
-
-    line-height: 1;
-}
-
-.fun-fact strong {
-    display: block;
-
-    font-size: 13px;
-
-    margin-bottom: 4px;
-}
-
-.fun-fact p {
-    color: var(--muted);
-
-    font-size: 12px;
-
-    line-height: 1.5;
+    font-size: 11px;
 }
 
 
@@ -1101,21 +1016,17 @@ main {
 ========================================================= */
 
 .about-conclusion {
-    max-width: 650px;
+    max-width: 620px;
 
-    margin-top: 55px;
+    margin-top: 45px;
 
-    padding: 25px 25px 25px 22px;
+    padding-left: 20px;
 
     border-left: 3px solid var(--accent);
-
-    background: var(--surface);
 }
 
 .conclusion-label {
     display: block;
-
-    margin-bottom: 15px;
 
     color: var(--accent);
 
@@ -1125,13 +1036,13 @@ main {
         Consolas,
         monospace;
 
-    font-size: 11px;
+    font-size: 12px;
 
-    font-weight: 700;
+    font-weight: 600;
 
-    letter-spacing: 0.8px;
+    letter-spacing: 0.5px;
 
-    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
 .about-conclusion p {
@@ -1139,7 +1050,9 @@ main {
 
     font-size: 17px;
 
-    margin-bottom: 7px;
+    line-height: 1.6;
+
+    margin-bottom: 3px;
 }
 
 .about-conclusion p:last-child {
@@ -1163,8 +1076,6 @@ footer {
     padding: 40px 30px 60px;
 
     display: flex;
-
-    align-items: center;
 
     justify-content: space-between;
 
@@ -1217,7 +1128,9 @@ footer a:hover {
     }
 
     .logo-mark {
-        font-size: 14px;
+        font-size: 13px;
+
+        gap: 7px;
     }
 
     .logo-icon {
@@ -1240,15 +1153,15 @@ footer a:hover {
     }
 
     .section-header {
-        grid-template-columns: 45px 1fr;
+        grid-template-columns: 42px 1fr;
 
         margin-bottom: 35px;
     }
 
     .section h2 {
-        font-size: 27px;
+        font-size: 28px;
 
-        letter-spacing: -0.8px;
+        letter-spacing: -0.7px;
     }
 
 
@@ -1261,40 +1174,29 @@ footer a:hover {
     }
 
     .about-page .section-header {
-        margin-bottom: 45px;
+        margin-bottom: 42px;
     }
 
-    .about-intro h1 {
-        font-size: 52px;
+    .about-small-name {
+        font-size: 11px !important;
 
-        letter-spacing: -2px;
-
-        margin-bottom: 28px;
+        margin-bottom: 15px !important;
     }
 
     .about-intro .about-lead {
         font-size: 19px;
 
-        line-height: 1.5;
+        line-height: 1.55;
     }
 
     .about-intro p {
-        font-size: 16px;
+        font-size: 15.5px;
 
-        margin-bottom: 20px;
+        line-height: 1.7;
     }
 
-
-    /* =====================================================
-       PITCH
-    ===================================================== */
-
-    .pitch {
-        margin-top: 30px;
-
-        padding: 17px 18px;
-
-        font-size: 14px;
+    .master-link {
+        font-size: 13px;
     }
 
 
@@ -1315,11 +1217,11 @@ footer a:hover {
     }
 
     .skill-card:hover {
-        padding-left: 5px;
+        padding-left: 0;
     }
 
     .skill-card h3 {
-        font-size: 20px;
+        font-size: 19px;
     }
 
     .skill-card p {
@@ -1349,8 +1251,18 @@ footer a:hover {
         padding: 28px 0;
     }
 
+    .experience-header {
+        gap: 15px;
+
+        margin-bottom: 25px;
+    }
+
     .experience-header h3 {
-        font-size: 21px;
+        font-size: 20px;
+    }
+
+    .experience-label {
+        font-size: 9px;
     }
 
     .experience-content > p {
@@ -1372,22 +1284,33 @@ footer a:hover {
        CERTIFICATIONS
     ===================================================== */
 
-    .certification-grid {
-        grid-template-columns: 1fr;
+    .certification-card {
+        grid-template-columns: 40px 1fr;
+
+        gap: 15px;
+
+        padding: 24px 0;
     }
 
-    .certification-card {
-        padding: 20px;
+    .certification-card h3 {
+        font-size: 17px;
     }
+
+    .certification-card p {
+        font-size: 13px;
+    }
+
+
+    /* =====================================================
+       LANGUAGES
+    ===================================================== */
 
     .languages {
         grid-template-columns: 1fr;
-
-        gap: 10px;
     }
 
     .language-item {
-        padding: 16px;
+        padding: 17px 18px;
     }
 
 
@@ -1413,24 +1336,7 @@ footer a:hover {
     }
 
     .objective-content p {
-        font-size: 16px;
-    }
-
-
-    /* =====================================================
-       REAL ME
-    ===================================================== */
-
-    .real-me {
-        padding-top: 70px;
-    }
-
-    .real-me-intro {
-        margin-bottom: 30px;
-    }
-
-    .real-me-intro p {
-        font-size: 16px;
+        font-size: 15px;
     }
 
 
@@ -1438,12 +1344,14 @@ footer a:hover {
        TERMINAL
     ===================================================== */
 
-    .profile-terminal {
-        border-radius: 8px;
+    .real-me {
+        padding-top: 70px;
+
+        padding-bottom: 80px;
     }
 
     .profile-terminal-bar {
-        min-height: 40px;
+        height: 40px;
 
         padding: 0 12px;
     }
@@ -1463,13 +1371,11 @@ footer a:hover {
     }
 
     .terminal-command {
-        font-size: 10px;
-
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
 
     .terminal-name {
-        font-size: 20px;
+        font-size: 21px;
     }
 
     .terminal-subtitle {
@@ -1479,7 +1385,7 @@ footer a:hover {
     }
 
     .terminal-separator {
-        margin: 18px 0;
+        margin: 20px 0;
     }
 
 
@@ -1495,18 +1401,14 @@ footer a:hover {
         min-height: auto;
 
         padding: 15px;
-
-        border-right: none;
-
-        border-bottom: 1px solid var(--terminal-border);
     }
 
-    .profile-cell:nth-child(2n) {
+    .profile-cell:nth-child(odd) {
         border-right: none;
     }
 
-    .profile-cell:nth-last-child(-n + 2) {
-        border-bottom: 1px solid var(--terminal-border);
+    .profile-cell:not(:last-child) {
+        border-bottom: 1px solid #333;
     }
 
     .profile-cell:last-child {
@@ -1517,31 +1419,31 @@ footer a:hover {
         font-size: 12px;
     }
 
-    .profile-label {
-        font-size: 9px;
-    }
-
 
     /* =====================================================
        MOTIVATION MOBILE
     ===================================================== */
 
     .progress-row {
+        flex-wrap: wrap;
+
         gap: 8px;
     }
 
     .progress-label {
-        font-size: 10px;
-    }
-
-    .progress-percent {
-        font-size: 10px;
+        width: 100%;
     }
 
     .progress-bar {
-        min-width: 80px;
+        min-width: 0;
 
-        height: 8px;
+        width: calc(100% - 45px);
+
+        flex: 1;
+    }
+
+    .progress-percent {
+        width: 35px;
     }
 
     .terminal-error {
@@ -1552,28 +1454,13 @@ footer a:hover {
 
 
     /* =====================================================
-       FUN FACTS
-    ===================================================== */
-
-    .fun-facts {
-        grid-template-columns: 1fr;
-
-        gap: 10px;
-    }
-
-    .fun-fact {
-        padding: 16px;
-    }
-
-
-    /* =====================================================
        CONCLUSION
     ===================================================== */
 
     .about-conclusion {
-        margin-top: 40px;
+        margin-top: 35px;
 
-        padding: 20px 18px;
+        padding-left: 15px;
     }
 
     .about-conclusion p {
@@ -1590,9 +1477,40 @@ footer a:hover {
 
         flex-direction: column;
 
-        align-items: flex-start;
-
         gap: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .navbar nav {
+        gap: 10px;
+    }
+
+    .navbar nav a {
+        font-size: 11px;
+    }
+
+    .section h2 {
+        font-size: 25px;
+    }
+
+    .about-intro .about-lead {
+        font-size: 18px;
+    }
+
+    .profile-terminal-body {
+        padding: 20px 13px;
+    }
+
+    .profile-cell {
+        padding: 13px;
     }
 
 }
