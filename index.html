@@ -12,40 +12,69 @@
 
 <body>
 
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
     <header class="navbar">
 
         <a href="#top" class="logo-mark">
+
             <span class="logo-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="6" cy="6" r="2.5" fill="currentColor"/>
-                    <circle cx="18" cy="6" r="2.5" fill="currentColor"/>
-                    <circle cx="12" cy="18" r="2.5" fill="currentColor"/>
-                    <path d="M6 6L18 6M6 6L12 18M18 6L12 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-                </svg>
+                <span class="rubiks-cube">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
             </span>
+
             BAY
+
         </a>
 
         <nav>
             <a href="#projects">Projets</a>
-            <a href="#about">Qui suis-je</a>
+            <a href="about.html">Qui suis-je</a>
         </nav>
+
     </header>
 
 
     <main>
 
-        <!-- HERO -->
+        <!-- =========================
+             HERO
+        ========================== -->
+
         <section class="hero" id="top">
 
             <div class="hero-avatar">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="6" cy="6" r="2.5" fill="currentColor"/>
-                    <circle cx="18" cy="6" r="2.5" fill="currentColor"/>
-                    <circle cx="12" cy="18" r="2.5" fill="currentColor"/>
-                    <path d="M6 6L18 6M6 6L12 18M18 6L12 18" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
-                </svg>
+                <span class="rubiks-cube hero-cube">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
             </div>
+
+            <p class="eyebrow">
+                Portfolio
+            </p>
 
             <h1>
                 Salut, je suis <span>BAY</span> 👋
@@ -70,15 +99,21 @@
                         <span class="terminal-dot yellow"></span>
                         <span class="terminal-dot green"></span>
 
-                        <span class="contact-card-title">contact.txt</span>
+                        <span class="contact-card-title">
+                            contact.txt
+                        </span>
                     </div>
 
                     <div class="contact-card-body">
-                        <span id="contactEmail">bay@site.com</span>
+
+                        <span id="contactEmail">
+                            bay@site.com
+                        </span>
 
                         <button type="button" id="copyBtn" class="copy-btn">
                             Copier
                         </button>
+
                     </div>
 
                 </div>
@@ -88,7 +123,10 @@
         </section>
 
 
-        <!-- PROJECTS -->
+        <!-- =========================
+             PROJECTS
+        ========================== -->
+
         <section id="projects" class="section">
 
             <div class="section-header">
@@ -99,12 +137,16 @@
             <div class="project-list">
 
                 <article class="project">
+
                     <div>
                         <p class="project-number">01</p>
                     </div>
 
                     <div class="project-content">
-                        <h3>Infrastructure réseau multi-site</h3>
+
+                        <h3>
+                            Infrastructure réseau multi-site
+                        </h3>
 
                         <p>
                             Conception et sécurisation d'une infrastructure réseau
@@ -117,22 +159,27 @@
                             <span>Réseau</span>
                             <span>Sécurité</span>
                         </div>
+
                     </div>
 
                     <a href="project-network.html" class="project-link">
-                         Voir ↗
+                        Voir ↗
                     </a>
 
                 </article>
 
 
                 <article class="project">
+
                     <div>
                         <p class="project-number">02</p>
                     </div>
 
                     <div class="project-content">
-                        <h3>Mon Portfolio</h3>
+
+                        <h3>
+                            Mon Portfolio
+                        </h3>
 
                         <p>
                             Portfolio personnel développé en HTML et CSS,
@@ -144,19 +191,27 @@
                             <span>CSS</span>
                             <span>Web</span>
                         </div>
+
                     </div>
 
-                    <a href="#" class="project-link">Voir ↗</a>
+                    <a href="#" class="project-link">
+                        Voir ↗
+                    </a>
+
                 </article>
 
 
                 <article class="project">
+
                     <div>
                         <p class="project-number">03</p>
                     </div>
 
                     <div class="project-content">
-                        <h3>Projet à venir</h3>
+
+                        <h3>
+                            Projet à venir
+                        </h3>
 
                         <p>
                             Un nouveau projet sera bientôt disponible.
@@ -165,66 +220,53 @@
                         <div class="tags">
                             <span>Bientôt disponible</span>
                         </div>
+
                     </div>
 
-                    <a href="#" class="project-link">Voir ↗</a>
+                    <a href="#" class="project-link">
+                        Voir ↗
+                    </a>
+
                 </article>
 
             </div>
 
         </section>
 
-
-        <!-- ABOUT -->
-        <section id="about" class="section about">
-
-            <div class="section-header">
-                <p class="section-number">02</p>
-                <h2>Qui suis-je</h2>
-            </div>
-
-            <div class="about-content">
-
-                <p>
-                    Je suis <strong>BAY</strong>, étudiant en informatique
-                    avec un intérêt particulier pour les réseaux,
-                    Linux et le développement.
-                </p>
-
-                <p>
-                    J'aime comprendre comment les systèmes fonctionnent,
-                    construire des projets et apprendre de nouvelles
-                    technologies.
-                </p>
-
-                <p>
-                    Actuellement, je travaille sur différents projets afin
-                    de développer mes compétences et construire mon portfolio.
-                </p>
-
-            </div>
-
-        </section>
-
-
     </main>
 
 
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
     <footer>
-        <p>© 2026 BAY</p>
+
+        <p>
+            © 2026 BAY
+        </p>
 
         <a href="mailto:bay@site.com">
             bay@site.com
         </a>
+
     </footer>
 
 
+    <!-- =========================
+         CONTACT SCRIPT
+    ========================== -->
+
     <script>
         (function () {
+
             var btn = document.getElementById('contactBtn');
             var card = document.getElementById('contactCard');
             var copyBtn = document.getElementById('copyBtn');
-            var email = document.getElementById('contactEmail').textContent.trim();
+            var email = document
+                .getElementById('contactEmail')
+                .textContent
+                .trim();
 
             btn.addEventListener('click', function (e) {
                 e.stopPropagation();
@@ -232,19 +274,30 @@
             });
 
             copyBtn.addEventListener('click', function () {
+
                 navigator.clipboard.writeText(email).then(function () {
+
                     copyBtn.textContent = 'Copié ✓';
+
                     setTimeout(function () {
                         copyBtn.textContent = 'Copier';
                     }, 2000);
+
                 });
+
             });
 
             document.addEventListener('click', function (e) {
-                if (!card.contains(e.target) && !btn.contains(e.target)) {
+
+                if (
+                    !card.contains(e.target) &&
+                    !btn.contains(e.target)
+                ) {
                     card.classList.remove('open');
                 }
+
             });
+
         })();
     </script>
 
