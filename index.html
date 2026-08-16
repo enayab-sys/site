@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>BAY — Portfolio</title>
-    <meta name="description" content="Portfolio de BAY — Étudiant en Mastère Infrastructure & Réseaux, à la recherche d'une alternance.">
+    <meta name="description" content="Portfolio de BAY — Étudiant en informatique, spécialité infra réseau, à la recherche d'une alternance.">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,12 +13,9 @@
 <body>
 
     <header class="navbar">
-        <a href="index.html" class="logo">BAY</a>
-
         <nav>
             <a href="#projects">Projets</a>
-            <a href="#articles">Articles</a>
-            <a href="#about">À propos</a>
+            <a href="#about">Qui suis-je</a>
         </nav>
     </header>
 
@@ -28,95 +25,39 @@
         <!-- HERO -->
         <section class="hero">
 
-            <div class="terminal">
-
-                <div class="terminal-bar">
-                    <span class="terminal-dot red"></span>
-                    <span class="terminal-dot yellow"></span>
-                    <span class="terminal-dot green"></span>
-
-                    <span class="terminal-title">
-                        bay@portfolio: ~
-                    </span>
-                </div>
-
-                <div class="terminal-content">
-
-                    <div class="terminal-line">
-                        <span class="prompt">bay@portfolio:~$</span>
-                        <span>whoami</span>
-                    </div>
-
-                    <div class="terminal-output">
-                        BAY
-                    </div>
-
-                    <div class="terminal-line">
-                        <span class="prompt">bay@portfolio:~$</span>
-                        <span>cat about.txt</span>
-                    </div>
-
-                    <div class="terminal-output">
-                        Étudiant en Mastère Infrastructure &amp; Réseaux · Alternance
-                    </div>
-
-                    <div class="terminal-line terminal-cursor">
-                        <span class="prompt">bay@portfolio:~$</span>
-                        <span class="cursor">█</span>
-                    </div>
-
-                </div>
-
-            </div>
-
             <p class="eyebrow">
-                Étudiant en Mastère Infrastructure &amp; Réseaux · Disponible pour une alternance
+                Étudiant en informatique · spécialité infra réseau · Disponible pour une alternance
             </p>
 
             <h1>
-                Bonjour, je suis<br>
-                <span>BAY</span>
+                Bienvenue sur mon <span>site</span>
             </h1>
 
-            <p class="intro">
-                Je conçois et sécurise des infrastructures réseau.
-                Je recherche actuellement une alternance pour mettre
-                ces compétences au service d'une équipe technique.
-            </p>
+            <div class="contact-widget">
 
-            <div class="links">
-                <a href="mailto:bay@site.com" class="primary">Me contacter</a>
-            </div>
+                <button type="button" id="contactBtn" class="primary contact-trigger">
+                    Me contacter
+                </button>
 
-        </section>
+                <div class="contact-card" id="contactCard">
 
+                    <div class="contact-card-bar">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
 
-        <!-- ABOUT -->
-        <section id="about" class="section about">
+                        <span class="contact-card-title">contact.txt</span>
+                    </div>
 
-            <div class="section-header">
-                <p class="section-number">03</p>
-                <h2>À propos</h2>
-            </div>
+                    <div class="contact-card-body">
+                        <span id="contactEmail">bay@site.com</span>
 
-            <div class="about-content">
+                        <button type="button" id="copyBtn" class="copy-btn">
+                            Copier
+                        </button>
+                    </div>
 
-                <p>
-                    Je suis <strong>BAY</strong>, étudiant en informatique
-                    avec un intérêt particulier pour les réseaux,
-                    Linux et le développement.
-                </p>
-
-                <p>
-                    J'aime comprendre comment les systèmes fonctionnent,
-                    construire des projets et apprendre de nouvelles
-                    technologies.
-                </p>
-
-                <p>
-                    Actuellement, je travaille sur différents projets afin
-                    de développer mes compétences et construire mon portfolio.
-                </p>
+                </div>
 
             </div>
 
@@ -210,30 +151,32 @@
         </section>
 
 
-        <!-- ARTICLES -->
-        <section id="articles" class="section">
+        <!-- ABOUT -->
+        <section id="about" class="section about">
 
             <div class="section-header">
                 <p class="section-number">02</p>
-                <h2>Articles</h2>
+                <h2>Qui suis-je</h2>
             </div>
 
-            <div class="articles-list">
+            <div class="about-content">
 
-                <a href="#" class="article">
-                    <span>Comprendre le DHCP Relay</span>
-                    <span>2026 ↗</span>
-                </a>
+                <p>
+                    Je suis <strong>BAY</strong>, étudiant en informatique
+                    avec un intérêt particulier pour les réseaux,
+                    Linux et le développement.
+                </p>
 
-                <a href="#" class="article">
-                    <span>Comprendre les VLANs</span>
-                    <span>2026 ↗</span>
-                </a>
+                <p>
+                    J'aime comprendre comment les systèmes fonctionnent,
+                    construire des projets et apprendre de nouvelles
+                    technologies.
+                </p>
 
-                <a href="#" class="article">
-                    <span>Mon environnement Linux</span>
-                    <span>2026 ↗</span>
-                </a>
+                <p>
+                    Actuellement, je travaille sur différents projets afin
+                    de développer mes compétences et construire mon portfolio.
+                </p>
 
             </div>
 
@@ -250,6 +193,36 @@
             bay@site.com
         </a>
     </footer>
+
+
+    <script>
+        (function () {
+            var btn = document.getElementById('contactBtn');
+            var card = document.getElementById('contactCard');
+            var copyBtn = document.getElementById('copyBtn');
+            var email = document.getElementById('contactEmail').textContent.trim();
+
+            btn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                card.classList.toggle('open');
+            });
+
+            copyBtn.addEventListener('click', function () {
+                navigator.clipboard.writeText(email).then(function () {
+                    copyBtn.textContent = 'Copié ✓';
+                    setTimeout(function () {
+                        copyBtn.textContent = 'Copier';
+                    }, 2000);
+                });
+            });
+
+            document.addEventListener('click', function (e) {
+                if (!card.contains(e.target) && !btn.contains(e.target)) {
+                    card.classList.remove('open');
+                }
+            });
+        })();
+    </script>
 
 </body>
 </html>
