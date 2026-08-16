@@ -1,75 +1,33 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>pfSense vs ZyXEL — BAY</title>
-
-    <meta
-        name="description"
-        content="Étude comparative de solutions de pare-feu pfSense et ZyXEL."
-    >
+    <title>Étude comparative des solutions pare-feu — BAY</title>
+    <meta name="description" content="Étude comparative entre pfSense et ZyXEL dans le cadre d'un projet de sécurité réseau.">
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
-
 <body>
-
 
 <header class="navbar">
 
     <a href="index.html" class="logo-mark">
-
         <span class="logo-icon">
-
-            <svg
-                class="rubiks-logo"
-                viewBox="0 0 100 100"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-
-                <rect x="15" y="15" width="70" height="70" rx="8" fill="#171717"/>
-
-                <rect x="20" y="20" width="20" height="20" fill="#ffffff"/>
-                <rect x="42" y="20" width="20" height="20" fill="#ef4444"/>
-                <rect x="64" y="20" width="20" height="20" fill="#3b82f6"/>
-
-                <rect x="20" y="42" width="20" height="20" fill="#facc15"/>
-                <rect x="42" y="42" width="20" height="20" fill="#22c55e"/>
-                <rect x="64" y="42" width="20" height="20" fill="#ffffff"/>
-
-                <rect x="20" y="64" width="20" height="20" fill="#f97316"/>
-                <rect x="42" y="64" width="20" height="20" fill="#3b82f6"/>
-                <rect x="64" y="64" width="20" height="20" fill="#ef4444"/>
-
-            </svg>
-
+            <span class="rubiks-cube">
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+            </span>
         </span>
-
         BAY
-
     </a>
 
-
     <nav>
-
-        <a href="index.html#projects">
-            Projets
-        </a>
-
-        <a href="about.html">
-            Qui suis-je
-        </a>
-
+        <a href="index.html#projects">Projets</a>
+        <a href="about.html">Qui suis-je</a>
     </nav>
 
 </header>
@@ -77,30 +35,51 @@
 
 <main>
 
-
     <section class="project-hero">
 
-        <p class="eyebrow">
-            Sécurité réseau
-        </p>
+        <p class="section-number">02 / PROJET</p>
 
         <h1>
-            pfSense vs ZyXEL
+            Étude comparative des solutions pare-feu
         </h1>
 
         <p class="project-intro">
-            Étude comparative de deux solutions de pare-feu
-            afin d'identifier la solution la plus adaptée aux
-            besoins d'une petite entreprise.
+            Comparaison de deux solutions de sécurité réseau,
+            pfSense et ZyXEL, afin d'identifier la solution la plus
+            adaptée aux besoins d'une petite entreprise.
         </p>
 
         <div class="tags project-tags">
-
             <span>pfSense</span>
             <span>ZyXEL</span>
             <span>Pare-feu</span>
-            <span>Filtrage web</span>
-            <span>VPN</span>
+            <span>Cybersécurité</span>
+        </div>
+
+    </section>
+
+
+    <section class="project-section">
+
+        <p class="section-number">01</p>
+
+        <h2>Contexte</h2>
+
+        <div class="project-text">
+
+            <p>
+                Dans le cadre d'un projet d'entreprise, j'ai réalisé une étude
+                comparative entre pfSense et ZyXEL afin d'évaluer leurs
+                fonctionnalités et leur pertinence pour une infrastructure
+                réseau professionnelle.
+            </p>
+
+            <p>
+                L'étude s'appuie notamment sur un cas concret : une entreprise
+                disposant d'un forfait 4G limité souhaite réduire sa
+                consommation de données en empêchant l'accès à certains
+                contenus non professionnels.
+            </p>
 
         </div>
 
@@ -109,85 +88,43 @@
 
     <section class="project-section">
 
-        <p class="section-number">
-            01
-        </p>
+        <p class="section-number">02</p>
 
-        <h2>
-            Problématique
-        </h2>
+        <h2>Solutions étudiées</h2>
 
         <div class="project-text">
-
-            <p>
-                Une entreprise utilisant un routeur 4G de 200 Go
-                rencontrait une consommation excessive de données.
-            </p>
-
-            <p>
-                Les postes étaient initialement destinés à la
-                consultation des courriels professionnels, mais
-                certains utilisateurs consultaient également des
-                vidéos et d'autres contenus de divertissement.
-            </p>
-
-            <div class="pitch">
-
-                Comment contrôler l'accès à Internet afin de réduire
-                la consommation de données tout en maintenant les
-                services nécessaires à l'activité ?
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <section class="project-section">
-
-        <p class="section-number">
-            02
-        </p>
-
-        <h2>
-            Solutions étudiées
-        </h2>
-
-        <div class="project-text">
-
-            <p>
-                Deux solutions ont été étudiées : pfSense associé
-                à une appliance Netgate et le pare-feu ZyXEL USG20-VPN.
-            </p>
 
             <div class="technology-grid">
 
                 <div class="technology">
-
-                    <strong>
-                        Netgate SG-1100
-                    </strong>
-
+                    <strong>pfSense</strong>
                     <span>
-                        Appliance compacte utilisant pfSense
-                        pour la gestion et la sécurisation du réseau.
+                        Solution open source basée sur FreeBSD,
+                        fortement personnalisable.
                     </span>
-
                 </div>
 
+                <div class="technology">
+                    <strong>ZyXEL</strong>
+                    <span>
+                        Solution commerciale orientée simplicité
+                        d'administration et déploiement.
+                    </span>
+                </div>
 
                 <div class="technology">
-
-                    <strong>
-                        ZyXEL USG20-VPN
-                    </strong>
-
+                    <strong>Netgate SG-1100</strong>
                     <span>
-                        Pare-feu destiné aux petites entreprises
-                        avec fonctionnalités de sécurité intégrées.
+                        Appliance compacte destinée notamment
+                        aux petites infrastructures.
                     </span>
+                </div>
 
+                <div class="technology">
+                    <strong>ZyXEL USG20-VPN</strong>
+                    <span>
+                        Pare-feu compact destiné aux petites entreprises.
+                    </span>
                 </div>
 
             </div>
@@ -199,59 +136,36 @@
 
     <section class="project-section">
 
-        <p class="section-number">
-            03
-        </p>
+        <p class="section-number">03</p>
 
-        <h2>
-            Tests pfSense
-        </h2>
+        <h2>Filtrage web</h2>
 
         <div class="project-text">
 
             <p>
-                Une plateforme pfSense a été mise en place dans un
-                environnement de test afin d'étudier les possibilités
-                de filtrage web.
+                Une phase de test a été réalisée avec pfSense afin d'étudier
+                la possibilité de contrôler les accès Internet.
             </p>
 
-            <p>
-                Les packages Squid et SquidGuard ont notamment été
-                étudiés afin de mettre en place un proxy et des règles
-                de filtrage.
-            </p>
-
-            <h3>
-                Configuration
-            </h3>
+            <h3>Configuration pfSense</h3>
 
             <ul>
+                <li>Accès à l'interface d'administration.</li>
+                <li>Installation des composants de filtrage.</li>
+                <li>Configuration du proxy.</li>
+                <li>Création de règles de filtrage.</li>
+                <li>Blocage de catégories de sites non nécessaires.</li>
+                <li>Tests des règles sur le réseau.</li>
+            </ul>
 
-                <li>
-                    Installation de Squid.
-                </li>
+            <h3>Configuration ZyXEL</h3>
 
-                <li>
-                    Installation de SquidGuard.
-                </li>
-
-                <li>
-                    Configuration du proxy.
-                </li>
-
-                <li>
-                    Création de règles de filtrage.
-                </li>
-
-                <li>
-                    Blocage de catégories de sites non nécessaires
-                    à l'activité professionnelle.
-                </li>
-
-                <li>
-                    Tests d'accès à différents sites.
-                </li>
-
+            <ul>
+                <li>Accès à l'interface de gestion.</li>
+                <li>Configuration des politiques de sécurité.</li>
+                <li>Paramétrage du filtrage web.</li>
+                <li>Définition des catégories autorisées ou bloquées.</li>
+                <li>Validation du comportement des règles.</li>
             </ul>
 
         </div>
@@ -261,13 +175,9 @@
 
     <section class="project-section">
 
-        <p class="section-number">
-            04
-        </p>
+        <p class="section-number">04</p>
 
-        <h2>
-            Comparaison
-        </h2>
+        <h2>Comparaison</h2>
 
         <div class="project-text">
 
@@ -276,110 +186,43 @@
                 <table class="data-table">
 
                     <thead>
-
                         <tr>
-
-                            <th>
-                                Critère
-                            </th>
-
-                            <th>
-                                ZyXEL
-                            </th>
-
-                            <th>
-                                pfSense
-                            </th>
-
+                            <th>Critère</th>
+                            <th>ZyXEL USG20-VPN</th>
+                            <th>Netgate SG-1100</th>
                         </tr>
-
                     </thead>
-
 
                     <tbody>
 
                         <tr>
-
-                            <td>
-                                Administration
-                            </td>
-
-                            <td>
-                                Interface intuitive
-                            </td>
-
-                            <td>
-                                Plus technique
-                            </td>
-
+                            <td>Administration</td>
+                            <td>Intuitive</td>
+                            <td>Plus technique</td>
                         </tr>
 
-
                         <tr>
-
-                            <td>
-                                Flexibilité
-                            </td>
-
-                            <td>
-                                Bonne
-                            </td>
-
-                            <td>
-                                Très élevée
-                            </td>
-
+                            <td>Fiabilité</td>
+                            <td>Élevée</td>
+                            <td>Élevée</td>
                         </tr>
 
-
                         <tr>
-
-                            <td>
-                                Personnalisation
-                            </td>
-
-                            <td>
-                                Limitée
-                            </td>
-
-                            <td>
-                                Élevée
-                            </td>
-
+                            <td>Coût matériel</td>
+                            <td>Plus élevé</td>
+                            <td>Plus abordable</td>
                         </tr>
 
-
                         <tr>
-
-                            <td>
-                                Licence
-                            </td>
-
-                            <td>
-                                Selon fonctionnalités
-                            </td>
-
-                            <td>
-                                Open source
-                            </td>
-
+                            <td>Licence</td>
+                            <td>Possible selon les services</td>
+                            <td>Open source</td>
                         </tr>
 
-
                         <tr>
-
-                            <td>
-                                Coût
-                            </td>
-
-                            <td>
-                                Plus élevé
-                            </td>
-
-                            <td>
-                                Plus économique
-                            </td>
-
+                            <td>Personnalisation</td>
+                            <td>Bonne</td>
+                            <td>Très importante</td>
                         </tr>
 
                     </tbody>
@@ -395,87 +238,29 @@
 
     <section class="project-section">
 
-        <p class="section-number">
-            05
-        </p>
+        <p class="section-number">05</p>
 
-        <h2>
-            Conclusion
-        </h2>
+        <h2>Conclusion</h2>
 
         <div class="project-text">
 
-            <p>
-                L'étude a permis de mettre en évidence les avantages
-                des deux solutions.
-            </p>
-
-            <p>
-                Le ZyXEL USG20-VPN se distingue par sa simplicité
-                d'administration et son approche prête à l'emploi.
-            </p>
-
-            <p>
-                pfSense offre davantage de flexibilité et de
-                possibilités de personnalisation, avec une approche
-                particulièrement intéressante pour une entreprise
-                souhaitant maîtriser ses coûts.
-            </p>
-
             <div class="pitch">
-
-                Mon choix s'est porté sur pfSense pour sa flexibilité,
-                sa personnalisation et son rapport fonctionnalités /
-                coût.
-
+                Pour ce cas d'utilisation, je privilégierais pfSense
+                pour sa flexibilité, sa personnalisation et l'absence
+                de coût de licence logiciel.
             </div>
 
-        </div>
+            <p>
+                ZyXEL reste cependant une solution intéressante pour une
+                entreprise recherchant une administration plus immédiate
+                et une solution davantage orientée « prête à l'emploi ».
+            </p>
 
-    </section>
-
-
-    <section class="project-section">
-
-        <p class="section-number">
-            06
-        </p>
-
-        <h2>
-            Compétences
-        </h2>
-
-        <div class="technology-grid">
-
-            <div class="technology">
-                <strong>Sécurité réseau</strong>
-                <span>Pare-feu et filtrage web</span>
-            </div>
-
-            <div class="technology">
-                <strong>pfSense</strong>
-                <span>Installation et configuration</span>
-            </div>
-
-            <div class="technology">
-                <strong>Analyse comparative</strong>
-                <span>Évaluation de solutions techniques</span>
-            </div>
-
-            <div class="technology">
-                <strong>Gestion de projet</strong>
-                <span>Planification et suivi des tâches</span>
-            </div>
-
-            <div class="technology">
-                <strong>Documentation</strong>
-                <span>Recherche et rédaction technique</span>
-            </div>
-
-            <div class="technology">
-                <strong>Cybersécurité</strong>
-                <span>Politiques et contrôle des accès</span>
-            </div>
+            <p>
+                Cette étude m'a permis de développer mes compétences en
+                cybersécurité, en administration réseau et en analyse
+                comparative de solutions techniques.
+            </p>
 
         </div>
 
@@ -483,22 +268,15 @@
 
 
     <div class="back-projects">
-
-        <a href="index.html#projects">
-            ← Retour aux projets
-        </a>
-
+        <a href="index.html#projects">← Retour aux projets</a>
     </div>
-
 
 </main>
 
 
 <footer>
 
-    <p>
-        © 2026 BAY
-    </p>
+    <p>© 2026 BAY</p>
 
     <a href="mailto:bay@site.com">
         bay@site.com
@@ -506,7 +284,5 @@
 
 </footer>
 
-
 </body>
-
 </html>

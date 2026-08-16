@@ -1,75 +1,33 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>Analyse forensique — BAY</title>
-
-    <meta
-        name="description"
-        content="Analyse forensique d'un poste informatique avec Autopsy."
-    >
+    <title>Analyse forensique avec Autopsy — BAY</title>
+    <meta name="description" content="Analyse forensique d'un poste informatique avec Autopsy.">
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
-
 <body>
-
 
 <header class="navbar">
 
     <a href="index.html" class="logo-mark">
-
         <span class="logo-icon">
-
-            <svg
-                class="rubiks-logo"
-                viewBox="0 0 100 100"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-
-                <rect x="15" y="15" width="70" height="70" rx="8" fill="#171717"/>
-
-                <rect x="20" y="20" width="20" height="20" fill="#ffffff"/>
-                <rect x="42" y="20" width="20" height="20" fill="#ef4444"/>
-                <rect x="64" y="20" width="20" height="20" fill="#3b82f6"/>
-
-                <rect x="20" y="42" width="20" height="20" fill="#facc15"/>
-                <rect x="42" y="42" width="20" height="20" fill="#22c55e"/>
-                <rect x="64" y="42" width="20" height="20" fill="#ffffff"/>
-
-                <rect x="20" y="64" width="20" height="20" fill="#f97316"/>
-                <rect x="42" y="64" width="20" height="20" fill="#3b82f6"/>
-                <rect x="64" y="64" width="20" height="20" fill="#ef4444"/>
-
-            </svg>
-
+            <span class="rubiks-cube">
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+            </span>
         </span>
-
         BAY
-
     </a>
 
-
     <nav>
-
-        <a href="index.html#projects">
-            Projets
-        </a>
-
-        <a href="about.html">
-            Qui suis-je
-        </a>
-
+        <a href="index.html#projects">Projets</a>
+        <a href="about.html">Qui suis-je</a>
     </nav>
 
 </header>
@@ -77,29 +35,25 @@
 
 <main>
 
-
     <section class="project-hero">
 
-        <p class="eyebrow">
-            Cybersécurité
-        </p>
+        <p class="section-number">03 / PROJET</p>
 
         <h1>
-            Analyse forensique
+            Analyse forensique avec Autopsy
         </h1>
 
         <p class="project-intro">
-            Investigation numérique d'un poste informatique
-            à l'aide du logiciel open-source Autopsy.
+            Investigation d'un poste informatique afin d'identifier
+            d'éventuelles activités suspectes et de préserver les
+            éléments pouvant constituer des preuves numériques.
         </p>
 
         <div class="tags project-tags">
-
             <span>Autopsy</span>
-            <span>Forensique</span>
+            <span>Forensics</span>
+            <span>Cybersécurité</span>
             <span>Windows</span>
-            <span>Investigation</span>
-
         </div>
 
     </section>
@@ -107,26 +61,22 @@
 
     <section class="project-section">
 
-        <p class="section-number">
-            01
-        </p>
+        <p class="section-number">01</p>
 
-        <h2>
-            Contexte
-        </h2>
+        <h2>Contexte</h2>
 
         <div class="project-text">
 
             <p>
-                Une entreprise souhaitait examiner le poste
-                informatique d'un collaborateur soupçonné d'avoir
-                effectué des actions suspectes sur le matériel et
-                les données de l'entreprise.
+                Une entreprise souhaitait examiner le poste informatique
+                d'un collaborateur à la suite de comportements considérés
+                comme suspects.
             </p>
 
             <p>
-                L'objectif était de rechercher des traces
-                d'activités inhabituelles tout en conservant
+                L'objectif était d'identifier d'éventuelles connexions
+                distantes, des copies non autorisées de documents ou encore
+                des traces de navigation problématiques, tout en conservant
                 l'intégrité des éléments analysés.
             </p>
 
@@ -137,39 +87,113 @@
 
     <section class="project-section">
 
-        <p class="section-number">
-            02
-        </p>
+        <p class="section-number">02</p>
 
-        <h2>
-            Objectifs
-        </h2>
+        <h2>Préservation</h2>
 
         <div class="project-text">
 
+            <p>
+                Afin de ne pas travailler directement sur le poste original,
+                une copie du disque a été réalisée à l'aide d'Acronis.
+            </p>
+
+            <p>
+                Le clone obtenu a ensuite été transformé en machine virtuelle
+                afin de pouvoir effectuer l'analyse dans un environnement
+                contrôlé.
+            </p>
+
+            <div class="pitch">
+                La préservation de l'intégrité et de la confidentialité
+                des données était une priorité durant toute l'investigation.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="project-section">
+
+        <p class="section-number">03</p>
+
+        <h2>Investigation</h2>
+
+        <div class="project-text">
+
+            <p>
+                L'analyse a été réalisée avec Autopsy, solution open source
+                dédiée à l'analyse forensique de supports numériques.
+            </p>
+
+            <h3>Modules utilisés</h3>
+
+            <div class="technology-grid">
+
+                <div class="technology">
+                    <strong>File Type Identification</strong>
+                    <span>Identification des types de fichiers.</span>
+                </div>
+
+                <div class="technology">
+                    <strong>Keyword Search</strong>
+                    <span>Recherche de mots-clés dans les données.</span>
+                </div>
+
+                <div class="technology">
+                    <strong>Web Artifacts</strong>
+                    <span>Analyse des traces de navigation.</span>
+                </div>
+
+                <div class="technology">
+                    <strong>Web Cookies Parser</strong>
+                    <span>Analyse des cookies et interactions web.</span>
+                </div>
+
+                <div class="technology">
+                    <strong>Windows Event Log Parser</strong>
+                    <span>Analyse des journaux Windows.</span>
+                </div>
+
+                <div class="technology">
+                    <strong>Recent Documents</strong>
+                    <span>Identification des documents récemment utilisés.</span>
+                </div>
+
+                <div class="technology">
+                    <strong>Windows Registry Analyzer</strong>
+                    <span>Analyse du registre Windows.</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="project-section">
+
+        <p class="section-number">04</p>
+
+        <h2>Résultats</h2>
+
+        <div class="project-text">
+
+            <p>
+                Plusieurs éléments ont été observés au cours de
+                l'investigation.
+            </p>
+
             <ul>
-
-                <li>
-                    Identifier d'éventuelles connexions à distance.
-                </li>
-
-                <li>
-                    Rechercher des copies non autorisées de documents.
-                </li>
-
-                <li>
-                    Examiner les traces de navigation web.
-                </li>
-
-                <li>
-                    Identifier les fichiers supprimés ou récemment utilisés.
-                </li>
-
-                <li>
-                    Collecter et préserver les éléments utiles à
-                    l'investigation.
-                </li>
-
+                <li>Aucune trace de logiciel de prise en main à distance.</li>
+                <li>Le Bureau à distance Windows était désactivé.</li>
+                <li>Un partage réseau « Users » accessible à tous a été identifié.</li>
+                <li>Le partage « Users » a été désactivé afin de préserver la confidentialité.</li>
+                <li>L'historique Firefox ne remontait qu'au 21/02/2024.</li>
+                <li>Des traces de fichiers et dossiers anciens ont été retrouvées.</li>
+                <li>Aucun logiciel compromettant n'a été identifié.</li>
             </ul>
 
         </div>
@@ -179,156 +203,24 @@
 
     <section class="project-section">
 
-        <p class="section-number">
-            03
-        </p>
+        <p class="section-number">05</p>
 
-        <h2>
-            Analyse avec Autopsy
-        </h2>
+        <h2>Bilan</h2>
 
         <div class="project-text">
 
             <p>
-                Le disque dur a d'abord été cloné afin de travailler
-                sur une copie de la machine sans modifier le support
-                original.
+                Cette investigation m'a permis de découvrir concrètement
+                les méthodes utilisées dans une analyse forensique et
+                l'importance de travailler sur une copie afin de préserver
+                les données originales.
             </p>
 
             <p>
-                Le clone a ensuite été transformé en machine virtuelle
-                puis analysé avec Autopsy.
+                J'ai également développé mes compétences en analyse de
+                systèmes Windows, en recherche de traces numériques et en
+                documentation des résultats.
             </p>
-
-            <h3>
-                Modules utilisés
-            </h3>
-
-            <div class="technology-grid">
-
-                <div class="technology">
-                    <strong>File Type Identification</strong>
-                    <span>Identification des types de fichiers</span>
-                </div>
-
-                <div class="technology">
-                    <strong>Keyword Search</strong>
-                    <span>Recherche de mots-clés</span>
-                </div>
-
-                <div class="technology">
-                    <strong>Web Artifacts</strong>
-                    <span>Analyse des traces de navigation</span>
-                </div>
-
-                <div class="technology">
-                    <strong>Web Cookies Parser</strong>
-                    <span>Analyse des cookies</span>
-                </div>
-
-                <div class="technology">
-                    <strong>Windows Event Log Parser</strong>
-                    <span>Analyse des journaux Windows</span>
-                </div>
-
-                <div class="technology">
-                    <strong>Recent Documents</strong>
-                    <span>Analyse des documents récents</span>
-                </div>
-
-                <div class="technology">
-                    <strong>Windows Registry Analyzer</strong>
-                    <span>Analyse du registre Windows</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <section class="project-section">
-
-        <p class="section-number">
-            04
-        </p>
-
-        <h2>
-            Résultats
-        </h2>
-
-        <div class="project-text">
-
-            <p>
-                L'analyse de l'historique Firefox a montré que les
-                données disponibles ne remontaient qu'au
-                21/02/2024, ce qui constituait un élément notable
-                dans l'investigation.
-            </p>
-
-            <p>
-                Plusieurs traces de fichiers et de raccourcis anciens
-                ont également été retrouvées.
-            </p>
-
-            <p>
-                Aucun logiciel de prise en main à distance suspect
-                n'a été identifié sur le poste.
-            </p>
-
-            <p>
-                Un partage réseau accessible à tous a toutefois été
-                identifié puis désactivé afin de préserver la
-                confidentialité des données.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <section class="project-section">
-
-        <p class="section-number">
-            05
-        </p>
-
-        <h2>
-            Compétences
-        </h2>
-
-        <div class="technology-grid">
-
-            <div class="technology">
-                <strong>Analyse forensique</strong>
-                <span>Investigation de supports numériques</span>
-            </div>
-
-            <div class="technology">
-                <strong>Autopsy</strong>
-                <span>Analyse d'artefacts numériques</span>
-            </div>
-
-            <div class="technology">
-                <strong>Windows</strong>
-                <span>Analyse des journaux et du registre</span>
-            </div>
-
-            <div class="technology">
-                <strong>Documentation</strong>
-                <span>Rédaction et présentation des résultats</span>
-            </div>
-
-            <div class="technology">
-                <strong>Confidentialité</strong>
-                <span>Préservation de l'intégrité des preuves</span>
-            </div>
-
-            <div class="technology">
-                <strong>Communication</strong>
-                <span>Échanges avec le client et l'équipe</span>
-            </div>
 
         </div>
 
@@ -336,13 +228,8 @@
 
 
     <div class="back-projects">
-
-        <a href="index.html#projects">
-            ← Retour aux projets
-        </a>
-
+        <a href="index.html#projects">← Retour aux projets</a>
     </div>
-
 
 </main>
 
@@ -357,7 +244,5 @@
 
 </footer>
 
-
 </body>
-
 </html>

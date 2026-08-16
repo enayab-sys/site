@@ -1,82 +1,33 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>Assistance VPN — BAY</title>
-
-    <meta
-        name="description"
-        content="Résolution d'un incident VPN et gestion d'une adresse IP bloquée par un pare-feu."
-    >
+    <title>Assistance utilisateur — Incident VPN — BAY</title>
+    <meta name="description" content="Résolution d'un incident VPN et déblocage d'une adresse IP sur un routeur.">
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
-
 <body>
-
 
 <header class="navbar">
 
     <a href="index.html" class="logo-mark">
-
         <span class="logo-icon">
-
-            <svg
-                class="rubiks-logo"
-                viewBox="0 0 100 100"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-
-                <rect
-                    x="15"
-                    y="15"
-                    width="70"
-                    height="70"
-                    rx="8"
-                    fill="#171717"
-                />
-
-                <rect x="20" y="20" width="20" height="20" fill="#ffffff"/>
-                <rect x="42" y="20" width="20" height="20" fill="#ef4444"/>
-                <rect x="64" y="20" width="20" height="20" fill="#3b82f6"/>
-
-                <rect x="20" y="42" width="20" height="20" fill="#facc15"/>
-                <rect x="42" y="42" width="20" height="20" fill="#22c55e"/>
-                <rect x="64" y="42" width="20" height="20" fill="#ffffff"/>
-
-                <rect x="20" y="64" width="20" height="20" fill="#f97316"/>
-                <rect x="42" y="64" width="20" height="20" fill="#3b82f6"/>
-                <rect x="64" y="64" width="20" height="20" fill="#ef4444"/>
-
-            </svg>
-
+            <span class="rubiks-cube">
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+            </span>
         </span>
-
         BAY
-
     </a>
 
-
     <nav>
-
-        <a href="index.html#projects">
-            Projets
-        </a>
-
-        <a href="about.html">
-            Qui suis-je
-        </a>
-
+        <a href="index.html#projects">Projets</a>
+        <a href="about.html">Qui suis-je</a>
     </nav>
 
 </header>
@@ -84,30 +35,56 @@
 
 <main>
 
-
     <section class="project-hero">
 
-        <p class="eyebrow">
-            Activité professionnelle
-        </p>
+        <p class="section-number">04 / PROJET</p>
 
         <h1>
-            Assistance utilisateur
+            Assistance utilisateur — Incident VPN
         </h1>
 
         <p class="project-intro">
-            Résolution d'un incident de connexion VPN causé par le
-            blocage automatique d'une adresse IP par le pare-feu
-            de l'entreprise.
+            Résolution d'un problème de connexion VPN provoqué par
+            le blocage automatique de l'adresse IP d'un utilisateur
+            par le pare-feu.
         </p>
 
         <div class="tags project-tags">
-
             <span>VPN</span>
             <span>SSH</span>
+            <span>Réseau</span>
+            <span>Support</span>
             <span>TeamViewer</span>
-            <span>CLI</span>
-            <span>Pare-feu</span>
+        </div>
+
+    </section>
+
+
+    <section class="project-section">
+
+        <p class="section-number">01</p>
+
+        <h2>Incident</h2>
+
+        <div class="project-text">
+
+            <p>
+                Un utilisateur ne parvenait plus à se connecter au réseau
+                de son entreprise via le VPN après plusieurs tentatives
+                de connexion.
+            </p>
+
+            <p>
+                Après analyse, le problème venait du mécanisme de sécurité
+                du pare-feu. L'adresse IP de l'utilisateur avait été
+                automatiquement placée dans une liste noire à la suite
+                d'un nombre important de tentatives de connexion.
+            </p>
+
+            <div class="pitch">
+                Le blocage permet de protéger le réseau contre des tentatives
+                répétées pouvant correspondre à une tentative d'intrusion.
+            </div>
 
         </div>
 
@@ -116,75 +93,74 @@
 
     <section class="project-section">
 
-        <p class="section-number">
-            01
-        </p>
+        <p class="section-number">02</p>
 
-        <h2>
-            Contexte
-        </h2>
+        <h2>Intervention</h2>
 
         <div class="project-text">
 
             <p>
-                Un utilisateur ne parvenait plus à se connecter
-                au réseau de l'entreprise via VPN après plusieurs
-                tentatives de connexion.
+                J'ai pris la main à distance sur un poste du réseau
+                à l'aide de TeamViewer afin d'accéder au routeur.
             </p>
 
             <p>
-                L'analyse a permis d'identifier que son adresse IP
-                avait été automatiquement bloquée par le pare-feu
-                après un nombre important de tentatives.
+                Une connexion SSH a ensuite été établie afin d'identifier
+                l'adresse IP bloquée et de la retirer de la liste noire.
             </p>
 
-            <p>
-                Cette mesure de sécurité permet de limiter les
-                tentatives d'intrusion et de protéger le réseau
-                de l'entreprise.
-            </p>
+            <h3>Commandes utilisées</h3>
 
-        </div>
+            <pre class="code-block"><code>Router > show lockout-users
 
-    </section>
-
-
-    <section class="project-section">
-
-        <p class="section-number">
-            02
-        </p>
-
-        <h2>
-            Intervention
-        </h2>
-
-        <div class="project-text">
-
-            <p>
-                Je me suis connecté à distance à un poste du réseau
-                à l'aide de TeamViewer afin d'établir ensuite une
-                connexion SSH au routeur.
-            </p>
-
-            <p>
-                L'objectif était de retirer manuellement l'adresse
-                IP de l'utilisateur de la liste des adresses bloquées.
-            </p>
-
-            <h3>
-                Commandes utilisées
-            </h3>
-
-            <div class="code-block">
-
-Router &gt; show lockout-users
-
-Router &gt; enable
+Router > enable
 
 Router # configure terminal
 
-Router (config) # unlock lockout-users "adresse IP"
+Router (config) # unlock lockout-users "ADRESSE_IP"</code></pre>
+
+        </div>
+
+    </section>
+
+
+    <section class="project-section">
+
+        <p class="section-number">03</p>
+
+        <h2>Procédure</h2>
+
+        <div class="project-text">
+
+            <div class="technology-grid">
+
+                <div class="technology">
+                    <strong>01 — Diagnostic</strong>
+                    <span>
+                        Identification du problème de connexion VPN.
+                    </span>
+                </div>
+
+                <div class="technology">
+                    <strong>02 — Accès distant</strong>
+                    <span>
+                        Connexion au poste avec TeamViewer.
+                    </span>
+                </div>
+
+                <div class="technology">
+                    <strong>03 — SSH</strong>
+                    <span>
+                        Connexion sécurisée au routeur.
+                    </span>
+                </div>
+
+                <div class="technology">
+                    <strong>04 — Déblocage</strong>
+                    <span>
+                        Suppression de l'adresse IP de la liste noire.
+                    </span>
+                </div>
 
             </div>
 
@@ -195,25 +171,27 @@ Router (config) # unlock lockout-users "adresse IP"
 
     <section class="project-section">
 
-        <p class="section-number">
-            03
-        </p>
+        <p class="section-number">04</p>
 
-        <h2>
-            Résultat
-        </h2>
+        <h2>Validation</h2>
 
         <div class="project-text">
 
             <p>
-                Après le retrait de l'adresse IP de la liste noire,
-                l'utilisateur a été recontacté afin de vérifier
-                la résolution de l'incident.
+                Une fois l'adresse IP débloquée, j'ai recontacté
+                l'utilisateur afin de vérifier que le problème était
+                bien résolu.
             </p>
 
             <p>
-                Il a pu se reconnecter au VPN avec succès et
-                reprendre son activité normalement.
+                L'utilisateur a pu se reconnecter au VPN et retrouver
+                l'accès au réseau de l'entreprise.
+            </p>
+
+            <p>
+                L'intervention a donc permis de rétablir rapidement
+                l'accès tout en conservant le mécanisme de protection
+                du pare-feu.
             </p>
 
         </div>
@@ -223,34 +201,34 @@ Router (config) # unlock lockout-users "adresse IP"
 
     <section class="project-section">
 
-        <p class="section-number">
-            04
-        </p>
+        <p class="section-number">05</p>
 
-        <h2>
-            Compétences
-        </h2>
+        <h2>Compétences</h2>
 
-        <div class="technology-grid">
+        <div class="project-text">
 
-            <div class="technology">
-                <strong>Sécurité réseau</strong>
-                <span>Gestion des adresses IP bloquées</span>
-            </div>
+            <div class="technology-grid">
 
-            <div class="technology">
-                <strong>Accès distant</strong>
-                <span>TeamViewer et SSH</span>
-            </div>
+                <div class="technology">
+                    <strong>Administration réseau</strong>
+                    <span>Diagnostic et intervention sur un routeur.</span>
+                </div>
 
-            <div class="technology">
-                <strong>Administration</strong>
-                <span>Interface CLI du routeur</span>
-            </div>
+                <div class="technology">
+                    <strong>CLI</strong>
+                    <span>Utilisation de l'interface en ligne de commande.</span>
+                </div>
 
-            <div class="technology">
-                <strong>Communication</strong>
-                <span>Assistance et suivi utilisateur</span>
+                <div class="technology">
+                    <strong>Support utilisateur</strong>
+                    <span>Communication et accompagnement de l'utilisateur.</span>
+                </div>
+
+                <div class="technology">
+                    <strong>Sécurité</strong>
+                    <span>Compréhension des mécanismes de blocage IP.</span>
+                </div>
+
             </div>
 
         </div>
@@ -259,22 +237,15 @@ Router (config) # unlock lockout-users "adresse IP"
 
 
     <div class="back-projects">
-
-        <a href="index.html#projects">
-            ← Retour aux projets
-        </a>
-
+        <a href="index.html#projects">← Retour aux projets</a>
     </div>
-
 
 </main>
 
 
 <footer>
 
-    <p>
-        © 2026 BAY
-    </p>
+    <p>© 2026 BAY</p>
 
     <a href="mailto:bay@site.com">
         bay@site.com
@@ -282,7 +253,5 @@ Router (config) # unlock lockout-users "adresse IP"
 
 </footer>
 
-
 </body>
-
 </html>
