@@ -12,6 +12,36 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    background: #fdfcfa;
+    color: #1c1917;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
 :root {
     --background: #fdfcfa;
     --surface: #f6f3ee;
@@ -24,45 +54,18 @@ html {
     --accent: #d97706;
     --accent-soft: #fef3e2;
 
-    --green: #27c93f;
-    --red: #ff5f56;
-    --yellow: #ffbd2e;
+    --terminal: #171717;
+    --terminal-light: #242424;
+    --terminal-border: #333333;
 }
 
 
 /* =========================================================
-   BODY
+   GLOBAL LAYOUT
 ========================================================= */
-
-body {
-    background: var(--background);
-    color: var(--text);
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    line-height: 1.6;
-
-    -webkit-font-smoothing: antialiased;
-}
-
-
-/* =========================================================
-   GLOBAL
-========================================================= */
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-button {
-    font-family: inherit;
-}
 
 main {
+    width: 100%;
     max-width: 900px;
 
     margin: 0 auto;
@@ -76,6 +79,7 @@ main {
 ========================================================= */
 
 .navbar {
+    width: 100%;
     max-width: 900px;
 
     margin: 0 auto;
@@ -83,23 +87,17 @@ main {
     padding: 28px 30px;
 
     display: flex;
-
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 .logo-mark {
     display: flex;
-
     align-items: center;
+    justify-content: center;
 
-    gap: 9px;
-
-    color: var(--text);
-
-    font-size: 14px;
-
-    font-weight: 700;
+    width: 38px;
+    height: 38px;
 }
 
 .logo-icon {
@@ -107,13 +105,8 @@ main {
     height: 38px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
-}
-
-.logo-name {
-    letter-spacing: -0.2px;
 }
 
 
@@ -150,8 +143,14 @@ main {
     width: 100%;
     height: 100%;
 
+    min-width: 0;
+    min-height: 0;
+
     border-radius: 1px;
 }
+
+
+/* Couleurs */
 
 .rubiks-cube span:nth-child(1) {
     background: #ffffff;
@@ -190,70 +189,7 @@ main {
 }
 
 
-/* =========================================================
-   NAVIGATION
-========================================================= */
-
-.navbar nav {
-    display: flex;
-
-    align-items: center;
-
-    gap: 25px;
-}
-
-.navbar nav a {
-    color: var(--muted);
-
-    font-size: 14px;
-
-    transition:
-        color 0.2s ease;
-}
-
-.navbar nav a:hover {
-    color: var(--text);
-}
-
-
-/* =========================================================
-   HERO
-========================================================= */
-
-.hero {
-    max-width: 560px;
-
-    margin: 0 auto;
-
-    padding: 130px 20px 110px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    text-align: center;
-}
-
-.hero-avatar {
-    width: 88px;
-    height: 88px;
-
-    margin-bottom: 30px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: var(--accent-soft);
-
-    box-shadow:
-        0 10px 30px rgba(217, 119, 6, 0.15);
-}
+/* Cube du hero */
 
 .hero-cube {
     width: 42px;
@@ -269,12 +205,77 @@ main {
         5px 6px 0 rgba(0, 0, 0, 0.12);
 }
 
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+}
+
+.navbar nav a {
+    color: var(--muted);
+
+    font-size: 14px;
+
+    transition:
+        color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.navbar nav a:hover {
+    color: var(--text);
+}
+
+
+/* =========================================================
+   HERO INDEX
+========================================================= */
+
+.hero {
+    width: 100%;
+    max-width: 560px;
+
+    margin: 0 auto;
+
+    padding: 130px 20px 110px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+.hero-avatar {
+    width: 88px;
+    height: 88px;
+
+    margin-bottom: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--accent-soft);
+
+    box-shadow:
+        0 10px 30px rgba(217, 119, 6, 0.15);
+}
+
 .eyebrow {
     color: var(--muted);
 
     font-size: 13px;
 
-    margin-bottom: 22px;
+    margin-bottom: 25px;
 
     text-transform: uppercase;
 
@@ -282,11 +283,11 @@ main {
 }
 
 .hero h1 {
-    font-size: clamp(38px, 6vw, 50px);
+    font-size: clamp(34px, 6vw, 46px);
 
     line-height: 1.15;
 
-    letter-spacing: -1.5px;
+    letter-spacing: -1px;
 
     font-weight: 700;
 }
@@ -296,19 +297,13 @@ main {
 }
 
 .intro {
-    max-width: 460px;
+    max-width: 440px;
 
     margin-top: 18px;
 
     color: var(--muted);
 
     font-size: 17px;
-
-    line-height: 1.7;
-}
-
-.intro strong {
-    color: var(--text);
 }
 
 
@@ -326,18 +321,15 @@ main {
 
 .contact-trigger {
     font-size: 14px;
-
     font-weight: 600;
 
     padding: 12px 24px;
 
     border: 1px solid var(--accent);
-
     border-radius: 7px;
 
     background: var(--accent);
-
-    color: #ffffff;
+    color: white;
 
     cursor: pointer;
 
@@ -352,11 +344,15 @@ main {
     transform: translateY(-1px);
 }
 
+
+/* =========================================================
+   CONTACT CARD
+========================================================= */
+
 .contact-card {
     position: absolute;
 
     top: calc(100% + 12px);
-
     left: 50%;
 
     width: 280px;
@@ -365,9 +361,9 @@ main {
         translateX(-50%)
         translateY(-8px);
 
-    background: #1a1a1a;
+    background: var(--terminal);
 
-    border: 1px solid #333;
+    border: 1px solid var(--terminal-border);
 
     border-radius: 10px;
 
@@ -377,7 +373,6 @@ main {
         0 20px 45px rgba(0, 0, 0, 0.2);
 
     opacity: 0;
-
     visibility: hidden;
 
     transition:
@@ -385,12 +380,11 @@ main {
         transform 0.2s ease,
         visibility 0.2s;
 
-    z-index: 10;
+    z-index: 100;
 }
 
 .contact-card.open {
     opacity: 1;
-
     visibility: visible;
 
     transform:
@@ -402,19 +396,20 @@ main {
     height: 38px;
 
     display: flex;
-
     align-items: center;
 
     padding: 0 14px;
 
-    background: #242424;
+    background: var(--terminal-light);
 
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid var(--terminal-border);
 }
 
 .terminal-dot {
     width: 10px;
     height: 10px;
+
+    flex-shrink: 0;
 
     border-radius: 50%;
 
@@ -422,15 +417,15 @@ main {
 }
 
 .terminal-dot.red {
-    background: var(--red);
+    background: #ff5f56;
 }
 
 .terminal-dot.yellow {
-    background: var(--yellow);
+    background: #ffbd2e;
 }
 
 .terminal-dot.green {
-    background: var(--green);
+    background: #27c93f;
 }
 
 .contact-card-title {
@@ -451,12 +446,12 @@ main {
     padding: 18px 16px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     gap: 10px;
+
+    color: #d4d4d4;
 
     font-family:
         "SFMono-Regular",
@@ -465,16 +460,10 @@ main {
         monospace;
 
     font-size: 13px;
-
-    color: #d4d4d4;
 }
 
 .copy-btn {
     flex-shrink: 0;
-
-    font-family: inherit;
-
-    font-size: 11px;
 
     padding: 6px 10px;
 
@@ -482,11 +471,14 @@ main {
 
     color: var(--accent);
 
-    border: 1px solid #333;
+    border: 1px solid var(--terminal-border);
 
     border-radius: 5px;
 
     cursor: pointer;
+
+    font-family: inherit;
+    font-size: 11px;
 
     transition:
         border-color 0.2s ease,
@@ -524,12 +516,6 @@ main {
     color: var(--muted);
 
     font-size: 13px;
-
-    font-family:
-        "SFMono-Regular",
-        "Roboto Mono",
-        Consolas,
-        monospace;
 }
 
 .section h2 {
@@ -552,7 +538,7 @@ main {
 .project {
     display: grid;
 
-    grid-template-columns: 60px 1fr auto;
+    grid-template-columns: 60px minmax(0, 1fr) auto;
 
     gap: 25px;
 
@@ -561,7 +547,8 @@ main {
     border-top: 1px solid var(--border);
 
     transition:
-        padding 0.2s ease;
+        padding 0.2s ease,
+        background 0.2s ease;
 }
 
 .project:last-child {
@@ -576,35 +563,32 @@ main {
     color: var(--muted);
 
     font-size: 13px;
+}
 
-    font-family:
-        "SFMono-Regular",
-        "Roboto Mono",
-        Consolas,
-        monospace;
+.project-content {
+    min-width: 0;
 }
 
 .project h3 {
     font-size: 21px;
 
+    line-height: 1.3;
+
     margin-bottom: 10px;
 }
 
 .project-content p {
-    color: var(--muted);
-
     max-width: 500px;
 
-    font-size: 15px;
+    color: var(--muted);
 }
 
 .project-link {
-    font-size: 13px;
-
     align-self: center;
 
     color: var(--accent);
 
+    font-size: 13px;
     font-weight: 600;
 
     white-space: nowrap;
@@ -628,25 +612,25 @@ main {
 .tags {
     display: flex;
 
+    flex-wrap: wrap;
+
     gap: 8px;
 
     margin-top: 15px;
-
-    flex-wrap: wrap;
 }
 
 .tags span {
-    border: 1px solid var(--border);
-
     padding: 4px 9px;
+
+    border: 1px solid var(--border);
 
     border-radius: 20px;
 
-    font-size: 11px;
+    background: var(--surface);
 
     color: var(--muted);
 
-    background: var(--surface);
+    font-size: 11px;
 }
 
 
@@ -655,45 +639,39 @@ main {
 ========================================================= */
 
 .about-page {
-    padding: 110px 0 100px;
+    padding: 110px 0 90px;
 }
 
 .about-page .section-header {
-    margin-bottom: 55px;
+    margin-bottom: 60px;
 }
 
 .about-intro {
     max-width: 680px;
 }
 
-.about-small-name {
-    color: var(--muted);
+.about-intro h1 {
+    font-size: clamp(44px, 7vw, 70px);
 
-    font-family:
-        "SFMono-Regular",
-        "Roboto Mono",
-        Consolas,
-        monospace;
+    line-height: 1;
 
-    font-size: 13px;
+    letter-spacing: -3px;
 
-    text-transform: uppercase;
+    margin-bottom: 30px;
+}
 
-    letter-spacing: 0.8px;
-
-    margin-bottom: 18px !important;
+.about-intro h1 span {
+    color: var(--accent);
 }
 
 .about-intro p {
+    max-width: 620px;
+
+    margin-bottom: 20px;
+
     color: var(--muted);
 
     font-size: 17px;
-
-    line-height: 1.75;
-
-    max-width: 650px;
-
-    margin-bottom: 22px;
 }
 
 .about-intro .about-lead {
@@ -701,60 +679,31 @@ main {
 
     font-size: 21px;
 
-    line-height: 1.55;
-
-    margin-bottom: 28px;
+    line-height: 1.5;
 }
 
 .about-intro strong {
     color: var(--text);
 }
 
-.master-link {
-    display: inline-block;
-
-    margin-top: 8px;
-
-    color: var(--accent);
-
-    font-size: 14px;
-
-    font-weight: 600;
-
-    border-bottom: 1px solid var(--accent);
-
-    padding-bottom: 2px;
-
-    transition:
-        opacity 0.2s ease,
-        transform 0.2s ease;
-}
-
-.master-link:hover {
-    opacity: 0.7;
-
-    transform: translateX(3px);
-}
-
 
 /* =========================================================
-   SKILLS
+   ABOUT — COMPÉTENCES
 ========================================================= */
 
 .about-skills {
-    padding-top: 100px;
+    padding-top: 90px;
 }
 
 .about-skills-grid {
     display: flex;
-
     flex-direction: column;
 }
 
 .skill-card {
     display: grid;
 
-    grid-template-columns: 60px 1fr;
+    grid-template-columns: 60px minmax(0, 1fr);
 
     gap: 25px;
 
@@ -762,8 +711,7 @@ main {
 
     border-top: 1px solid var(--border);
 
-    transition:
-        padding 0.2s ease;
+    transition: padding 0.2s ease;
 }
 
 .skill-card:last-child {
@@ -778,312 +726,29 @@ main {
     color: var(--muted);
 
     font-size: 13px;
-
-    font-family:
-        "SFMono-Regular",
-        "Roboto Mono",
-        Consolas,
-        monospace;
 }
 
 .skill-card h3 {
-    font-size: 21px;
+    font-size: 23px;
 
-    line-height: 1.3;
-
-    margin-bottom: 9px;
-}
-
-.skill-card p {
-    color: var(--muted);
-
-    max-width: 620px;
-
-    font-size: 15px;
-
-    line-height: 1.65;
-}
-
-
-/* =========================================================
-   EXPERIENCE
-========================================================= */
-
-.experience-section {
-    padding-top: 100px;
-}
-
-.experience-card {
-    border-top: 1px solid var(--border);
-
-    border-bottom: 1px solid var(--border);
-
-    padding: 35px 0;
-}
-
-.experience-header {
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: flex-start;
-
-    gap: 30px;
-
-    margin-bottom: 30px;
-}
-
-.experience-label {
-    color: var(--muted);
-
-    font-size: 11px;
-
-    font-weight: 600;
-
-    letter-spacing: 0.6px;
-
-    text-transform: uppercase;
+    line-height: 1.2;
 
     margin-bottom: 8px;
 }
 
-.experience-header h3 {
-    font-size: 25px;
-
-    letter-spacing: -0.5px;
-}
-
-.experience-number {
-    color: var(--muted);
-
-    font-family:
-        "SFMono-Regular",
-        "Roboto Mono",
-        Consolas,
-        monospace;
-
-    font-size: 13px;
-}
-
-.experience-content {
-    max-width: 700px;
-}
-
-.experience-content > p {
-    color: var(--muted);
-
-    font-size: 16px;
-
-    line-height: 1.7;
-
-    margin-bottom: 25px;
-}
-
-.experience-content ul {
-    padding-left: 20px;
+.skill-card p {
+    max-width: 600px;
 
     color: var(--muted);
-}
-
-.experience-content li {
-    margin-bottom: 10px;
-
-    padding-left: 5px;
-}
-
-.experience-content li::marker {
-    color: var(--accent);
 }
 
 
 /* =========================================================
-   CERTIFICATIONS
-========================================================= */
-
-.certifications-section {
-    padding-top: 100px;
-}
-
-.certification-grid {
-    display: flex;
-
-    flex-direction: column;
-}
-
-.certification-card {
-    display: grid;
-
-    grid-template-columns: 60px 1fr;
-
-    gap: 25px;
-
-    padding: 27px 0;
-
-    border-top: 1px solid var(--border);
-}
-
-.certification-card:last-child {
-    border-bottom: 1px solid var(--border);
-}
-
-.certification-number {
-    color: var(--muted);
-
-    font-size: 13px;
-
-    font-family:
-        "SFMono-Regular",
-        "Roboto Mono",
-        Consolas,
-        monospace;
-}
-
-.certification-card h3 {
-    font-size: 18px;
-
-    margin-bottom: 5px;
-}
-
-.certification-card p {
-    color: var(--muted);
-
-    font-size: 14px;
-}
-
-
-/* =========================================================
-   LANGUES
-========================================================= */
-
-.languages {
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 1px;
-
-    margin-top: 35px;
-
-    background: var(--border);
-
-    border: 1px solid var(--border);
-}
-
-.language-item {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 3px;
-
-    padding: 20px;
-
-    background: var(--background);
-}
-
-.language-item strong {
-    font-size: 14px;
-}
-
-.language-item span {
-    color: var(--muted);
-
-    font-size: 11px;
-
-    line-height: 1.5;
-}
-
-
-/* =========================================================
-   ENVIRONNEMENT TECHNIQUE
-========================================================= */
-
-.environments-section {
-    padding-top: 100px;
-}
-
-.technology-grid {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 1px;
-
-    background: var(--border);
-
-    border: 1px solid var(--border);
-}
-
-.technology {
-    background: var(--background);
-
-    padding: 25px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 6px;
-
-    min-height: 95px;
-}
-
-.technology strong {
-    font-size: 15px;
-}
-
-.technology span {
-    color: var(--muted);
-
-    font-size: 13px;
-
-    line-height: 1.5;
-}
-
-
-/* =========================================================
-   OBJECTIF
-========================================================= */
-
-.objective-section {
-    padding-top: 100px;
-}
-
-.objective-content {
-    max-width: 680px;
-}
-
-.objective-content p {
-    color: var(--muted);
-
-    font-size: 17px;
-
-    line-height: 1.75;
-
-    margin-bottom: 22px;
-}
-
-.objective-content .about-lead {
-    color: var(--text);
-
-    font-size: 21px;
-
-    line-height: 1.55;
-}
-
-.objective-content strong {
-    color: var(--text);
-}
-
-
-/* =========================================================
-   PROFIL TERMINAL
+   ABOUT — PROFIL
 ========================================================= */
 
 .real-me {
     padding-top: 100px;
-
-    padding-bottom: 120px;
 }
 
 .real-me-intro {
@@ -1095,22 +760,24 @@ main {
 .real-me-intro p {
     color: var(--muted);
 
-    font-size: 17px;
-
-    line-height: 1.7;
+    font-size: 18px;
 
     margin-bottom: 8px;
 }
 
+.real-me-intro strong {
+    color: var(--text);
+}
+
 
 /* =========================================================
-   TERMINAL
+   PROFILE TERMINAL
 ========================================================= */
 
 .profile-terminal {
     width: 100%;
 
-    background: #171717;
+    background: var(--terminal);
 
     border: 1px solid #2d2d2d;
 
@@ -1126,12 +793,11 @@ main {
     height: 44px;
 
     display: flex;
-
     align-items: center;
 
     padding: 0 15px;
 
-    background: #242424;
+    background: var(--terminal-light);
 
     border-bottom: 1px solid #333;
 
@@ -1146,8 +812,11 @@ main {
 
 .terminal-status {
     display: flex;
-
     align-items: center;
+}
+
+.profile-terminal-bar .terminal-dot {
+    margin-right: 6px;
 }
 
 .profile-terminal-title {
@@ -1159,7 +828,7 @@ main {
 .profile-terminal-online {
     margin-left: auto;
 
-    color: var(--green);
+    color: #27c93f;
 
     font-size: 10px;
 }
@@ -1178,26 +847,18 @@ main {
     font-size: 13px;
 }
 
-.terminal-command {
-    color: #777;
-
-    margin-bottom: 25px;
-}
-
 .terminal-name {
-    color: #ffffff;
+    color: white;
 
-    font-size: 24px;
-
-    line-height: 1.2;
+    font-size: 20px;
 
     font-weight: 700;
-
-    margin-bottom: 5px;
 }
 
 .terminal-subtitle {
-    color: #8b8b8b;
+    margin-top: 4px;
+
+    color: #777;
 
     font-size: 12px;
 }
@@ -1205,14 +866,14 @@ main {
 .terminal-separator {
     height: 1px;
 
-    background: #333;
+    margin: 20px 0;
 
-    margin: 25px 0;
+    background: #333;
 }
 
 
 /* =========================================================
-   PROFILE GRID
+   PROFIL — GRILLE
 ========================================================= */
 
 .profile-grid {
@@ -1221,51 +882,41 @@ main {
     grid-template-columns: 1fr 1fr;
 
     border: 1px solid #333;
+
+    background: #333;
+
+    gap: 1px;
 }
 
-.profile-cell {
-    min-height: 90px;
+.profile-box {
+    min-width: 0;
 
-    padding: 17px 18px;
+    padding: 18px;
 
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    gap: 5px;
-
-    border-bottom: 1px solid #333;
-}
-
-.profile-cell:nth-child(odd) {
-    border-right: 1px solid #333;
-}
-
-.profile-cell:nth-last-child(-n + 2) {
-    border-bottom: none;
+    background: var(--terminal);
 }
 
 .profile-label {
+    display: block;
+
+    margin-bottom: 6px;
+
     color: #777;
 
     font-size: 10px;
 
-    letter-spacing: 0.6px;
-
     text-transform: uppercase;
+
+    letter-spacing: 0.5px;
 }
 
-.profile-cell strong {
+.profile-value {
     color: #d4d4d4;
 
     font-size: 13px;
-
-    font-weight: 500;
 }
 
-.profile-cell strong.highlight {
+.profile-value.highlight {
     color: var(--accent);
 
     font-weight: 600;
@@ -1287,15 +938,19 @@ main {
 }
 
 .progress-label {
-    color: #777;
+    flex-shrink: 0;
 
-    font-size: 12px;
+    color: #777;
 }
 
 .progress-bar {
     flex: 1;
 
     height: 10px;
+
+    min-width: 100px;
+
+    max-width: none;
 
     background: #292929;
 
@@ -1321,13 +976,11 @@ main {
 }
 
 .progress-percent {
+    flex-shrink: 0;
+
     color: var(--accent);
 
     font-size: 11px;
-
-    min-width: 30px;
-
-    text-align: right;
 }
 
 .terminal-error {
@@ -1340,47 +993,85 @@ main {
 
 
 /* =========================================================
-   CONCLUSION
+   ABOUT — MINI CARTES
+========================================================= */
+
+.fun-facts {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+.fun-fact {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 20px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.fun-fact:hover {
+    transform: translateY(-3px);
+
+    border-color: #d6cfc5;
+}
+
+.fun-fact-icon {
+    flex-shrink: 0;
+
+    font-size: 23px;
+}
+
+.fun-fact strong {
+    display: block;
+
+    font-size: 14px;
+}
+
+.fun-fact p {
+    margin-top: 2px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   ABOUT — CONCLUSION
 ========================================================= */
 
 .about-conclusion {
-    max-width: 620px;
+    max-width: 600px;
 
-    margin-top: 45px;
+    margin-top: 55px;
 
     padding-left: 20px;
 
     border-left: 3px solid var(--accent);
 }
 
-.conclusion-label {
-    display: block;
-
-    color: var(--accent);
-
-    font-family:
-        "SFMono-Regular",
-        "Roboto Mono",
-        Consolas,
-        monospace;
-
-    font-size: 12px;
-
-    font-weight: 600;
-
-    letter-spacing: 0.5px;
-
-    margin-bottom: 10px;
-}
-
 .about-conclusion p {
     color: var(--muted);
 
-    font-size: 17px;
+    font-size: 18px;
 
-    line-height: 1.6;
-
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
 
 .about-conclusion strong {
@@ -1389,10 +1080,284 @@ main {
 
 
 /* =========================================================
+   PROJECT PAGE
+========================================================= */
+
+.project-hero {
+    padding: 120px 0 80px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.project-hero h1 {
+    font-size: clamp(42px, 7vw, 68px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 35px;
+}
+
+.project-intro {
+    max-width: 600px;
+
+    color: var(--muted);
+
+    font-size: 19px;
+}
+
+.project-tags {
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   PROJECT IMAGE
+========================================================= */
+
+.project-image {
+    padding: 70px 0;
+}
+
+.project-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+}
+
+
+/* =========================================================
+   PROJECT SECTION
+========================================================= */
+
+.project-section {
+    display: grid;
+
+    grid-template-columns: 80px 250px minmax(0, 1fr);
+
+    gap: 30px;
+
+    padding: 90px 0;
+
+    border-top: 1px solid var(--border);
+}
+
+.project-section h2 {
+    font-size: 32px;
+
+    letter-spacing: -1px;
+}
+
+.project-text {
+    max-width: 550px;
+}
+
+.project-text p {
+    color: var(--muted);
+
+    font-size: 17px;
+
+    margin-bottom: 25px;
+}
+
+.project-text ul {
+    padding-left: 20px;
+
+    color: var(--muted);
+}
+
+.project-text li {
+    margin-bottom: 12px;
+}
+
+.project-text h3 {
+    font-size: 16px;
+
+    margin: 30px 0 5px;
+}
+
+.project-text h3:first-child {
+    margin-top: 0;
+}
+
+
+/* =========================================================
+   TECHNOLOGIES
+========================================================= */
+
+.technology-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 1px;
+
+    background: var(--border);
+
+    border: 1px solid var(--border);
+}
+
+.technology {
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    background: var(--background);
+}
+
+.technology strong {
+    font-size: 16px;
+}
+
+.technology span {
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   CODE
+========================================================= */
+
+.code-block {
+    margin: 20px 0;
+
+    padding: 20px 24px;
+
+    overflow-x: auto;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    font-family:
+        "SFMono-Regular",
+        "Roboto Mono",
+        Consolas,
+        monospace;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: var(--text);
+}
+
+
+/* =========================================================
+   TABLEAUX
+========================================================= */
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+
+    margin: 20px 0;
+
+    border-collapse: collapse;
+
+    font-size: 14px;
+}
+
+.data-table th,
+.data-table td {
+    padding: 10px 14px;
+
+    text-align: left;
+
+    border-bottom: 1px solid var(--border);
+
+    white-space: nowrap;
+}
+
+.data-table th {
+    color: var(--muted);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.4px;
+}
+
+.data-table td.ok {
+    color: #16a34a;
+
+    font-weight: 600;
+}
+
+.data-table td.no {
+    color: #dc2626;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   PITCH
+========================================================= */
+
+.pitch {
+    margin-top: 25px;
+
+    padding: 20px 25px;
+
+    background: var(--surface);
+
+    border-left: 3px solid var(--accent);
+
+    color: var(--text);
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   BACK PROJECTS
+========================================================= */
+
+.back-projects {
+    padding: 70px 0;
+}
+
+.back-projects a {
+    font-size: 14px;
+
+    border-bottom: 1px solid var(--text);
+
+    transition: opacity 0.2s ease;
+}
+
+.back-projects a:hover {
+    opacity: 0.6;
+}
+
+
+/* =========================================================
    FOOTER
 ========================================================= */
 
 footer {
+    width: 100%;
     max-width: 900px;
 
     margin: 0 auto;
@@ -1400,7 +1365,6 @@ footer {
     padding: 40px 30px 60px;
 
     display: flex;
-
     justify-content: space-between;
 
     color: var(--muted);
@@ -1411,8 +1375,7 @@ footer {
 footer a {
     border-bottom: 1px solid var(--muted);
 
-    transition:
-        opacity 0.2s ease;
+    transition: opacity 0.2s ease;
 }
 
 footer a:hover {
@@ -1426,12 +1389,18 @@ footer a:hover {
 
 @media (max-width: 650px) {
 
+    /* =====================================================
+       GLOBAL
+    ===================================================== */
+
     main {
         padding: 0 20px;
     }
 
 
-    /* NAVBAR */
+    /* =====================================================
+       NAVBAR
+    ===================================================== */
 
     .navbar {
         padding: 20px;
@@ -1445,12 +1414,7 @@ footer a:hover {
         font-size: 12px;
     }
 
-    .logo-mark {
-        font-size: 13px;
-
-        gap: 7px;
-    }
-
+    .logo-mark,
     .logo-icon {
         width: 34px;
         height: 34px;
@@ -1462,10 +1426,12 @@ footer a:hover {
     }
 
 
-    /* HERO */
+    /* =====================================================
+       HERO
+    ===================================================== */
 
     .hero {
-        padding: 90px 20px 70px;
+        padding: 90px 10px 70px;
     }
 
     .hero-avatar {
@@ -1480,7 +1446,6 @@ footer a:hover {
         height: 38px;
 
         gap: 2px;
-
         padding: 3px;
     }
 
@@ -1495,44 +1460,44 @@ footer a:hover {
     }
 
 
-    /* CONTACT */
+    /* =====================================================
+       CONTACT
+    ===================================================== */
 
     .contact-card {
         width: 240px;
     }
 
 
-    /* SECTIONS */
+    /* =====================================================
+       SECTIONS
+    ===================================================== */
 
     .section {
         padding: 70px 0;
     }
 
     .section-header {
-        grid-template-columns: 42px 1fr;
+        grid-template-columns: 45px minmax(0, 1fr);
 
         margin-bottom: 35px;
     }
 
     .section h2 {
-        font-size: 28px;
-
-        letter-spacing: -0.7px;
+        font-size: 30px;
     }
 
 
-    /* PROJECTS */
+    /* =====================================================
+       PROJECTS
+    ===================================================== */
 
     .project {
-        grid-template-columns: 40px 1fr;
+        grid-template-columns: 40px minmax(0, 1fr);
 
         gap: 15px;
 
         padding: 25px 0;
-    }
-
-    .project:hover {
-        padding-left: 0;
     }
 
     .project-link {
@@ -1544,18 +1509,26 @@ footer a:hover {
     }
 
     .project-content p {
-        font-size: 14px;
+        font-size: 15px;
     }
 
 
-    /* ABOUT */
+    /* =====================================================
+       ABOUT
+    ===================================================== */
 
     .about-page {
-        padding: 80px 0 70px;
+        padding: 80px 0 60px;
     }
 
     .about-page .section-header {
-        margin-bottom: 42px;
+        margin-bottom: 45px;
+    }
+
+    .about-intro h1 {
+        font-size: 52px;
+
+        letter-spacing: -2px;
     }
 
     .about-intro .about-lead {
@@ -1563,246 +1536,184 @@ footer a:hover {
     }
 
     .about-intro p {
-        font-size: 15.5px;
-
-        line-height: 1.7;
+        font-size: 16px;
     }
 
 
-    /* SKILLS */
+    /* =====================================================
+       SKILLS
+    ===================================================== */
 
     .about-skills {
         padding-top: 70px;
     }
 
     .skill-card {
-        grid-template-columns: 40px 1fr;
+        grid-template-columns: 40px minmax(0, 1fr);
 
         gap: 15px;
-
-        padding: 25px 0;
-    }
-
-    .skill-card:hover {
-        padding-left: 0;
     }
 
     .skill-card h3 {
-        font-size: 19px;
-    }
-
-    .skill-card p {
-        font-size: 14px;
-    }
-
-
-    /* EXPERIENCE */
-
-    .experience-section {
-        padding-top: 70px;
-    }
-
-    .experience-card {
-        padding: 28px 0;
-    }
-
-    .experience-header {
-        gap: 15px;
-
-        margin-bottom: 25px;
-    }
-
-    .experience-header h3 {
         font-size: 20px;
     }
 
-    .experience-content > p {
-        font-size: 15px;
-    }
 
-    .experience-content li {
-        font-size: 14px;
-    }
-
-
-    /* CERTIFICATIONS */
-
-    .certification-card {
-        grid-template-columns: 40px 1fr;
-
-        gap: 15px;
-
-        padding: 24px 0;
-    }
-
-    .certification-card h3 {
-        font-size: 17px;
-    }
-
-
-    /* LANGUAGES */
-
-    .languages {
-        grid-template-columns: 1fr;
-    }
-
-    .language-item {
-        padding: 17px 18px;
-    }
-
-
-    /* TECHNOLOGY */
-
-    .technology-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .technology {
-        padding: 20px;
-    }
-
-
-    /* OBJECTIVE */
-
-    .objective-content .about-lead {
-        font-size: 19px;
-    }
-
-    .objective-content p {
-        font-size: 15px;
-    }
-
-
-    /* TERMINAL */
+    /* =====================================================
+       PROFILE
+    ===================================================== */
 
     .real-me {
         padding-top: 70px;
-
-        padding-bottom: 80px;
     }
 
     .real-me-intro p {
-        font-size: 15px;
-    }
-
-    .profile-terminal-bar {
-        height: 40px;
-
-        padding: 0 12px;
-    }
-
-    .profile-terminal-title {
-        font-size: 10px;
-    }
-
-    .profile-terminal-online {
-        font-size: 9px;
+        font-size: 16px;
     }
 
     .profile-terminal-body {
-        padding: 22px 16px;
+        padding: 22px 18px;
 
         font-size: 11px;
     }
 
-    .terminal-command {
-        margin-bottom: 20px;
+    .profile-terminal-bar {
+        padding: 0 12px;
     }
-
-    .terminal-name {
-        font-size: 21px;
-    }
-
-    .terminal-subtitle {
-        font-size: 10px;
-
-        line-height: 1.5;
-    }
-
-    .terminal-separator {
-        margin: 20px 0;
-    }
-
-
-    /* PROFILE GRID */
 
     .profile-grid {
         grid-template-columns: 1fr;
     }
 
-    .profile-cell {
-        min-height: auto;
-
+    .profile-box {
         padding: 15px;
     }
 
-    .profile-cell:nth-child(odd) {
-        border-right: none;
+    .profile-value {
+        font-size: 11px;
     }
-
-    .profile-cell:not(:last-child) {
-        border-bottom: 1px solid #333;
-    }
-
-    .profile-cell:last-child {
-        border-bottom: none;
-    }
-
-
-    /* MOTIVATION */
 
     .progress-row {
         flex-wrap: wrap;
-
-        gap: 8px;
-    }
-
-    .progress-label {
-        width: 100%;
     }
 
     .progress-bar {
+        order: 3;
+
+        flex-basis: 100%;
+
+        width: 100%;
+
         min-width: 0;
-
-        width: calc(100% - 45px);
-    }
-
-    .terminal-error {
-        font-size: 9px;
     }
 
 
-    /* CONCLUSION */
+    /* =====================================================
+       FUN FACTS
+    ===================================================== */
+
+    .fun-facts {
+        grid-template-columns: 1fr;
+    }
+
+    .fun-fact {
+        padding: 16px;
+    }
+
+
+    /* =====================================================
+       CONCLUSION
+    ===================================================== */
 
     .about-conclusion {
-        margin-top: 35px;
-
-        padding-left: 15px;
+        margin-top: 45px;
     }
 
     .about-conclusion p {
-        font-size: 15px;
+        font-size: 16px;
     }
 
 
-    /* FOOTER */
+    /* =====================================================
+       PROJECT PAGE
+    ===================================================== */
+
+    .project-hero {
+        padding: 80px 0 60px;
+    }
+
+    .project-hero h1 {
+        font-size: 42px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .project-intro {
+        font-size: 17px;
+    }
+
+    .project-section {
+        display: block;
+
+        padding: 65px 0;
+    }
+
+    .project-section .section-number {
+        margin-bottom: 15px;
+    }
+
+    .project-section h2 {
+        margin-bottom: 30px;
+
+        font-size: 28px;
+    }
+
+    .project-text p {
+        font-size: 16px;
+    }
+
+    .technology-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        padding: 45px 0;
+    }
+
+
+    /* =====================================================
+       TABLES
+    ===================================================== */
+
+    .data-table {
+        font-size: 13px;
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 8px 10px;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
 
     footer {
-        padding: 35px 20px 50px;
+        padding: 40px 20px 50px;
 
         flex-direction: column;
 
         gap: 10px;
     }
-
 }
 
 
 /* =========================================================
-   VERY SMALL SCREEN
+   VERY SMALL PHONES
 ========================================================= */
 
-@media (max-width: 380px) {
+@media (max-width: 400px) {
 
     .navbar nav {
         gap: 10px;
@@ -1812,16 +1723,23 @@ footer a:hover {
         font-size: 11px;
     }
 
-    .section h2 {
-        font-size: 25px;
+    .hero h1 {
+        font-size: 36px;
     }
 
-    .about-intro .about-lead {
-        font-size: 18px;
+    .section h2 {
+        font-size: 26px;
+    }
+
+    .about-intro h1 {
+        font-size: 45px;
     }
 
     .profile-terminal-body {
-        padding: 20px 13px;
+        padding: 18px 14px;
     }
 
+    .profile-terminal-online {
+        display: none;
+    }
 }
