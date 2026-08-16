@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>BAY — Portfolio</title>
 
-    <meta
-        name="description"
-        content="Portfolio de BAY — Étudiant en informatique, spécialité infrastructure et réseau, à la recherche d'un poste d'alternant administrateur réseau."
-    >
+    <meta name="description"
+          content="Portfolio de BAY — Étudiant en informatique, spécialité infrastructure et réseau, à la recherche d'un poste d'alternant administrateur réseau.">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -23,7 +20,8 @@
 
     <header class="navbar">
 
-        <a href="index.html" class="logo-mark">
+        <!-- Logo : uniquement le Rubik's Cube -->
+        <a href="#top" class="logo-mark" aria-label="Accueil">
 
             <span class="logo-icon">
 
@@ -45,11 +43,10 @@
 
             </span>
 
-            BAY
-
         </a>
 
 
+        <!-- Navigation -->
         <nav>
 
             <a href="#projects">
@@ -72,6 +69,8 @@
         ========================== -->
 
         <section class="hero" id="top">
+
+            <!-- Rubik's Cube principal -->
 
             <div class="hero-avatar">
 
@@ -120,7 +119,7 @@
                 <button
                     type="button"
                     id="contactBtn"
-                    class="primary contact-trigger"
+                    class="contact-trigger"
                 >
                     Me contacter
                 </button>
@@ -217,7 +216,7 @@
 
                         <p>
                             Conception et sécurisation d'une infrastructure
-                            réseau multi-site réalisée avec Cisco Packet Tracer.
+                            réseau multi-site avec Cisco Packet Tracer.
                         </p>
 
 
@@ -272,14 +271,14 @@
                     <div class="project-content">
 
                         <h3>
-                            Étude comparative des solutions pare-feu
+                            Étude comparative de solutions pare-feu
                         </h3>
 
 
                         <p>
                             Comparaison de solutions de sécurité réseau
-                            avec pfSense et ZyXEL afin d'identifier la
-                            solution la plus adaptée aux besoins d'une entreprise.
+                            avec pfSense et ZyXEL afin d'identifier
+                            une solution adaptée aux besoins d'une entreprise.
                         </p>
 
 
@@ -334,14 +333,14 @@
                     <div class="project-content">
 
                         <h3>
-                            Assistance utilisateur — incident VPN
+                            Assistance utilisateur — VPN
                         </h3>
 
 
                         <p>
-                            Résolution d'un incident de connexion VPN
-                            causé par le blocage de l'adresse IP de
-                            l'utilisateur sur le pare-feu de l'entreprise.
+                            Résolution d'un problème de connexion VPN
+                            après le blocage d'une adresse IP par le
+                            pare-feu de l'entreprise.
                         </p>
 
 
@@ -411,22 +410,23 @@
 
         (function () {
 
-            var btn = document.getElementById('contactBtn');
+            var btn =
+                document.getElementById('contactBtn');
 
-            var card = document.getElementById('contactCard');
+            var card =
+                document.getElementById('contactCard');
 
-            var copyBtn = document.getElementById('copyBtn');
+            var copyBtn =
+                document.getElementById('copyBtn');
 
-            var email = document
-                .getElementById('contactEmail')
-                .textContent
-                .trim();
+            var email =
+                document
+                    .getElementById('contactEmail')
+                    .textContent
+                    .trim();
 
 
-            /*
-             * Ouverture / fermeture
-             * de la carte de contact
-             */
+            /* Ouvrir / fermer la carte */
 
             btn.addEventListener('click', function (e) {
 
@@ -437,9 +437,7 @@
             });
 
 
-            /*
-             * Copier l'adresse email
-             */
+            /* Copier l'adresse mail */
 
             copyBtn.addEventListener('click', function () {
 
@@ -447,12 +445,14 @@
                     .writeText(email)
                     .then(function () {
 
-                        copyBtn.textContent = 'Copié ✓';
+                        copyBtn.textContent =
+                            'Copié ✓';
 
 
                         setTimeout(function () {
 
-                            copyBtn.textContent = 'Copier';
+                            copyBtn.textContent =
+                                'Copier';
 
                         }, 2000);
 
@@ -461,28 +461,27 @@
             });
 
 
-            /*
-             * Fermer la carte
-             * si on clique ailleurs
-             */
+            /* Fermer en cliquant ailleurs */
 
-            document.addEventListener('click', function (e) {
+            document.addEventListener(
+                'click',
+                function (e) {
 
-                if (
-                    !card.contains(e.target) &&
-                    !btn.contains(e.target)
-                ) {
+                    if (
+                        !card.contains(e.target) &&
+                        !btn.contains(e.target)
+                    ) {
 
-                    card.classList.remove('open');
+                        card.classList.remove('open');
+
+                    }
 
                 }
-
-            });
+            );
 
         })();
 
     </script>
 
 </body>
-
 </html>
