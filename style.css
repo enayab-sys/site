@@ -1,6 +1,6 @@
-/* =========================
+/* =========================================================
    RESET
-========================= */
+========================================================= */
 
 * {
     margin: 0;
@@ -11,11 +11,6 @@
 html {
     scroll-behavior: smooth;
 }
-
-
-/* =========================
-   VARIABLES
-========================= */
 
 :root {
     --background: #fdfcfa;
@@ -29,9 +24,9 @@ html {
 }
 
 
-/* =========================
+/* =========================================================
    BODY
-========================= */
+========================================================= */
 
 body {
     background: var(--background);
@@ -43,9 +38,9 @@ body {
 }
 
 
-/* =========================
+/* =========================================================
    GLOBAL
-========================= */
+========================================================= */
 
 a {
     color: inherit;
@@ -65,9 +60,9 @@ main {
 }
 
 
-/* =========================
+/* =========================================================
    NAVBAR
-========================= */
+========================================================= */
 
 .navbar {
     max-width: 900px;
@@ -77,7 +72,6 @@ main {
     padding: 28px 30px;
 
     display: flex;
-
     justify-content: space-between;
     align-items: center;
 }
@@ -87,14 +81,17 @@ main {
 
 .logo-mark {
     display: flex;
-
     align-items: center;
     justify-content: center;
 
-    width: 38px;
-    height: 38px;
+    gap: 10px;
+
+    width: auto;
+    min-height: 38px;
 
     color: var(--text);
+
+    font-weight: 700;
 }
 
 .logo-icon {
@@ -102,7 +99,6 @@ main {
     height: 38px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
@@ -112,9 +108,9 @@ main {
 }
 
 
-/* =========================
+/* =========================================================
    RUBIK'S CUBE
-========================= */
+========================================================= */
 
 .rubiks-cube {
     width: 28px;
@@ -139,9 +135,6 @@ main {
         3px 4px 0 rgba(0, 0, 0, 0.12);
 }
 
-
-/* Petits carrés */
-
 .rubiks-cube span {
     display: block;
 
@@ -155,9 +148,7 @@ main {
 }
 
 
-/* =========================
-   COULEURS RUBIK'S CUBE
-========================= */
+/* Couleurs */
 
 .rubiks-cube span:nth-child(1) {
     background: #ffffff;
@@ -196,9 +187,7 @@ main {
 }
 
 
-/* =========================
-   CUBE DU HERO
-========================= */
+/* Cube du Hero */
 
 .hero-cube {
     width: 42px;
@@ -215,9 +204,9 @@ main {
 }
 
 
-/* =========================
+/* =========================================================
    NAVIGATION
-========================= */
+========================================================= */
 
 .navbar nav {
     display: flex;
@@ -242,9 +231,9 @@ main {
 }
 
 
-/* =========================
+/* =========================================================
    HERO
-========================= */
+========================================================= */
 
 .hero {
     max-width: 560px;
@@ -254,16 +243,11 @@ main {
     padding: 130px 20px 110px;
 
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
 
     text-align: center;
 }
-
-
-/* Cercle autour du cube */
 
 .hero-avatar {
     width: 88px;
@@ -272,7 +256,6 @@ main {
     margin-bottom: 30px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
@@ -284,23 +267,17 @@ main {
         0 10px 30px rgba(217, 119, 6, 0.15);
 }
 
-
-/* Petit texte Portfolio */
-
 .eyebrow {
+    margin-bottom: 25px;
+
     color: var(--muted);
 
     font-size: 13px;
-
-    margin-bottom: 25px;
 
     text-transform: uppercase;
 
     letter-spacing: 0.5px;
 }
-
-
-/* Titre */
 
 .hero h1 {
     font-size: clamp(34px, 6vw, 46px);
@@ -316,9 +293,6 @@ main {
     color: var(--accent);
 }
 
-
-/* Description */
-
 .intro {
     max-width: 440px;
 
@@ -330,9 +304,9 @@ main {
 }
 
 
-/* =========================
+/* =========================================================
    CONTACT WIDGET
-========================= */
+========================================================= */
 
 .contact-widget {
     position: relative;
@@ -342,23 +316,18 @@ main {
     margin-top: 40px;
 }
 
-
-/* Bouton */
-
 .contact-trigger {
-    font-size: 14px;
-
-    font-weight: 600;
-
     padding: 12px 24px;
 
     border: 1px solid var(--accent);
-
     border-radius: 7px;
 
     background: var(--accent);
 
     color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
 
     cursor: pointer;
 
@@ -374,15 +343,14 @@ main {
 }
 
 
-/* =========================
+/* =========================================================
    CONTACT CARD
-========================= */
+========================================================= */
 
 .contact-card {
     position: absolute;
 
     top: calc(100% + 12px);
-
     left: 50%;
 
     width: 280px;
@@ -394,7 +362,6 @@ main {
     background: #1a1a1a;
 
     border: 1px solid #333333;
-
     border-radius: 10px;
 
     overflow: hidden;
@@ -403,7 +370,6 @@ main {
         0 20px 45px rgba(0, 0, 0, 0.2);
 
     opacity: 0;
-
     visibility: hidden;
 
     transition:
@@ -414,10 +380,8 @@ main {
     z-index: 10;
 }
 
-
 .contact-card.open {
     opacity: 1;
-
     visibility: visible;
 
     transform:
@@ -425,14 +389,10 @@ main {
         translateY(0);
 }
 
-
-/* Barre terminal */
-
 .contact-card-bar {
     height: 38px;
 
     display: flex;
-
     align-items: center;
 
     padding: 0 14px;
@@ -442,16 +402,13 @@ main {
     border-bottom: 1px solid #333333;
 }
 
-
-/* Points */
-
 .terminal-dot {
     width: 10px;
     height: 10px;
 
-    border-radius: 50%;
-
     margin-right: 6px;
+
+    border-radius: 50%;
 }
 
 .terminal-dot.red {
@@ -465,9 +422,6 @@ main {
 .terminal-dot.green {
     background: #27c93f;
 }
-
-
-/* Titre */
 
 .contact-card-title {
     margin-left: 8px;
@@ -483,19 +437,16 @@ main {
     font-size: 11px;
 }
 
-
-/* Contenu */
-
 .contact-card-body {
     padding: 18px 16px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     gap: 10px;
+
+    color: #d4d4d4;
 
     font-family:
         "SFMono-Regular",
@@ -504,19 +455,10 @@ main {
         monospace;
 
     font-size: 13px;
-
-    color: #d4d4d4;
 }
-
-
-/* Bouton copier */
 
 .copy-btn {
     flex-shrink: 0;
-
-    font-family: inherit;
-
-    font-size: 11px;
 
     padding: 6px 10px;
 
@@ -525,8 +467,10 @@ main {
     color: var(--accent);
 
     border: 1px solid #333333;
-
     border-radius: 5px;
+
+    font-family: inherit;
+    font-size: 11px;
 
     cursor: pointer;
 
@@ -542,16 +486,15 @@ main {
 }
 
 
-/* =========================
+/* =========================================================
    SECTIONS
-========================= */
+========================================================= */
 
 .section {
     padding: 100px 0;
 
     border-top: 1px solid var(--border);
 }
-
 
 .section-header {
     display: grid;
@@ -563,13 +506,11 @@ main {
     margin-bottom: 50px;
 }
 
-
 .section-number {
     color: var(--muted);
 
     font-size: 13px;
 }
-
 
 .section h2 {
     font-size: 35px;
@@ -578,9 +519,9 @@ main {
 }
 
 
-/* =========================
+/* =========================================================
    PROJECTS
-========================= */
+========================================================= */
 
 .project {
     display: grid;
@@ -598,16 +539,13 @@ main {
         background 0.2s ease;
 }
 
-
 .project:last-child {
     border-bottom: 1px solid var(--border);
 }
 
-
 .project:hover {
     padding-left: 10px;
 }
-
 
 .project-number {
     color: var(--muted);
@@ -615,30 +553,24 @@ main {
     font-size: 13px;
 }
 
-
 .project h3 {
-    font-size: 21px;
-
     margin-bottom: 10px;
-}
 
+    font-size: 21px;
+}
 
 .project-content p {
-    color: var(--muted);
-
     max-width: 500px;
+
+    color: var(--muted);
 }
 
-
-/* Lien Voir */
-
 .project-link {
-    font-size: 13px;
-
     align-self: center;
 
     color: var(--accent);
 
+    font-size: 13px;
     font-weight: 600;
 
     white-space: nowrap;
@@ -655,9 +587,9 @@ main {
 }
 
 
-/* =========================
+/* =========================================================
    TAGS
-========================= */
+========================================================= */
 
 .tags {
     display: flex;
@@ -669,648 +601,23 @@ main {
     flex-wrap: wrap;
 }
 
-
 .tags span {
-    border: 1px solid var(--border);
-
     padding: 4px 9px;
 
+    background: var(--surface);
+
+    border: 1px solid var(--border);
     border-radius: 20px;
 
-    font-size: 11px;
-
     color: var(--muted);
-
-    background: var(--surface);
-}
-
-
-/* =========================
-   ABOUT
-========================= */
-
-.about-content {
-    max-width: 650px;
-}
-
-
-.about-content p {
-    margin-bottom: 25px;
-
-    color: var(--muted);
-
-    font-size: 18px;
-}
-
-
-.about-content strong {
-    color: var(--text);
-}
-
-
-/* =========================
-   ABOUT PAGE
-========================= */
-
-.about-page {
-    padding: 120px 0 100px;
-}
-
-
-.about-page .section-header {
-    margin-bottom: 60px;
-}
-
-
-.about-page h1 {
-    font-size: clamp(42px, 7vw, 68px);
-
-    line-height: 1.05;
-
-    letter-spacing: -2px;
-}
-
-
-.about-page .about-content {
-    max-width: 650px;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    max-width: 900px;
-
-    margin: 0 auto;
-
-    padding: 40px 30px 60px;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    color: var(--muted);
-
-    font-size: 13px;
-}
-
-
-footer a {
-    border-bottom: 1px solid var(--muted);
-
-    transition: opacity 0.2s ease;
-}
-
-
-footer a:hover {
-    opacity: 0.6;
-}
-
-
-/* =========================
-   PROJECT PAGE
-========================= */
-
-.project-hero {
-    padding: 120px 0 80px;
-
-    border-bottom: 1px solid var(--border);
-}
-
-
-.project-hero h1 {
-    font-size: clamp(42px, 7vw, 68px);
-
-    line-height: 1.05;
-
-    letter-spacing: -2px;
-
-    margin-bottom: 35px;
-}
-
-
-.project-intro {
-    max-width: 600px;
-
-    color: var(--muted);
-
-    font-size: 19px;
-}
-
-
-.project-tags {
-    margin-top: 30px;
-}
-
-
-/* =========================
-   PROJECT IMAGE
-========================= */
-
-.project-image {
-    padding: 70px 0;
-}
-
-
-.project-image img {
-    width: 100%;
-
-    height: auto;
-
-    display: block;
-
-    border: 1px solid var(--border);
-
-    border-radius: 8px;
-
-    background: var(--surface);
-}
-
-
-/* =========================
-   PROJECT SECTION
-========================= */
-
-.project-section {
-    padding: 90px 0;
-
-    display: grid;
-
-    grid-template-columns: 80px 250px 1fr;
-
-    gap: 30px;
-
-    border-top: 1px solid var(--border);
-}
-
-
-.project-section h2 {
-    font-size: 32px;
-
-    letter-spacing: -1px;
-}
-
-
-.project-text {
-    max-width: 550px;
-}
-
-
-.project-text p {
-    color: var(--muted);
-
-    font-size: 17px;
-
-    margin-bottom: 25px;
-}
-
-
-.project-text ul {
-    padding-left: 20px;
-
-    color: var(--muted);
-}
-
-
-.project-text li {
-    margin-bottom: 12px;
-}
-
-
-/* =========================
-   TECHNOLOGY GRID
-========================= */
-
-.technology-grid {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 1px;
-
-    background: var(--border);
-
-    border: 1px solid var(--border);
-}
-
-
-.technology {
-    background: var(--background);
-
-    padding: 25px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 5px;
-}
-
-
-.technology strong {
-    font-size: 16px;
-}
-
-
-.technology span {
-    color: var(--muted);
-
-    font-size: 13px;
-}
-
-
-/* =========================
-   BACK TO PROJECTS
-========================= */
-
-.back-projects {
-    padding: 70px 0;
-}
-
-
-.back-projects a {
-    font-size: 14px;
-
-    border-bottom: 1px solid var(--text);
-
-    transition: opacity 0.2s ease;
-}
-
-
-.back-projects a:hover {
-    opacity: 0.6;
-}
-
-
-/* =========================
-   CODE BLOCK
-========================= */
-
-.code-block {
-    background: var(--surface);
-
-    border: 1px solid var(--border);
-
-    border-radius: 8px;
-
-    padding: 20px 24px;
-
-    margin: 20px 0;
-
-    overflow-x: auto;
-
-    font-family:
-        "SFMono-Regular",
-        "Roboto Mono",
-        Consolas,
-        monospace;
-
-    font-size: 13px;
-
-    line-height: 1.7;
-
-    color: var(--text);
-}
-
-
-/* Titres dans projet */
-
-.project-text h3 {
-    font-size: 16px;
-
-    margin: 30px 0 5px;
-}
-
-
-.project-text h3:first-child {
-    margin-top: 0;
-}
-
-
-/* =========================
-   TABLEAUX
-========================= */
-
-.data-table {
-    width: 100%;
-
-    border-collapse: collapse;
-
-    margin: 20px 0;
-
-    font-size: 14px;
-}
-
-
-.data-table th,
-.data-table td {
-    text-align: left;
-
-    padding: 10px 14px;
-
-    border-bottom: 1px solid var(--border);
-
-    white-space: nowrap;
-}
-
-
-.data-table th {
-    color: var(--muted);
-
-    font-weight: 600;
 
     font-size: 11px;
-
-    text-transform: uppercase;
-
-    letter-spacing: 0.4px;
 }
 
 
-.data-table td.ok {
-    color: #16a34a;
-
-    font-weight: 600;
-}
-
-
-.data-table td.no {
-    color: #dc2626;
-
-    font-weight: 600;
-}
-
-
-.table-wrap {
-    overflow-x: auto;
-}
-
-
-/* =========================
-   PITCH
-========================= */
-
-.pitch {
-    background: var(--surface);
-
-    border-left: 3px solid var(--accent);
-
-    padding: 20px 25px;
-
-    margin-top: 25px;
-
-    font-size: 16px;
-
-    color: var(--text);
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 650px) {
-
-    /* Main */
-
-    main {
-        padding: 0 20px;
-    }
-
-
-    /* Navbar */
-
-    .navbar {
-        padding: 20px;
-    }
-
-
-    .navbar nav {
-        gap: 15px;
-    }
-
-
-    .navbar nav a {
-        font-size: 12px;
-    }
-
-
-    /* Cube logo */
-
-    .logo-mark {
-        width: 34px;
-        height: 34px;
-    }
-
-
-    .logo-icon {
-        width: 34px;
-        height: 34px;
-    }
-
-
-    .rubiks-cube {
-        width: 26px;
-        height: 26px;
-    }
-
-
-    /* Hero */
-
-    .hero {
-        padding: 90px 20px 60px;
-    }
-
-
-    .hero-avatar {
-        width: 72px;
-        height: 72px;
-
-        margin-bottom: 22px;
-    }
-
-
-    .hero-cube {
-        width: 38px;
-        height: 38px;
-
-        gap: 2px;
-
-        padding: 3px;
-    }
-
-
-    .hero h1 {
-        font-size: 42px;
-
-        letter-spacing: -1.5px;
-    }
-
-
-    .intro {
-        font-size: 16px;
-    }
-
-
-    /* Contact */
-
-    .contact-card {
-        width: 240px;
-    }
-
-
-    /* Sections */
-
-    .section {
-        padding: 70px 0;
-    }
-
-
-    .section-header {
-        grid-template-columns: 45px 1fr;
-
-        margin-bottom: 35px;
-    }
-
-
-    .section h2 {
-        font-size: 30px;
-    }
-
-
-    /* Projects */
-
-    .project {
-        grid-template-columns: 40px 1fr;
-
-        gap: 15px;
-
-        padding: 25px 0;
-    }
-
-
-    .project-link {
-        display: none;
-    }
-
-
-    .project h3 {
-        font-size: 19px;
-    }
-
-
-    .project-content p {
-        font-size: 15px;
-    }
-
-
-    /* Footer */
-
-    footer {
-        padding-left: 20px;
-
-        padding-right: 20px;
-
-        flex-direction: column;
-
-        gap: 10px;
-    }
-
-
-    /* =========================
-       PROJECT PAGE MOBILE
-    ========================= */
-
-    .project-hero {
-        padding: 80px 0 60px;
-    }
-
-
-    .project-hero h1 {
-        font-size: 42px;
-
-        letter-spacing: -1.5px;
-    }
-
-
-    .project-intro {
-        font-size: 17px;
-    }
-
-
-    .project-section {
-        display: block;
-
-        padding: 65px 0;
-    }
-
-
-    .project-section .section-number {
-        margin-bottom: 15px;
-    }
-
-
-    .project-section h2 {
-        margin-bottom: 30px;
-
-        font-size: 28px;
-    }
-
-
-    .project-text p {
-        font-size: 16px;
-    }
-
-
-    .technology-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    .project-image {
-        padding: 45px 0;
-    }
-
-
-    /* Tables */
-
-    .data-table {
-        font-size: 13px;
-    }
-
-
-    .data-table th,
-    .data-table td {
-        padding: 8px 10px;
-    }
-
-
-    /* About */
-
-    .about-page {
-        padding: 80px 0 60px;
-    }
-
-
-    .about-page h1 {
-        font-size: 42px;
-
-        letter-spacing: -1.5px;
-    }
-
-
-    .about-content p {
-        font-size: 16px;
-    }
-
-}
-
-
-/* =========================
+/* =========================================================
    ABOUT PAGE
-========================= */
+========================================================= */
 
 .about-page {
     padding: 110px 0 100px;
@@ -1325,10 +632,13 @@ footer a:hover {
 }
 
 .about-intro h1 {
-    font-size: clamp(48px, 8vw, 76px);
-    line-height: 1;
-    letter-spacing: -3px;
     margin-bottom: 35px;
+
+    font-size: clamp(48px, 8vw, 76px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
 }
 
 .about-intro h1 span {
@@ -1336,16 +646,21 @@ footer a:hover {
 }
 
 .about-intro p {
-    color: var(--muted);
-    font-size: 18px;
-    margin-bottom: 24px;
     max-width: 620px;
+
+    margin-bottom: 24px;
+
+    color: var(--muted);
+
+    font-size: 18px;
 }
 
 .about-intro .about-lead {
-    font-size: 22px;
-    line-height: 1.5;
     color: var(--text);
+
+    font-size: 22px;
+
+    line-height: 1.5;
 }
 
 .about-intro strong {
@@ -1353,9 +668,9 @@ footer a:hover {
 }
 
 
-/* =========================
+/* =========================================================
    ABOUT SKILLS
-========================= */
+========================================================= */
 
 .about-skills {
     padding-top: 90px;
@@ -1363,11 +678,13 @@ footer a:hover {
 
 .about-skills-grid {
     display: flex;
+
     flex-direction: column;
 }
 
 .skill-card {
     display: grid;
+
     grid-template-columns: 60px 1fr;
 
     gap: 25px;
@@ -1389,17 +706,20 @@ footer a:hover {
 
 .skill-number {
     color: var(--muted);
+
     font-size: 13px;
 }
 
 .skill-card h3 {
-    font-size: 23px;
     margin-bottom: 8px;
+
+    font-size: 23px;
 }
 
 .skill-card p {
-    color: var(--muted);
     max-width: 600px;
+
+    color: var(--muted);
 }
 
 .skill-card .tags {
@@ -1407,9 +727,9 @@ footer a:hover {
 }
 
 
-/* =========================
+/* =========================================================
    REAL ME
-========================= */
+========================================================= */
 
 .real-me {
     padding-top: 110px;
@@ -1417,13 +737,16 @@ footer a:hover {
 
 .real-me-intro {
     max-width: 620px;
+
     margin-bottom: 50px;
 }
 
 .real-me-intro p {
-    color: var(--muted);
-    font-size: 18px;
     margin-bottom: 8px;
+
+    color: var(--muted);
+
+    font-size: 18px;
 }
 
 .real-me-intro strong {
@@ -1431,19 +754,19 @@ footer a:hover {
 }
 
 
-/* =========================
+/* =========================================================
    PROFILE TERMINAL
-========================= */
+========================================================= */
 
 .profile-terminal {
     width: 100%;
+
+    overflow: hidden;
 
     background: #171717;
 
     border: 1px solid #2d2d2d;
     border-radius: 10px;
-
-    overflow: hidden;
 
     box-shadow:
         0 25px 60px rgba(0, 0, 0, 0.15);
@@ -1472,6 +795,7 @@ footer a:hover {
 
 .terminal-status {
     display: flex;
+
     align-items: center;
 }
 
@@ -1508,20 +832,20 @@ footer a:hover {
 }
 
 .terminal-name {
+    margin-bottom: 20px;
+
     color: #ffffff;
 
     font-size: 18px;
     font-weight: 700;
-
-    margin-bottom: 20px;
 }
 
 .terminal-separator {
     height: 1px;
 
-    background: #333;
-
     margin: 20px 0;
+
+    background: #333;
 }
 
 .profile-row {
@@ -1544,16 +868,18 @@ footer a:hover {
 
 .profile-value.highlight {
     color: var(--accent);
+
     font-weight: 600;
 }
 
 
-/* =========================
+/* =========================================================
    MOTIVATION BAR
-========================= */
+========================================================= */
 
 .progress-row {
     display: flex;
+
     align-items: center;
 
     gap: 12px;
@@ -1568,15 +894,14 @@ footer a:hover {
 .progress-bar {
     flex: 1;
 
+    max-width: 280px;
     height: 10px;
 
-    max-width: 280px;
+    overflow: hidden;
 
     background: #292929;
 
     border-radius: 3px;
-
-    overflow: hidden;
 }
 
 .progress-bar span {
@@ -1610,9 +935,9 @@ footer a:hover {
 }
 
 
-/* =========================
+/* =========================================================
    FUN FACTS
-========================= */
+========================================================= */
 
 .fun-facts {
     display: grid;
@@ -1626,6 +951,7 @@ footer a:hover {
 
 .fun-fact {
     display: flex;
+
     align-items: center;
 
     gap: 14px;
@@ -1660,17 +986,17 @@ footer a:hover {
 }
 
 .fun-fact p {
+    margin-top: 2px;
+
     color: var(--muted);
 
     font-size: 12px;
-
-    margin-top: 2px;
 }
 
 
-/* =========================
-   CONCLUSION
-========================= */
+/* =========================================================
+   ABOUT CONCLUSION
+========================================================= */
 
 .about-conclusion {
     max-width: 600px;
@@ -1683,11 +1009,11 @@ footer a:hover {
 }
 
 .about-conclusion p {
+    margin-bottom: 5px;
+
     color: var(--muted);
 
     font-size: 18px;
-
-    margin-bottom: 5px;
 }
 
 .about-conclusion strong {
@@ -1695,11 +1021,435 @@ footer a:hover {
 }
 
 
-/* =========================
-   ABOUT MOBILE
-========================= */
+/* =========================================================
+   PROJECT PAGE
+========================================================= */
+
+.project-hero {
+    padding: 120px 0 80px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.project-hero h1 {
+    margin-bottom: 35px;
+
+    font-size: clamp(42px, 7vw, 68px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+}
+
+.project-intro {
+    max-width: 600px;
+
+    color: var(--muted);
+
+    font-size: 19px;
+}
+
+.project-tags {
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   PROJECT IMAGE
+========================================================= */
+
+.project-image {
+    padding: 70px 0;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+
+/* =========================================================
+   PROJECT SECTION
+========================================================= */
+
+.project-section {
+    display: grid;
+
+    grid-template-columns: 80px 250px 1fr;
+
+    gap: 30px;
+
+    padding: 90px 0;
+
+    border-top: 1px solid var(--border);
+}
+
+.project-section h2 {
+    font-size: 32px;
+
+    letter-spacing: -1px;
+}
+
+.project-text {
+    max-width: 550px;
+}
+
+.project-text p {
+    margin-bottom: 25px;
+
+    color: var(--muted);
+
+    font-size: 17px;
+}
+
+.project-text ul {
+    padding-left: 20px;
+
+    color: var(--muted);
+}
+
+.project-text li {
+    margin-bottom: 12px;
+}
+
+.project-text h3 {
+    margin: 30px 0 5px;
+
+    font-size: 16px;
+}
+
+.project-text h3:first-child {
+    margin-top: 0;
+}
+
+
+/* =========================================================
+   TECHNOLOGY GRID
+========================================================= */
+
+.technology-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 1px;
+
+    background: var(--border);
+
+    border: 1px solid var(--border);
+}
+
+.technology {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding: 25px;
+
+    background: var(--background);
+}
+
+.technology strong {
+    font-size: 16px;
+}
+
+.technology span {
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   BACK TO PROJECTS
+========================================================= */
+
+.back-projects {
+    padding: 70px 0;
+}
+
+.back-projects a {
+    border-bottom: 1px solid var(--text);
+
+    font-size: 14px;
+
+    transition: opacity 0.2s ease;
+}
+
+.back-projects a:hover {
+    opacity: 0.6;
+}
+
+
+/* =========================================================
+   CODE BLOCK
+========================================================= */
+
+.code-block {
+    margin: 20px 0;
+    padding: 20px 24px;
+
+    overflow-x: auto;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    color: var(--text);
+
+    font-family:
+        "SFMono-Regular",
+        "Roboto Mono",
+        Consolas,
+        monospace;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   TABLEAUX
+========================================================= */
+
+.data-table {
+    width: 100%;
+
+    margin: 20px 0;
+
+    border-collapse: collapse;
+
+    font-size: 14px;
+}
+
+.data-table th,
+.data-table td {
+    padding: 10px 14px;
+
+    text-align: left;
+
+    border-bottom: 1px solid var(--border);
+
+    white-space: nowrap;
+}
+
+.data-table th {
+    color: var(--muted);
+
+    font-size: 11px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.4px;
+}
+
+.data-table td.ok {
+    color: #16a34a;
+
+    font-weight: 600;
+}
+
+.data-table td.no {
+    color: #dc2626;
+
+    font-weight: 600;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   PITCH
+========================================================= */
+
+.pitch {
+    margin-top: 25px;
+
+    padding: 20px 25px;
+
+    background: var(--surface);
+
+    border-left: 3px solid var(--accent);
+
+    color: var(--text);
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 40px 30px 60px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+footer a {
+    border-bottom: 1px solid var(--muted);
+
+    transition: opacity 0.2s ease;
+}
+
+footer a:hover {
+    opacity: 0.6;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 650px) {
+
+    /* Main */
+
+    main {
+        padding: 0 20px;
+    }
+
+
+    /* Navbar */
+
+    .navbar {
+        padding: 20px;
+    }
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    .navbar nav a {
+        font-size: 12px;
+    }
+
+
+    /* Logo */
+
+    .logo-mark {
+        gap: 8px;
+    }
+
+    .logo-icon {
+        width: 34px;
+        height: 34px;
+    }
+
+    .rubiks-cube {
+        width: 26px;
+        height: 26px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        padding: 90px 20px 60px;
+    }
+
+    .hero-avatar {
+        width: 72px;
+        height: 72px;
+
+        margin-bottom: 22px;
+    }
+
+    .hero-cube {
+        width: 38px;
+        height: 38px;
+
+        gap: 2px;
+
+        padding: 3px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .intro {
+        font-size: 16px;
+    }
+
+
+    /* Contact */
+
+    .contact-card {
+        width: 240px;
+    }
+
+
+    /* Sections */
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .section-header {
+        grid-template-columns: 45px 1fr;
+
+        margin-bottom: 35px;
+    }
+
+    .section h2 {
+        font-size: 30px;
+    }
+
+
+    /* Projects */
+
+    .project {
+        grid-template-columns: 40px 1fr;
+
+        gap: 15px;
+
+        padding: 25px 0;
+    }
+
+    .project-link {
+        display: none;
+    }
+
+    .project h3 {
+        font-size: 19px;
+    }
+
+    .project-content p {
+        font-size: 15px;
+    }
+
+
+    /* =====================================================
+       ABOUT MOBILE
+    ===================================================== */
 
     .about-page {
         padding: 80px 0 70px;
@@ -1710,7 +1460,10 @@ footer a:hover {
     }
 
     .about-intro h1 {
+        margin-bottom: 28px;
+
         font-size: 52px;
+
         letter-spacing: -2px;
     }
 
@@ -1722,12 +1475,16 @@ footer a:hover {
         font-size: 16px;
     }
 
+
+    /* About skills */
+
     .about-skills {
         padding-top: 70px;
     }
 
     .skill-card {
         grid-template-columns: 40px 1fr;
+
         gap: 15px;
     }
 
@@ -1735,17 +1492,33 @@ footer a:hover {
         font-size: 20px;
     }
 
+
+    /* Real me */
+
     .real-me {
         padding-top: 70px;
     }
 
+    .real-me-intro {
+        margin-bottom: 35px;
+    }
+
+    .real-me-intro p {
+        font-size: 16px;
+    }
+
+
+    /* Terminal */
+
     .profile-terminal-body {
         padding: 22px 18px;
+
         font-size: 11px;
     }
 
     .profile-row {
         grid-template-columns: 105px 1fr;
+
         gap: 10px;
     }
 
@@ -1757,6 +1530,9 @@ footer a:hover {
         min-width: 140px;
     }
 
+
+    /* Fun facts */
+
     .fun-facts {
         grid-template-columns: 1fr;
     }
@@ -1765,8 +1541,81 @@ footer a:hover {
         padding: 16px;
     }
 
+
+    /* Conclusion */
+
     .about-conclusion {
         margin-top: 45px;
     }
 
+
+    /* =====================================================
+       PROJECT PAGE MOBILE
+    ===================================================== */
+
+    .project-hero {
+        padding: 80px 0 60px;
+    }
+
+    .project-hero h1 {
+        font-size: 42px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .project-intro {
+        font-size: 17px;
+    }
+
+    .project-section {
+        display: block;
+
+        padding: 65px 0;
+    }
+
+    .project-section .section-number {
+        margin-bottom: 15px;
+    }
+
+    .project-section h2 {
+        margin-bottom: 30px;
+
+        font-size: 28px;
+    }
+
+    .project-text p {
+        font-size: 16px;
+    }
+
+    .technology-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        padding: 45px 0;
+    }
+
+
+    /* Tables */
+
+    .data-table {
+        font-size: 13px;
+    }
+
+    .data-table th,
+    .data-table td {
+        padding: 8px 10px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        padding-right: 20px;
+        padding-left: 20px;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
 }
