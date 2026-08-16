@@ -15,12 +15,18 @@ html {
 :root {
     --background: #fdfcfa;
     --surface: #f6f3ee;
+    --surface-dark: #171717;
+
     --text: #1c1917;
     --muted: #78716c;
     --border: #e7e2db;
 
     --accent: #d97706;
     --accent-soft: #fef3e2;
+
+    --terminal-text: #d4d4d4;
+    --terminal-muted: #777;
+    --terminal-border: #333;
 }
 
 
@@ -35,6 +41,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 
     line-height: 1.6;
+
+    -webkit-font-smoothing: antialiased;
 }
 
 
@@ -52,6 +60,7 @@ button {
 }
 
 main {
+    width: 100%;
     max-width: 900px;
 
     margin: 0 auto;
@@ -65,6 +74,7 @@ main {
 ========================================================= */
 
 .navbar {
+    width: 100%;
     max-width: 900px;
 
     margin: 0 auto;
@@ -80,14 +90,12 @@ main {
 /* Logo */
 
 .logo-mark {
-    width: auto;
-    min-height: 38px;
-
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 9px;
 
-    gap: 10px;
+    width: auto;
+    height: 38px;
 
     color: var(--text);
 
@@ -101,10 +109,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    background: transparent;
-
-    border-radius: 8px;
 }
 
 
@@ -148,7 +152,7 @@ main {
 }
 
 
-/* Couleurs Rubik's cube */
+/* Couleurs */
 
 .rubiks-cube span:nth-child(1) {
     background: #ffffff;
@@ -187,30 +191,12 @@ main {
 }
 
 
-/* Cube du Hero */
-
-.hero-cube {
-    width: 42px;
-    height: 42px;
-
-    gap: 3px;
-
-    padding: 3px;
-
-    transform: rotate(-8deg);
-
-    box-shadow:
-        5px 6px 0 rgba(0, 0, 0, 0.12);
-}
-
-
 /* =========================================================
    NAVIGATION
 ========================================================= */
 
 .navbar nav {
     display: flex;
-
     align-items: center;
 
     gap: 25px;
@@ -267,12 +253,25 @@ main {
         0 10px 30px rgba(217, 119, 6, 0.15);
 }
 
-.eyebrow {
-    margin-bottom: 25px;
+.hero-cube {
+    width: 42px;
+    height: 42px;
 
+    gap: 3px;
+    padding: 3px;
+
+    transform: rotate(-8deg);
+
+    box-shadow:
+        5px 6px 0 rgba(0, 0, 0, 0.12);
+}
+
+.eyebrow {
     color: var(--muted);
 
     font-size: 13px;
+
+    margin-bottom: 25px;
 
     text-transform: uppercase;
 
@@ -305,7 +304,7 @@ main {
 
 
 /* =========================================================
-   CONTACT WIDGET
+   CONTACT
 ========================================================= */
 
 .contact-widget {
@@ -317,17 +316,16 @@ main {
 }
 
 .contact-trigger {
+    font-size: 14px;
+    font-weight: 600;
+
     padding: 12px 24px;
 
     border: 1px solid var(--accent);
     border-radius: 7px;
 
     background: var(--accent);
-
-    color: #ffffff;
-
-    font-size: 14px;
-    font-weight: 600;
+    color: #fff;
 
     cursor: pointer;
 
@@ -338,7 +336,6 @@ main {
 
 .contact-trigger:hover {
     opacity: 0.9;
-
     transform: translateY(-1px);
 }
 
@@ -361,7 +358,8 @@ main {
 
     background: #1a1a1a;
 
-    border: 1px solid #333333;
+    border: 1px solid #333;
+
     border-radius: 10px;
 
     overflow: hidden;
@@ -399,16 +397,16 @@ main {
 
     background: #242424;
 
-    border-bottom: 1px solid #333333;
+    border-bottom: 1px solid #333;
 }
 
 .terminal-dot {
     width: 10px;
     height: 10px;
 
-    margin-right: 6px;
-
     border-radius: 50%;
+
+    margin-right: 6px;
 }
 
 .terminal-dot.red {
@@ -426,7 +424,7 @@ main {
 .contact-card-title {
     margin-left: 8px;
 
-    color: #777777;
+    color: #777;
 
     font-family:
         "SFMono-Regular",
@@ -446,8 +444,6 @@ main {
 
     gap: 10px;
 
-    color: #d4d4d4;
-
     font-family:
         "SFMono-Regular",
         "Roboto Mono",
@@ -455,22 +451,23 @@ main {
         monospace;
 
     font-size: 13px;
+
+    color: #d4d4d4;
 }
 
 .copy-btn {
     flex-shrink: 0;
 
+    font-family: inherit;
+    font-size: 11px;
+
     padding: 6px 10px;
 
     background: transparent;
-
     color: var(--accent);
 
-    border: 1px solid #333333;
+    border: 1px solid #333;
     border-radius: 5px;
-
-    font-family: inherit;
-    font-size: 11px;
 
     cursor: pointer;
 
@@ -515,6 +512,8 @@ main {
 .section h2 {
     font-size: 35px;
 
+    line-height: 1.15;
+
     letter-spacing: -1px;
 }
 
@@ -554,23 +553,24 @@ main {
 }
 
 .project h3 {
-    margin-bottom: 10px;
-
     font-size: 21px;
+
+    margin-bottom: 10px;
 }
 
 .project-content p {
-    max-width: 500px;
-
     color: var(--muted);
+
+    max-width: 500px;
 }
 
 .project-link {
+    font-size: 13px;
+
     align-self: center;
 
     color: var(--accent);
 
-    font-size: 13px;
     font-weight: 600;
 
     white-space: nowrap;
@@ -602,16 +602,17 @@ main {
 }
 
 .tags span {
+    border: 1px solid var(--border);
+
     padding: 4px 9px;
 
-    background: var(--surface);
-
-    border: 1px solid var(--border);
     border-radius: 20px;
+
+    font-size: 11px;
 
     color: var(--muted);
 
-    font-size: 11px;
+    background: var(--surface);
 }
 
 
@@ -620,25 +621,28 @@ main {
 ========================================================= */
 
 .about-page {
-    padding: 110px 0 100px;
+    padding: 110px 0 90px;
 }
 
 .about-page .section-header {
-    margin-bottom: 60px;
+    margin-bottom: 65px;
 }
+
+
+/* Intro */
 
 .about-intro {
     max-width: 680px;
 }
 
 .about-intro h1 {
-    margin-bottom: 35px;
-
     font-size: clamp(48px, 8vw, 76px);
 
     line-height: 1;
 
     letter-spacing: -3px;
+
+    margin-bottom: 35px;
 }
 
 .about-intro h1 span {
@@ -648,11 +652,11 @@ main {
 .about-intro p {
     max-width: 620px;
 
-    margin-bottom: 24px;
-
     color: var(--muted);
 
     font-size: 18px;
+
+    margin-bottom: 24px;
 }
 
 .about-intro .about-lead {
@@ -693,7 +697,9 @@ main {
 
     border-top: 1px solid var(--border);
 
-    transition: padding 0.2s ease;
+    transition:
+        padding 0.2s ease,
+        background 0.2s ease;
 }
 
 .skill-card:last-child {
@@ -711,9 +717,9 @@ main {
 }
 
 .skill-card h3 {
-    margin-bottom: 8px;
-
     font-size: 23px;
+
+    margin-bottom: 8px;
 }
 
 .skill-card p {
@@ -732,55 +738,25 @@ main {
 ========================================================= */
 
 .real-me {
-    padding-top: 110px;
+    padding-top: 100px;
 }
 
 .real-me-intro {
-    max-width: 680px;
+    max-width: 650px;
 
-    margin-bottom: 55px;
+    margin-bottom: 45px;
 }
 
-.real-me-kicker {
-    margin-bottom: 8px;
-
-    color: var(--accent);
-
-    font-family:
-        "SFMono-Regular",
-        "Roboto Mono",
-        Consolas,
-        monospace;
-
-    font-size: 13px;
-
-    text-transform: uppercase;
-
-    letter-spacing: 0.8px;
-}
-
-.real-me-intro h3 {
-    margin-bottom: 18px;
-
-    font-size: 38px;
-
-    line-height: 1.15;
-
-    letter-spacing: -1.5px;
-}
-
-.real-me-intro h3 span {
-    color: var(--accent);
-}
-
-.real-me-description {
-    max-width: 600px;
-
+.real-me-intro p {
     color: var(--muted);
 
     font-size: 18px;
 
-    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+.real-me-intro strong {
+    color: var(--text);
 }
 
 
@@ -791,60 +767,57 @@ main {
 .profile-terminal {
     width: 100%;
 
+    background: var(--surface-dark);
+
+    border: 1px solid #2d2d2d;
+
+    border-radius: 10px;
+
     overflow: hidden;
 
-    background: #151515;
-
-    border: 1px solid #303030;
-
-    border-radius: 12px;
-
     box-shadow:
-        0 25px 60px rgba(0, 0, 0, 0.16);
-}
-
-
-/* Terminal header */
-
-.profile-terminal-bar {
-    height: 46px;
-
-    display: flex;
-
-    align-items: center;
-
-    padding: 0 16px;
-
-    background: #222222;
-
-    border-bottom: 1px solid #333333;
+        0 25px 60px rgba(0, 0, 0, 0.14);
 
     font-family:
         "SFMono-Regular",
         "Roboto Mono",
         Consolas,
         monospace;
+}
+
+
+/* ---------------------------------------------------------
+   Terminal header
+--------------------------------------------------------- */
+
+.profile-terminal-bar {
+    min-height: 44px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 16px;
+
+    background: #242424;
+
+    border-bottom: 1px solid #333;
 
     font-size: 11px;
 }
 
 .terminal-status {
     display: flex;
-
     align-items: center;
 }
 
 .profile-terminal-bar .terminal-dot {
-    width: 9px;
-    height: 9px;
-
     margin-right: 6px;
 }
 
 .profile-terminal-title {
     margin-left: 8px;
 
-    color: #777777;
+    color: #777;
 }
 
 .profile-terminal-online {
@@ -853,67 +826,78 @@ main {
     color: #27c93f;
 
     font-size: 10px;
+
+    white-space: nowrap;
 }
 
 
-/* Terminal body */
+/* ---------------------------------------------------------
+   Terminal body
+--------------------------------------------------------- */
 
 .profile-terminal-body {
-    padding: 32px;
+    padding: 28px;
 
-    color: #d4d4d4;
-
-    font-family:
-        "SFMono-Regular",
-        "Roboto Mono",
-        Consolas,
-        monospace;
+    color: var(--terminal-text);
 
     font-size: 13px;
+
+    line-height: 1.6;
 }
 
 
 /* Command */
 
 .terminal-command {
-    margin-bottom: 18px;
+    color: #aaa;
 
-    color: #777777;
+    margin-bottom: 22px;
+}
+
+.terminal-command::first-letter {
+    color: var(--accent);
 }
 
 
-/* Name */
+/* Nom */
 
 .terminal-name {
-    margin-bottom: 4px;
+    color: #fff;
 
-    color: #ffffff;
-
-    font-size: 25px;
+    font-size: 22px;
 
     font-weight: 700;
+
+    margin-bottom: 3px;
 }
 
-.terminal-role {
-    color: #888888;
+
+/* Sous-titre */
+
+.terminal-subtitle {
+    color: #777;
 
     font-size: 12px;
+
+    margin-bottom: 25px;
 }
 
 
-/* Separator */
+/* Séparateur */
 
 .terminal-separator {
+    width: 100%;
+
     height: 1px;
 
-    margin: 25px 0;
+    background: #333;
 
-    background: #303030;
+    margin: 22px 0;
 }
 
 
 /* =========================================================
-   PROFILE GRID
+   TERMINAL PROFILE GRID
 ========================================================= */
 
 .profile-grid {
@@ -921,53 +905,64 @@ main {
 
     grid-template-columns: 1fr 1fr;
 
+    border: 1px solid #333;
+
+    background: #333;
+
     gap: 1px;
 
-    background: #303030;
+    border-radius: 6px;
 
-    border: 1px solid #303030;
+    overflow: hidden;
 }
 
-.profile-item {
-    min-height: 85px;
+
+/* Une cellule */
+
+.profile-cell {
+    min-width: 0;
+
+    padding: 17px 18px;
+
+    background: #171717;
 
     display: flex;
 
     flex-direction: column;
 
-    justify-content: center;
-
-    padding: 18px 20px;
-
-    background: #191919;
+    gap: 5px;
 }
 
-.profile-label {
-    margin-bottom: 7px;
 
-    color: #666666;
+/* Label */
+
+.profile-label {
+    color: #777;
 
     font-size: 10px;
+
+    font-weight: 600;
 
     text-transform: uppercase;
 
     letter-spacing: 0.7px;
 }
 
-.profile-item strong {
-    color: #dddddd;
+
+/* Valeur */
+
+.profile-value {
+    color: #d4d4d4;
 
     font-size: 13px;
 
-    font-weight: 500;
+    overflow-wrap: anywhere;
 }
 
-.profile-item strong.highlight {
+.profile-value.highlight {
     color: var(--accent);
-}
 
-.profile-item strong.warning {
-    color: #f59e0b;
+    font-weight: 600;
 }
 
 
@@ -975,45 +970,40 @@ main {
    MOTIVATION
 ========================================================= */
 
-.terminal-progress {
-    max-width: 600px;
-}
+.progress-row {
+    display: grid;
 
-.progress-header {
-    display: flex;
-
-    justify-content: space-between;
+    grid-template-columns: auto 1fr auto;
 
     align-items: center;
 
-    margin-bottom: 10px;
+    gap: 14px;
 
-    color: #777777;
+    margin-top: 5px;
+}
+
+.progress-label {
+    color: #777;
 
     font-size: 11px;
 }
 
-.progress-header strong {
-    color: var(--accent);
-
-    font-size: 11px;
-}
-
-.progress-track {
+.progress-bar {
     width: 100%;
-    height: 8px;
 
-    overflow: hidden;
+    height: 10px;
 
     background: #292929;
 
     border-radius: 3px;
+
+    overflow: hidden;
 }
 
-.progress-track span {
+.progress-bar span {
     display: block;
 
-    width: 101%;
+    width: 100%;
     height: 100%;
 
     background:
@@ -1021,15 +1011,23 @@ main {
             90deg,
             var(--accent) 0,
             var(--accent) 8px,
-            #171717 8px,
-            #171717 11px
+            transparent 8px,
+            transparent 11px
         );
 }
 
-.terminal-progress p {
-    margin-top: 10px;
+.progress-percent {
+    color: var(--accent);
 
-    color: #666666;
+    font-size: 11px;
+
+    white-space: nowrap;
+}
+
+.terminal-error {
+    margin-top: 12px;
+
+    color: #777;
 
     font-size: 10px;
 }
@@ -1046,27 +1044,24 @@ main {
 
     gap: 15px;
 
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .fun-fact {
-    position: relative;
-
-    min-height: 150px;
+    min-height: 110px;
 
     display: flex;
-
     align-items: flex-start;
 
-    gap: 16px;
+    gap: 14px;
 
-    padding: 22px;
+    padding: 20px;
 
     background: var(--surface);
 
     border: 1px solid var(--border);
 
-    border-radius: 10px;
+    border-radius: 8px;
 
     transition:
         transform 0.2s ease,
@@ -1075,66 +1070,34 @@ main {
 }
 
 .fun-fact:hover {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
 
     border-color: #d6cfc5;
 
     box-shadow:
-        0 12px 25px rgba(0, 0, 0, 0.06);
+        0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
 .fun-fact-icon {
-    width: 42px;
-    height: 42px;
-
     flex-shrink: 0;
 
-    display: flex;
+    font-size: 23px;
 
-    align-items: center;
-    justify-content: center;
-
-    background: var(--background);
-
-    border: 1px solid var(--border);
-
-    border-radius: 8px;
-
-    font-size: 20px;
-}
-
-.fun-fact-number {
-    display: block;
-
-    margin-bottom: 4px;
-
-    color: var(--muted);
-
-    font-family:
-        "SFMono-Regular",
-        "Roboto Mono",
-        Consolas,
-        monospace;
-
-    font-size: 10px;
+    line-height: 1;
 }
 
 .fun-fact strong {
     display: block;
 
-    margin-bottom: 7px;
+    font-size: 14px;
 
-    font-size: 15px;
+    margin-bottom: 3px;
 }
 
 .fun-fact p {
-    margin: 0;
-
     color: var(--muted);
 
     font-size: 12px;
-
-    line-height: 1.5;
 }
 
 
@@ -1143,53 +1106,57 @@ main {
 ========================================================= */
 
 .about-conclusion {
-    max-width: 650px;
+    max-width: 620px;
 
-    margin-top: 65px;
+    margin-top: 55px;
 
-    padding: 25px 0 25px 25px;
+    padding: 20px 0 20px 20px;
 
     border-left: 3px solid var(--accent);
 }
 
-.conclusion-label {
-    display: block;
-
-    margin-bottom: 12px;
-
-    color: var(--accent);
-
-    font-family:
-        "SFMono-Regular",
-        "Roboto Mono",
-        Consolas,
-        monospace;
-
-    font-size: 11px;
-
-    font-weight: 600;
-
-    text-transform: uppercase;
-
-    letter-spacing: 1px;
-}
-
 .about-conclusion p {
-    margin-bottom: 8px;
-
     color: var(--muted);
 
-    font-size: 17px;
+    font-size: 18px;
 
-    line-height: 1.6;
-}
-
-.about-conclusion p:last-child {
-    margin-bottom: 0;
+    margin-bottom: 5px;
 }
 
 .about-conclusion strong {
     color: var(--text);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 40px 30px 60px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+footer a {
+    border-bottom: 1px solid var(--muted);
+
+    transition: opacity 0.2s ease;
+}
+
+footer a:hover {
+    opacity: 0.6;
 }
 
 
@@ -1204,13 +1171,13 @@ main {
 }
 
 .project-hero h1 {
-    margin-bottom: 35px;
-
     font-size: clamp(42px, 7vw, 68px);
 
     line-height: 1.05;
 
     letter-spacing: -2px;
+
+    margin-bottom: 35px;
 }
 
 .project-intro {
@@ -1240,11 +1207,11 @@ main {
 
     display: block;
 
-    background: var(--surface);
-
     border: 1px solid var(--border);
 
     border-radius: 8px;
+
+    background: var(--surface);
 }
 
 
@@ -1253,13 +1220,13 @@ main {
 ========================================================= */
 
 .project-section {
+    padding: 90px 0;
+
     display: grid;
 
     grid-template-columns: 80px 250px 1fr;
 
     gap: 30px;
-
-    padding: 90px 0;
 
     border-top: 1px solid var(--border);
 }
@@ -1275,11 +1242,11 @@ main {
 }
 
 .project-text p {
-    margin-bottom: 25px;
-
     color: var(--muted);
 
     font-size: 17px;
+
+    margin-bottom: 25px;
 }
 
 .project-text ul {
@@ -1293,9 +1260,9 @@ main {
 }
 
 .project-text h3 {
-    margin: 30px 0 5px;
-
     font-size: 16px;
+
+    margin: 30px 0 5px;
 }
 
 .project-text h3:first-child {
@@ -1320,15 +1287,15 @@ main {
 }
 
 .technology {
+    background: var(--background);
+
+    padding: 25px;
+
     display: flex;
 
     flex-direction: column;
 
     gap: 5px;
-
-    padding: 25px;
-
-    background: var(--background);
 }
 
 .technology strong {
@@ -1343,7 +1310,7 @@ main {
 
 
 /* =========================================================
-   BACK TO PROJECTS
+   BACK PROJECTS
 ========================================================= */
 
 .back-projects {
@@ -1351,9 +1318,9 @@ main {
 }
 
 .back-projects a {
-    border-bottom: 1px solid var(--text);
-
     font-size: 14px;
+
+    border-bottom: 1px solid var(--text);
 
     transition: opacity 0.2s ease;
 }
@@ -1368,19 +1335,17 @@ main {
 ========================================================= */
 
 .code-block {
-    margin: 20px 0;
-
-    padding: 20px 24px;
-
-    overflow-x: auto;
-
     background: var(--surface);
 
     border: 1px solid var(--border);
 
     border-radius: 8px;
 
-    color: var(--text);
+    padding: 20px 24px;
+
+    margin: 20px 0;
+
+    overflow-x: auto;
 
     font-family:
         "SFMono-Regular",
@@ -1391,28 +1356,30 @@ main {
     font-size: 13px;
 
     line-height: 1.7;
+
+    color: var(--text);
 }
 
 
 /* =========================================================
-   TABLEAUX
+   TABLES
 ========================================================= */
 
 .data-table {
     width: 100%;
 
-    margin: 20px 0;
-
     border-collapse: collapse;
+
+    margin: 20px 0;
 
     font-size: 14px;
 }
 
 .data-table th,
 .data-table td {
-    padding: 10px 14px;
-
     text-align: left;
+
+    padding: 10px 14px;
 
     border-bottom: 1px solid var(--border);
 
@@ -1422,8 +1389,9 @@ main {
 .data-table th {
     color: var(--muted);
 
-    font-size: 11px;
     font-weight: 600;
+
+    font-size: 11px;
 
     text-transform: uppercase;
 
@@ -1452,48 +1420,17 @@ main {
 ========================================================= */
 
 .pitch {
-    margin-top: 25px;
-
-    padding: 20px 25px;
-
     background: var(--surface);
 
     border-left: 3px solid var(--accent);
 
-    color: var(--text);
+    padding: 20px 25px;
+
+    margin-top: 25px;
 
     font-size: 16px;
-}
 
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-footer {
-    max-width: 900px;
-
-    margin: 0 auto;
-
-    padding: 40px 30px 60px;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    color: var(--muted);
-
-    font-size: 13px;
-}
-
-footer a {
-    border-bottom: 1px solid var(--muted);
-
-    transition: opacity 0.2s ease;
-}
-
-footer a:hover {
-    opacity: 0.6;
+    color: var(--text);
 }
 
 
@@ -1503,14 +1440,18 @@ footer a:hover {
 
 @media (max-width: 650px) {
 
-    /* Main */
+    /* -----------------------------------------------------
+       GLOBAL
+    ----------------------------------------------------- */
 
     main {
         padding: 0 20px;
     }
 
 
-    /* Navbar */
+    /* -----------------------------------------------------
+       NAVBAR
+    ----------------------------------------------------- */
 
     .navbar {
         padding: 20px;
@@ -1524,11 +1465,8 @@ footer a:hover {
         font-size: 12px;
     }
 
-
-    /* Logo */
-
     .logo-mark {
-        gap: 8px;
+        height: 34px;
     }
 
     .logo-icon {
@@ -1542,7 +1480,9 @@ footer a:hover {
     }
 
 
-    /* Hero */
+    /* -----------------------------------------------------
+       HERO
+    ----------------------------------------------------- */
 
     .hero {
         padding: 90px 20px 60px;
@@ -1560,7 +1500,6 @@ footer a:hover {
         height: 38px;
 
         gap: 2px;
-
         padding: 3px;
     }
 
@@ -1575,14 +1514,18 @@ footer a:hover {
     }
 
 
-    /* Contact */
+    /* -----------------------------------------------------
+       CONTACT
+    ----------------------------------------------------- */
 
     .contact-card {
         width: 240px;
     }
 
 
-    /* Sections */
+    /* -----------------------------------------------------
+       SECTIONS
+    ----------------------------------------------------- */
 
     .section {
         padding: 70px 0;
@@ -1595,11 +1538,13 @@ footer a:hover {
     }
 
     .section h2 {
-        font-size: 30px;
+        font-size: 29px;
     }
 
 
-    /* Projects */
+    /* -----------------------------------------------------
+       PROJECTS
+    ----------------------------------------------------- */
 
     .project {
         grid-template-columns: 40px 1fr;
@@ -1622,12 +1567,12 @@ footer a:hover {
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------------------
        ABOUT
-    ===================================================== */
+    ----------------------------------------------------- */
 
     .about-page {
-        padding: 80px 0 70px;
+        padding: 80px 0 65px;
     }
 
     .about-page .section-header {
@@ -1635,8 +1580,6 @@ footer a:hover {
     }
 
     .about-intro h1 {
-        margin-bottom: 28px;
-
         font-size: 52px;
 
         letter-spacing: -2px;
@@ -1651,7 +1594,9 @@ footer a:hover {
     }
 
 
-    /* About skills */
+    /* -----------------------------------------------------
+       SKILLS
+    ----------------------------------------------------- */
 
     .about-skills {
         padding-top: 70px;
@@ -1661,6 +1606,8 @@ footer a:hover {
         grid-template-columns: 40px 1fr;
 
         gap: 15px;
+
+        padding: 25px 0;
     }
 
     .skill-card h3 {
@@ -1668,51 +1615,35 @@ footer a:hover {
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------------------
        REAL ME
-    ===================================================== */
+    ----------------------------------------------------- */
 
     .real-me {
         padding-top: 70px;
     }
 
     .real-me-intro {
-        margin-bottom: 40px;
+        margin-bottom: 35px;
     }
 
-    .real-me-kicker {
-        font-size: 11px;
-    }
-
-    .real-me-intro h3 {
-        font-size: 31px;
-
-        letter-spacing: -1px;
-    }
-
-    .real-me-description {
+    .real-me-intro p {
         font-size: 16px;
     }
 
 
-    /* =====================================================
-       TERMINAL
-    ===================================================== */
+    /* -----------------------------------------------------
+       TERMINAL MOBILE
+    ----------------------------------------------------- */
 
     .profile-terminal {
-        border-radius: 9px;
+        border-radius: 8px;
     }
 
     .profile-terminal-bar {
-        height: 42px;
+        min-height: 42px;
 
         padding: 0 12px;
-    }
-
-    .profile-terminal-body {
-        padding: 22px 18px;
-
-        font-size: 11px;
     }
 
     .profile-terminal-title {
@@ -1723,42 +1654,92 @@ footer a:hover {
         font-size: 9px;
     }
 
-    .terminal-name {
-        font-size: 22px;
+    .profile-terminal-body {
+        padding: 20px 15px;
+
+        font-size: 11px;
     }
 
-    .terminal-role {
+    .terminal-command {
+        margin-bottom: 18px;
+
         font-size: 10px;
     }
 
+    .terminal-name {
+        font-size: 19px;
+    }
 
-    /* Profile */
+    .terminal-subtitle {
+        font-size: 10px;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* -----------------------------------------------------
+       PROFILE GRID MOBILE
+    ----------------------------------------------------- */
 
     .profile-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
-    .profile-item {
-        min-height: auto;
+    .profile-cell {
+        padding: 13px 12px;
 
-        padding: 15px;
+        gap: 4px;
     }
 
-    .profile-item strong {
-        font-size: 12px;
+    .profile-label {
+        font-size: 8px;
+
+        letter-spacing: 0.4px;
+    }
+
+    .profile-value {
+        font-size: 10px;
+
+        line-height: 1.45;
     }
 
 
-    /* Motivation */
+    /* -----------------------------------------------------
+       MOTIVATION MOBILE
+    ----------------------------------------------------- */
 
-    .terminal-progress {
-        width: 100%;
+    .progress-row {
+        grid-template-columns: auto auto;
+
+        gap: 8px;
+    }
+
+    .progress-label {
+        font-size: 10px;
+    }
+
+    .progress-percent {
+        font-size: 10px;
+    }
+
+    .progress-bar {
+        grid-column: 1 / -1;
+
+        height: 9px;
+
+        order: 3;
+    }
+
+    .terminal-error {
+        font-size: 9px;
+
+        line-height: 1.5;
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------------------
        FUN FACTS
-    ===================================================== */
+    ----------------------------------------------------- */
 
     .fun-facts {
         grid-template-columns: 1fr;
@@ -1769,18 +1750,18 @@ footer a:hover {
     .fun-fact {
         min-height: auto;
 
-        padding: 18px;
+        padding: 16px;
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------------------
        CONCLUSION
-    ===================================================== */
+    ----------------------------------------------------- */
 
     .about-conclusion {
-        margin-top: 45px;
+        margin-top: 40px;
 
-        padding-left: 18px;
+        padding-left: 16px;
     }
 
     .about-conclusion p {
@@ -1788,9 +1769,22 @@ footer a:hover {
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------------------
+       FOOTER
+    ----------------------------------------------------- */
+
+    footer {
+        padding: 40px 20px 50px;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    /* -----------------------------------------------------
        PROJECT PAGE
-    ===================================================== */
+    ----------------------------------------------------- */
 
     .project-hero {
         padding: 80px 0 60px;
@@ -1835,7 +1829,9 @@ footer a:hover {
     }
 
 
-    /* Tables */
+    /* -----------------------------------------------------
+       TABLES
+    ----------------------------------------------------- */
 
     .data-table {
         font-size: 13px;
@@ -1847,14 +1843,61 @@ footer a:hover {
     }
 
 
-    /* Footer */
+    /* -----------------------------------------------------
+       CODE
+    ----------------------------------------------------- */
 
-    footer {
-        padding-right: 20px;
-        padding-left: 20px;
+    .code-block {
+        padding: 16px;
 
-        flex-direction: column;
+        font-size: 11px;
+    }
+}
 
+
+/* =========================================================
+   VERY SMALL SCREENS
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .navbar nav {
         gap: 10px;
+    }
+
+    .navbar nav a {
+        font-size: 11px;
+    }
+
+    .about-intro h1 {
+        font-size: 46px;
+    }
+
+    .section h2 {
+        font-size: 26px;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-cell {
+        padding: 14px;
+    }
+
+    .progress-row {
+        grid-template-columns: 1fr auto;
+    }
+
+    .progress-label {
+        grid-column: 1;
+    }
+
+    .progress-percent {
+        grid-column: 2;
+    }
+
+    .progress-bar {
+        grid-column: 1 / -1;
     }
 }
