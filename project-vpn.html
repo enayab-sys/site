@@ -35,6 +35,8 @@
 
 <main>
 
+    <!-- HERO -->
+
     <section class="project-hero">
 
         <p class="section-number">04 / PROJET</p>
@@ -59,6 +61,8 @@
 
     </section>
 
+
+    <!-- INCIDENT -->
 
     <section class="project-section">
 
@@ -91,6 +95,8 @@
     </section>
 
 
+    <!-- INTERVENTION -->
+
     <section class="project-section">
 
         <p class="section-number">02</p>
@@ -109,20 +115,63 @@
                 l'adresse IP bloquée et de la retirer de la liste noire.
             </p>
 
+
+            <!-- CAPTURE 1 : LISTE DES IP BLOQUÉES -->
+
+            <div class="screenshot-container">
+
+                <img
+                    src="images/screenshot_terminal_router.png"
+                    alt="Terminal SSH connecté au routeur affichant la liste des utilisateurs bloqués avec la commande show lockout-users"
+                    class="project-screenshot"
+                >
+
+                <p class="screenshot-caption">
+                    <strong>01 — Identification de l'adresse IP bloquée</strong><br>
+                    Connexion SSH au routeur et utilisation de la commande
+                    <code>show lockout-users</code> afin d'identifier
+                    l'adresse IP présente dans la liste des utilisateurs bloqués.
+                </p>
+
+            </div>
+
+
             <h3>Commandes utilisées</h3>
 
-            <pre class="code-block"><code>Router > show lockout-users
+            <pre class="code-block"><code>Router &gt; show lockout-users
 
-Router > enable
+Router &gt; enable
 
 Router # configure terminal
 
 Router (config) # unlock lockout-users "ADRESSE_IP"</code></pre>
 
+
+            <!-- CAPTURE 2 : DÉBLOCAGE -->
+
+            <div class="screenshot-container">
+
+                <img
+                    src="images/unlock-lockout_users.png"
+                    alt="Terminal du routeur affichant la commande unlock lockout-users pour débloquer une adresse IP"
+                    class="project-screenshot"
+                >
+
+                <p class="screenshot-caption">
+                    <strong>02 — Déblocage de l'adresse IP</strong><br>
+                    Utilisation de la commande
+                    <code>unlock lockout-users</code>
+                    afin de retirer l'adresse IP de la liste noire du routeur.
+                </p>
+
+            </div>
+
         </div>
 
     </section>
 
+
+    <!-- PROCEDURE -->
 
     <section class="project-section">
 
@@ -169,6 +218,8 @@ Router (config) # unlock lockout-users "ADRESSE_IP"</code></pre>
     </section>
 
 
+    <!-- VALIDATION -->
+
     <section class="project-section">
 
         <p class="section-number">04</p>
@@ -199,6 +250,8 @@ Router (config) # unlock lockout-users "ADRESSE_IP"</code></pre>
     </section>
 
 
+    <!-- COMPÉTENCES -->
+
     <section class="project-section">
 
         <p class="section-number">05</p>
@@ -211,22 +264,30 @@ Router (config) # unlock lockout-users "ADRESSE_IP"</code></pre>
 
                 <div class="technology">
                     <strong>Administration réseau</strong>
-                    <span>Diagnostic et intervention sur un routeur.</span>
+                    <span>
+                        Diagnostic et intervention sur un routeur.
+                    </span>
                 </div>
 
                 <div class="technology">
                     <strong>CLI</strong>
-                    <span>Utilisation de l'interface en ligne de commande.</span>
+                    <span>
+                        Utilisation de l'interface en ligne de commande.
+                    </span>
                 </div>
 
                 <div class="technology">
                     <strong>Support utilisateur</strong>
-                    <span>Communication et accompagnement de l'utilisateur.</span>
+                    <span>
+                        Communication et accompagnement de l'utilisateur.
+                    </span>
                 </div>
 
                 <div class="technology">
                     <strong>Sécurité</strong>
-                    <span>Compréhension des mécanismes de blocage IP.</span>
+                    <span>
+                        Compréhension des mécanismes de blocage IP.
+                    </span>
                 </div>
 
             </div>
@@ -235,6 +296,8 @@ Router (config) # unlock lockout-users "ADRESSE_IP"</code></pre>
 
     </section>
 
+
+    <!-- RETOUR AUX PROJETS -->
 
     <div class="back-projects">
         <a href="index.html#projects">← Retour aux projets</a>
@@ -248,7 +311,7 @@ Router (config) # unlock lockout-users "ADRESSE_IP"</code></pre>
     <p>© 2026 BAY</p>
 
     <a href="mailto:contact@aoudia.cloud">
-            contact@aoudia.cloud
+        contact@aoudia.cloud
     </a>
 
 </footer>
