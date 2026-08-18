@@ -3129,3 +3129,229 @@ footer a:hover {
         font-size: 11px;
     }
 }
+
+/* =========================================================
+   PROJECT — PDF REPORT
+========================================================= */
+
+.project-report {
+    padding: 80px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.report-header {
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 35px;
+}
+
+.report-header h2 {
+    margin-top: 8px;
+
+    font-size: 32px;
+
+    line-height: 1.15;
+
+    letter-spacing: -1px;
+}
+
+.report-download {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    padding: 11px 16px;
+
+    border: 1px solid var(--accent);
+
+    border-radius: 7px;
+
+    background: var(--accent);
+
+    color: white;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.report-download:hover {
+    opacity: 0.9;
+
+    transform: translateY(-1px);
+}
+
+.report-description {
+    max-width: 700px;
+
+    margin-bottom: 35px;
+}
+
+.report-description p {
+    margin-bottom: 18px;
+
+    color: var(--muted);
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+.report-description p:last-of-type {
+    margin-bottom: 25px;
+}
+
+.report-description strong {
+    color: var(--text);
+}
+
+.report-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 16px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-left: 3px solid var(--accent);
+
+    border-radius: 0 7px 7px 0;
+}
+
+.report-info span {
+    color: var(--accent);
+
+    font-family:
+        "SFMono-Regular",
+        "Roboto Mono",
+        Consolas,
+        monospace;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+}
+
+.report-info strong {
+    overflow: hidden;
+
+    color: var(--text);
+
+    font-family:
+        "SFMono-Regular",
+        "Roboto Mono",
+        Consolas,
+        monospace;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   PDF VIEWER
+========================================================= */
+
+.report-viewer {
+    width: 100%;
+
+    overflow: hidden;
+
+    background: #e8e5df;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 15px 40px rgba(28, 25, 23, 0.08);
+}
+
+.report-viewer iframe {
+    display: block;
+
+    width: 100%;
+
+    height: 850px;
+
+    border: 0;
+
+    background: white;
+}
+
+
+/* =========================================================
+   PDF REPORT — MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .project-report {
+        padding: 65px 0;
+    }
+
+    .report-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .report-header h2 {
+        font-size: 28px;
+    }
+
+    .report-download {
+        width: 100%;
+    }
+
+    .report-description p {
+        font-size: 15px;
+    }
+
+    .report-info {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .report-info strong {
+        max-width: 100%;
+    }
+
+    .report-viewer {
+        border-radius: 7px;
+    }
+
+    .report-viewer iframe {
+        height: 650px;
+    }
+}
